@@ -1,0 +1,42 @@
+.banner-container {
+    margin-top: -30px;
+  }
+  
+  .banner-text {
+    margin: 20px 0;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  .Navbar {
+    margin-top: 20px;
+  }
+  .banner-text h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+    display: grid;
+  }
+  
+  .banner-text p {
+    font-size: 26px;
+    color: black;
+  }
+  
+  .order-button {
+    background-color: #FDDB52;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF3030;
+
+  }
+  
+  .burger-image {
+    max-width: 90%;
+    height: auto;
+  }
+  
