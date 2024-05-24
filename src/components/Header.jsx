@@ -4,10 +4,7 @@ import "../Styles/Banner.css";
 
 function Header() {
   return (
-    <>
-     
-
-      <Container className="banner-container">
+    <>      <Container className="banner-container">
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-left">
             <div className="banner-text">
@@ -17,7 +14,7 @@ function Header() {
                 <span className="line">una sonrisa</span>
               </h2>
               <p>¡Hamburguesas que te hacen feliz!</p>
-              <Button variant="transparent" className="order-button">
+              <Button variant="transparent" className="order-button" href="/menu">
                 ORDERNA YA
               </Button>
             </div>

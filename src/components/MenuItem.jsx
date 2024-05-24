@@ -4,11 +4,11 @@ import { Col, Row, Card, Container } from 'react-bootstrap';
 
 function MenuItem() {
   return (
-    <Container>
+    <Container className='py-5'>
       <Row>
         {burgers.map((burger) => (
-          <Col md={4} key={burger.id}>
-            <Card>
+          <Col md={4} key={burger.id} className='my-3'>
+            <Card className='rounded-5'>
               <Card.Img variant="top" src={burger.image} />
               <Card.Body>
                 <Card.Title>{burger.name}</Card.Title>

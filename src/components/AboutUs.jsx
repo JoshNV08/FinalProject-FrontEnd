@@ -4,7 +4,7 @@ import "../Styles/AboutUs.css";
 
 function AboutUs() {
   return (
-    <Container fluid style={{ backgroundColor: "#FCDA51"}}>
+    <Container fluid className="rounded-5" style={{ backgroundColor: "#FCDA51"}}>
       <Row className="align-items-center">
         <Col md={6} className="p-0" >
           <img

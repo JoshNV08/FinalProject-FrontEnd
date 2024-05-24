@@ -1,8 +1,9 @@
 import React from "react";
-import Header from "../components/Header"; // Ensure the correct path
+import Header from "../components/Header";
 import SobreNosotros from "../components/AboutUs";
 import MenuSection from "../components/MenuCards";
 import Testimonials from "../components/Testimonials";
+import FooterHome from "../components/FooterHome";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <SobreNosotros />
       <MenuSection />
       <Testimonials/>
+      <FooterHome />
     </>
   );
 }
