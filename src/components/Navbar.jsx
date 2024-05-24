@@ -16,8 +16,8 @@ function Nav() {
             <Navbar.Text>
               <a
                 href="/Contact"
-                className=" fs-5 text-danger"
-                style={{ fontWeight: "bolder" }}>
+                className=" fs-5"
+                style={{ fontWeight: "bolder", color: "#ff3030" }}>
                 Trabaja con Nostros
               </a>
               <a href="https://www.facebook.com">

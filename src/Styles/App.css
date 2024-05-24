@@ -6,6 +6,15 @@ body {
   a {
     text-decoration: none;
     color: inherit;
+
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a:hover {
+  color: #ff3131;
 }
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button, Navbar } from "react-bootstrap";
 import "../Styles/Banner.css";
+import BurgerModel from "./Burger3D";
 
 function Header() {
   return (
@@ -15,16 +16,12 @@ function Header() {
               </h2>
               <p>¡Hamburguesas que te hacen feliz!</p>
               <Button variant="transparent" className="order-button" href="/menu">
-                ORDERNA YA
+                ORDENA YA
               </Button>
             </div>
           </Col>
-          <Col md={6} className="text-center">
-            <img
-              src="../src/assets/BurgerHome.png"
-              alt="Hamburguesa"
-              className="burger-image"
-            />
+          <Col md={6} className="text-center" style={{paddingBottom:'20px'}}>
+          <BurgerModel />
           </Col>
         </Row>
       </Container>
