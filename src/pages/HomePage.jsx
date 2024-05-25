@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
-import SobreNosotros from "../components/AboutUs";
-import MenuSection from "../components/MenuCards";
-import Testimonials from "../components/Testimonials";
-import FooterHome from "../components/FooterHome";
+import Header from "../components/Home/Header";
+import SobreNosotros from "../components/Home/AboutUs";
+import MenuSection from "../components/Home/MenuCards";
+import Testimonials from "../components/Home/Testimonials";
+import FooterHome from "../components/Home/FooterHome";
 
 function HomePage() {
   return (
@@ -11,7 +11,7 @@ function HomePage() {
       <Header />
       <SobreNosotros />
       <MenuSection />
-      <Testimonials/>
+      <Testimonials />
       <FooterHome />
     </>
   );

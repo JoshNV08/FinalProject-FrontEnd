@@ -1,0 +1,19 @@
+.navbar-custom {
+    background-color: #f8f9fa;
+  }
+  
+  .logo-container {
+    padding-left: 15px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icon {
+    width: 35px; 
+    margin: 0 5px;
+  }
+ 
+  

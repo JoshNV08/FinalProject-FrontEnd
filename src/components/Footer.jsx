@@ -7,7 +7,7 @@ function Footer() {
     <Container fluid style={{ backgroundColor: "#FFE066"}}>
       <Row className="align-items-center">
         <Col md={5} className="text-center ps-0">
-          <Image src="src/assets/LogoFooter.png" fluid  style={{ maxHeight: "300px" }} />
+          <Image src="../src/assets/LogoFooter.png" fluid  style={{ maxHeight: "300px" }} />
         </Col>
         <Col md={6} style={{ color: "#FE3031", fontSize: "14px", paddingTop:'50px' }}>
           <Row>

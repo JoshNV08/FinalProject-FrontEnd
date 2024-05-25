@@ -6,9 +6,9 @@ function FooterHome() {
     <Container fluid style={{ backgroundColor: "#FFE066" }}>
       <Row className="align-items-center">
         <Col md={8} className="text-center ps-0">
-          <Image src="src\assets\ImageFooter.png" fluid />
+          <Image src="../src/assets/ImageFooter.png" fluid />
         </Col>
-        <Col md={3} style={{ color: "#FE3031"}}>
+        <Col md={3} style={{ color: "#FE3031" }}>
           <div>
             <h4>NUESTROS HORARIOS</h4>
             <p>Lun - Viernes: 7am - 10pm</p>
