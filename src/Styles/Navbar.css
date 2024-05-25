@@ -1,19 +1,29 @@
-.navbar-custom {
-    background-color: #f8f9fa;
+
+
+.logo {
+  max-height: 150px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .navbar-custom {
+    padding: 10px 0;
   }
-  
-  .logo-container {
-    padding-left: 15px;
-  }
-  
+
   .social-icons {
-    display: flex;
-    align-items: center;
+    justify-content: flex-end;
   }
-  
-  .social-icon {
-    width: 35px; 
-    margin: 0 5px;
+
+  .d-md-none {
+    text-align: right;
   }
- 
-  
+}

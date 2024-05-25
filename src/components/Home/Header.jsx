@@ -9,16 +9,17 @@ function Header() {
       <Container className="banner-container">
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-left">
-            <div className="banner-text">
+            <div className="banner-text text-md-left">
               <h2 className="text-md-start">
                 <span className="line">Cada</span>
                 <span className="line">bocado</span>
                 <span className="line">una sonrisa</span>
               </h2>
-              <p className="fs-4">¡Hamburguesas que te hacen feliz!</p>
+              <p className="text-center">¡Hamburguesas que te hacen feliz!</p>
               <Button
                 variant="transparent"
                 className="order-button"
+                size='lg'
                 href="/menu">
                 ORDENA YA
               </Button>

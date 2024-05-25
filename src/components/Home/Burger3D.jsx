@@ -53,10 +53,14 @@ function BurgerModel() {
   }
 
   return (
-    <Canvas style={{ height: "80vh", width: "100%" }}>
+    <Canvas style={{ height: "80vh", width: "110%", bottom:'45px' }}>
       <ambientLight intensity={1} />
       <directionalLight position={[0, 10, 5]} intensity={2} />
-      <primitive ref={burgerRef} object={scene} scale={[7, 7, 7]} />
+      <primitive 
+        ref={burgerRef} 
+        object={scene} 
+        scale={[8, 8, 8]} 
+      />
       <OrbitControls
         ref={controlsRef}
         minDistance={5}

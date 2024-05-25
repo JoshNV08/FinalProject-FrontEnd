@@ -18,7 +18,7 @@ function MenuSection() {
 
       <Row className="mt-4">
         <Col md={4}>
-          <Card>
+          <Card className="rounded-5">
             <Card.Img variant="top" src="../src/assets/burgerMenu.png" />
             <Card.Body>
               <Card.Title>HAMBURGUESAS</Card.Title>
@@ -33,7 +33,7 @@ function MenuSection() {
           </Card>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className="rounded-5">
             <Card.Img variant="top" src="../src/assets/Fritas.png" />
             <Card.Body>
               <Card.Title>PAPAS FRITAS</Card.Title>
@@ -48,7 +48,7 @@ function MenuSection() {
           </Card>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className="rounded-5">
             <Card.Img variant="top" src="../src/assets/Coca.png" />
             <Card.Body>
               <Card.Title>BEBIDAS</Card.Title>
@@ -75,7 +75,7 @@ function MenuSection() {
                 {activeSection === "burgers" &&
                   burgers.map((burger) => (
                     <Col key={burger.id} xs={6} sm={4} md={2}>
-                      <Card>
+                      <Card className="rounded-5">
                         <Card.Img variant="top" src={burger.image} />
                         <Card.Body>
                           <Card.Title>{burger.name}</Card.Title>
@@ -88,7 +88,7 @@ function MenuSection() {
                 {activeSection === "snacks" &&
                   snacks.map((snack) => (
                     <Col key={snack.id} xs={6} sm={4} md={2}>
-                      <Card>
+                      <Card className="rounded-5">
                         <Card.Img variant="top" src={snack.image} />
                         <Card.Body>
                           <Card.Title>{snack.name}</Card.Title>
@@ -101,7 +101,7 @@ function MenuSection() {
                 {activeSection === "drinks" &&
                   drinks.map((drink) => (
                     <Col key={drink.id} xs={6} sm={4} md={2}>
-                      <Card>
+                      <Card className="rounded-5">
                         <Card.Img variant="top" src={drink.image} />
                         <Card.Body>
                           <Card.Title>{drink.name}</Card.Title>
