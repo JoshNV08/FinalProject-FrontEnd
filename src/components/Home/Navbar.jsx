@@ -1,5 +1,11 @@
 import React from "react";
-import { Navbar, Container, Col, Row, Nav as BootstrapNav } from "react-bootstrap";
+import {
+  Navbar,
+  Container,
+  Col,
+  Row,
+  Nav as BootstrapNav,
+} from "react-bootstrap";
 import "../../Styles/Navbar.css";
 
 function Nav() {
@@ -16,12 +22,12 @@ function Nav() {
               />
             </Navbar.Brand>
           </Col>
-          <Col xs={6} md={6} className="d-flex justify-content-end align-items-center">
+          <Col
+            xs={6}
+            md={6}
+            className="d-flex justify-content-end align-items-center">
             <BootstrapNav className="d-none d-md-flex">
-              <BootstrapNav.Link
-                href="/contact"
-                className="fs-5"
-                style={{ fontWeight: "bolder", color: "#ff3030" }}>
+              <BootstrapNav.Link href="/contact" className="fs-5 text-contact">
                 Trabaja con Nosotros
               </BootstrapNav.Link>
               <div className="social-icons">
@@ -51,7 +57,7 @@ function Nav() {
             <div className="d-flex d-md-none flex-column align-items-end">
               <BootstrapNav.Link
                 href="/contact"
-                className="fs-6 mb-2"
+                className="fs-6 mb-2 text-contact"
                 style={{ fontWeight: "bolder", color: "#ff3030" }}>
                 Trabaja con Nosotros
               </BootstrapNav.Link>

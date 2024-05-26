@@ -1,14 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import '../../Styles/FooterHome.css'
 
 function FooterHome() {
   return (
-    <Container fluid style={{ backgroundColor: "#FFE066" }}>
+    <Container fluid style={{ backgroundColor: "#FCDA51"}}>
       <Row className="align-items-center">
         <Col md={8} className="text-center ps-0">
-          <Image src="../src/assets/ImageFooter.png" fluid />
+          <Image src="../src/assets/ImageFooter.png" style={{width:'103%'}}/>
         </Col>
-        <Col md={3} style={{ color: "#FE3031" }}>
+        <Col md={3} className="text">
           <div>
             <h4>NUESTROS HORARIOS</h4>
             <p>Lun - Viernes: 7am - 10pm</p>

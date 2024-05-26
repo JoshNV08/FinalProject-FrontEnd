@@ -1,40 +1,21 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import testimonials from '../../data/testimonials';
+
 
 function Testimonials() {
-  const testimonials = [
-    {
-      image: 'src/assets/messi.webp',
-      title: 'The Online Food Hub',
-      text: 'Testimonials are short quotes from people who love your brand. It\'s a great way to convince customers to try your services.',
-      stars: 5,
-    },
-    {
-      image: 'src/assets/cr7.webp',
-      title: 'Food Pyramid Co.',
-      text: 'Testimonials are short quotes from people who love your brand. It\'s a great way to convince customers to try your services.',
-      stars: 5,
-    },
-    {
-      image: 'src/assets/neymar.webp',
-      title: 'Jul & Sons Co.',
-      text: 'Testimonials are short quotes from people who love your brand. It\'s a great way to convince customers to try your services.',
-      stars: 5,
-    },
-  ];
-
   return (
-    <Container fluid style={{ backgroundColor: '#FF3D30', color: '#FFFFFF', padding: '40px' }}>
-      <Row className="text-center mb-5">
+    <Container fluid style={{ backgroundColor: '#FF3D30', color: '#FFFFFF', padding: '30px' }}>
+      <Row className="text-center mb-3">
         <Col>
           <h2>¿Qué dicen nuestros clientes?</h2>
           <p>Dejanos tu opinión en nuestras redes</p>
         </Col>
       </Row>
       <Row>
-        {testimonials.map((testimonial, index) => (
-          <Col key={index} md={4} className="text-center mb-4">
-            <Card style={{ border: 'none', backgroundColor: 'transparent' }}>
+        {testimonials.map((testimonial) => (
+          <Col md={4}  className="text-center mb-1">
+            <Card style={{ border: 'none', backgroundColor: 'transparent', color:'white' }}>
               <Card.Img
                 variant="top"
                 src={testimonial.image}

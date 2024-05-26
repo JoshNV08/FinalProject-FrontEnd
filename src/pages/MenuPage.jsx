@@ -8,6 +8,7 @@ import MenuDrinks from "../components/Menu/MenuDrinks";
 import MenuDesserts from "../components/Menu/MenuDesserts";
 import MenuCoffee from "../components/Menu/MenuCoffee";
 import { useLocation } from "react-router-dom";
+import '../Styles/Menu.css'
 
 function MenuPage() {
   const location = useLocation();

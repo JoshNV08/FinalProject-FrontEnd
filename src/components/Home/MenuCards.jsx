@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import burgers from "../../data/burgers";
 import snacks from "../../data/snacks";
 import drinks from "../../data/drinks";
+import coffee from "../../data/coffee";
 
 function MenuSection() {
   const [activeSection, setActiveSection] = useState(null);
@@ -13,51 +14,74 @@ function MenuSection() {
 
   return (
     <Container className="align-items-center justify-contents-center text-center p-4">
-      <h2 className="fs-1">¿Qué te ofrecemos?</h2>
+      <h2 className="fs-1 font-weight-bold">¿Qué te ofrecemos?</h2>
       <p className="text-muted fs-5">Sólo lo mejor para vos</p>
 
       <Row className="mt-4">
-        <Col md={4}>
-          <Card className="rounded-5">
+        <Col xs={6} md={4}>
+          <Card className="rounded-5 mb-4">
             <Card.Img variant="top" src="../src/assets/burgerMenu.png" />
             <Card.Body>
               <Card.Title>HAMBURGUESAS</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("burgers")}>
+                onClick={() => handleSectionClick("burgers")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
         </Col>
-        <Col md={4}>
-          <Card className="rounded-5">
+        <Col xs={6} md={4}>
+          <Card className="rounded-5 mb-4">
             <Card.Img variant="top" src="../src/assets/Fritas.png" />
             <Card.Body>
               <Card.Title>PAPAS FRITAS</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("snacks")}>
+                onClick={() => handleSectionClick("snacks")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
         </Col>
-        <Col md={4}>
-          <Card className="rounded-5">
+        <Col xs={6} md={4}>
+          <Card className="rounded-5 mb-4">
             <Card.Img variant="top" src="../src/assets/Coca.png" />
             <Card.Body>
               <Card.Title>BEBIDAS</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("drinks")}>
+                onClick={() => handleSectionClick("drinks")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} md={4} className="d-md-none text-center">
+          <Card className="rounded-5 mb-4">
+            <Card.Img variant="top" src="../src/assets/Coffee.png" />
+            <Card.Body>
+              <Card.Title>CAFETERÍA</Card.Title>
+              <Button
+                variant="link"
+                onClick={() => handleSectionClick("coffee")}
+              >
+                <i
+                  className="bi bi-chevron-compact-down"
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
@@ -65,16 +89,13 @@ function MenuSection() {
       </Row>
 
       {activeSection && (
-        <div className="mt-4">
-          <Carousel
-            indicators={false}
-            interval={null}
-            className="cast-carousel">
+        <div>
+          <Carousel indicators={false} interval={null} className="cast-carousel">
             <Carousel.Item>
               <Row className="justify-content-center">
                 {activeSection === "burgers" &&
                   burgers.map((burger) => (
-                    <Col key={burger.id} xs={6} sm={4} md={2}>
+                    <Col key={burger.id} xs={6} sm={4} md={3}>
                       <Card className="rounded-5">
                         <Card.Img variant="top" src={burger.image} />
                         <Card.Body>
@@ -87,7 +108,7 @@ function MenuSection() {
                   ))}
                 {activeSection === "snacks" &&
                   snacks.map((snack) => (
-                    <Col key={snack.id} xs={6} sm={4} md={2}>
+                    <Col key={snack.id} xs={6} sm={4} md={3}>
                       <Card className="rounded-5">
                         <Card.Img variant="top" src={snack.image} />
                         <Card.Body>
@@ -100,13 +121,26 @@ function MenuSection() {
                   ))}
                 {activeSection === "drinks" &&
                   drinks.map((drink) => (
-                    <Col key={drink.id} xs={6} sm={4} md={2}>
+                    <Col key={drink.id} xs={6} sm={4} md={3}>
                       <Card className="rounded-5">
                         <Card.Img variant="top" src={drink.image} />
                         <Card.Body>
                           <Card.Title>{drink.name}</Card.Title>
                           <Card.Text>{drink.description}</Card.Text>
                           <Card.Text>Price: ${drink.price}</Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                  {activeSection === "coffee" &&
+                  coffee.map((coffee) => (
+                    <Col key={coffee.id} xs={6} sm={4} md={3}>
+                      <Card className="rounded-5">
+                        <Card.Img variant="top" src={coffee.image} />
+                        <Card.Body>
+                          <Card.Title>{coffee.name}</Card.Title>
+                          <Card.Text>{coffee.description}</Card.Text>
+                          <Card.Text>Price: ${coffee.price}</Card.Text>
                         </Card.Body>
                       </Card>
                     </Col>
@@ -118,7 +152,12 @@ function MenuSection() {
       )}
 
       <div className="text-center mt-4">
-        <Button variant="transparent" href="/menu" className="rounded-5" style={{backgroundColor:'#ff3030', color:'white'}}>
+        <Button
+          variant="transparent"
+          href="/menu"
+          className="rounded-5"
+          style={{ backgroundColor: "#ff3030", color: "white" }}
+        >
           VER MENÚ
         </Button>
       </div>

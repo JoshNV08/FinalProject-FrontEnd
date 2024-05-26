@@ -1,4 +1,11 @@
+.text-contact{
+  font-weight: bolder;
+   color: #ff3030;
+}
 
+.text-contact:hover{
+  color: #fcdb52;
+}
 
 .logo {
   max-height: 150px;
@@ -6,7 +13,6 @@
 
 .social-icons {
   display: flex;
-  gap: 10px;
 }
 
 .social-icon {
@@ -21,9 +27,12 @@
 
   .social-icons {
     justify-content: flex-end;
+    gap: 10px;
   }
 
   .d-md-none {
     text-align: right;
   }
 }
+
+
