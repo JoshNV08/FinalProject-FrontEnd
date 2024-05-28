@@ -16,8 +16,8 @@ function BurgerModel() {
     const y = -(clientY / innerHeight) * 2 + 1;
 
     if (burgerRef.current) {
-      burgerRef.current.rotation.y = x * 0.1;
-      burgerRef.current.rotation.x = y * 0.1;
+      burgerRef.current.rotation.y = x * 0.2;
+      burgerRef.current.rotation.x = y * 0.2;
     }
   };
 
@@ -53,19 +53,15 @@ function BurgerModel() {
   }
 
   return (
-    <Canvas style={{ height: "80vh", width: "110%", bottom:'45px' }}>
+    <Canvas style={{ height: "80vh", width: "110%", bottom: "45px" }}>
       <ambientLight intensity={1} />
       <directionalLight position={[0, 10, 5]} intensity={2} />
-      <primitive 
-        ref={burgerRef} 
-        object={scene} 
-        scale={[8, 8, 8]} 
-      />
+      <primitive ref={burgerRef} object={scene} scale={[8, 8, 8]} />
       <OrbitControls
         ref={controlsRef}
         minDistance={5}
         maxDistance={8}
-        enableZoom={true}
+        enableZoom={false}
       />
     </Canvas>
   );

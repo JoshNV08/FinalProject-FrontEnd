@@ -18,7 +18,7 @@ function Header() {
               <p className="text-center">¡Hamburguesas que te hacen feliz!</p>
               <Button
                 variant="transparent"
-                className="order-button"
+                className="order-button rounded-5 fw-bold"
                 size='lg'
                 href="/menu">
                 ORDENA YA

@@ -28,16 +28,11 @@
   color: black;
 }
 
-.order-button {
-  background-color: #fddb52;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #ff3030;
-}
+
 
 .line {
   display: block;
+  margin-top: -10px;
 }
 
 .order-button {
@@ -45,7 +40,7 @@
   background-color: #ffcc00;
   color: #ff3030;
   border: none;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 .order-button:hover {

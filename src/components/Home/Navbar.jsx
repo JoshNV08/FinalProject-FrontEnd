@@ -27,6 +27,9 @@ function Nav() {
             md={6}
             className="d-flex justify-content-end align-items-center">
             <BootstrapNav className="d-none d-md-flex">
+            <BootstrapNav.Link href="/login" className="fs-5 text-contact">
+                Login
+              </BootstrapNav.Link>
               <BootstrapNav.Link href="/contact" className="fs-5 text-contact">
                 Trabaja con Nosotros
               </BootstrapNav.Link>
@@ -55,6 +58,9 @@ function Nav() {
               </div>
             </BootstrapNav>
             <div className="d-flex d-md-none flex-column align-items-end">
+            <BootstrapNav.Link href="/login" className="fs-5 text-contact">
+                Login
+              </BootstrapNav.Link>
               <BootstrapNav.Link
                 href="/contact"
                 className="fs-6 mb-2 text-contact"

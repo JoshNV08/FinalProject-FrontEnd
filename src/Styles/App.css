@@ -1,22 +1,16 @@
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
 
-a:hover {
-  color: #ff3131;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-
 
 .line {
   display: block;
   line-height: 1.2;
 }
-

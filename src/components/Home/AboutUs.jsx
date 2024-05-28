@@ -4,9 +4,9 @@ import "../../Styles/AboutUs.css";
 
 function AboutUs() {
   return (
-    <Container fluid style={{ backgroundColor: "#FCDA51" }}>
+    <Container fluid className="ps-0" style={{ backgroundColor: "#FCDA51" }}>
       <Row className="align-items-center">
-        <Col md={6} className=" ps-0">
+        <Col md={6}>
           <img
             src="../src/assets/Image2.png"
             alt="Hamburguesa"
@@ -24,8 +24,9 @@ function AboutUs() {
           <Button
             variant="transparent"
             size="lg"
-            className="my-3 rounded-5"
-            href="/SobreNosotros" style={{backgroundColor:'#ff3030', color:'#fcda51'}}>
+            className="my-3 rounded-5 fw-bold"
+            href="/SobreNosotros"
+            style={{ backgroundColor: "#ff3030", color: "#fcda51" }}>
             LEER MÁS
           </Button>
         </Col>

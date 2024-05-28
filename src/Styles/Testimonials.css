@@ -1,0 +1,41 @@
+.testimonials-container {
+    background-color: #ff3d30;
+    color: #ffffff;
+    padding: 30px;
+    position: relative;
+  }
+  .image-section {
+    position: relative;
+    height: 300px;
+    width: auto;
+    background: url("src/assets/FondoFooter.png") no-repeat center center;
+    background-size: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials-container {
+      padding-bottom: 60px;
+    }
+  
+    .girl-image-left {
+      width: 330px;
+      position: absolute;
+      bottom: 0%;
+      height: auto;
+    }
+    .girl-image-right {
+      width: 350px;
+      position: absolute;
+      bottom: 0%;
+      height: auto;
+    }
+  
+    .girl-image-left {
+      right: 33%;
+    }
+  
+    .girl-image-right {
+      right: 0%;
+    }
+  }
+  

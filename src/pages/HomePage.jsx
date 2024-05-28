@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Home/Header";
 import SobreNosotros from "../components/Home/AboutUs";
-import MenuSection from "../components/Home/MenuCards";
+import MenuSection from "../components/Home/MenuSection";
 import Testimonials from "../components/Home/Testimonials";
 import FooterHome from "../components/Home/FooterHome";
 

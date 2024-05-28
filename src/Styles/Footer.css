@@ -25,3 +25,37 @@
     margin-bottom: 5px;
   }
   
+
+  .text h4 {
+    font-size: 25px;
+    font-weight: bold;
+  
+  }
+  h5 {
+    font-weight: bold;
+  }
+  .text p {
+    font-size: 17px;
+  }
+
+  .text {
+    color: #fe3031;
+    font-size: 14px;
+    align-items: start;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .TextFooter {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 768px) { 
+    .TextFooter {
+      padding-top: 10px;
+      padding-bottom: 50px;
+    }
+  }

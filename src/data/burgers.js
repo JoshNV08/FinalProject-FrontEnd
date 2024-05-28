@@ -34,7 +34,6 @@
         "id": 4,
         "name": "Veggie Burger",
         "image": "https://s3-eu-central-1.amazonaws.com/bk-uy-demo.menu.app/wp-media-folder-burger-king-uruguay//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/27/Doble-Egg-1-1024x683.png",
-        "description": "A classic beef burger with lettuce, tomato, and cheese.",
         "description": "A tasty veggie burger with lettuce, tomato, and avocado.",
         "price": 8.49,
         "ingredients": ["veggie patty", "lettuce", "tomato", "avocado", "bun"],
