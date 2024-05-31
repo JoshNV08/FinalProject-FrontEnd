@@ -27,8 +27,7 @@ ul li .active {
     font-size: large;
     font-weight: bold;
     padding-top: 40px;
+    text-align: center;
   }
-  ul {
-    padding-right: 20px;
-  }
+ 
 }
