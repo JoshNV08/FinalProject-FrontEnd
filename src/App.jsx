@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import ContactPage from "./pages/ContactPage";
+import WorkPage from "./pages/WorkPage";
 import UserLogin from "./pages/UserLogin";
 import AdminLogin from "./pages/AdminLogin";
 import Nav from "./components/Home/Navbar";
@@ -28,6 +29,7 @@ function App() {
         </Route>
         <Route path="/sobrenosotros" element={<Information />} />
         <Route path="/contacto" element={<ContactPage />} />
+        <Route path="/trabajo" element={<WorkPage />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
       </Routes>
