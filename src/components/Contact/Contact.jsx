@@ -2,6 +2,7 @@ import React from "react";
 import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea } from "mdb-react-ui-kit";
 import "../../Styles/Contact.css";
 
+
 function Contact() {
   return (
     <div className="contact">
