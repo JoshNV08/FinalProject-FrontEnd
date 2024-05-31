@@ -77,7 +77,7 @@ const Faq = () => {
     <>
       <h1 className="container">Preguntas más frecuentes</h1>
       <Collapse
-        className="container"
+        className="container mb-5"
         items={items}
         bordered={false}
         defaultActiveKey={["1"]}
