@@ -17,7 +17,7 @@ ul li .active {
   color: #fe3030;
 }
 .order{
-  background-color: #ffcc00;
+  background-color: #fddb52;
 
 }
 
@@ -27,8 +27,7 @@ ul li .active {
     font-size: large;
     font-weight: bold;
     padding-top: 40px;
+    text-align: center;
   }
-  ul {
-    padding-right: 20px;
-  }
+ 
 }
