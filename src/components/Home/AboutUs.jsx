@@ -25,8 +25,9 @@ function AboutUs() {
             variant="transparent"
             size="lg"
             className="my-3 rounded-5 fw-bold"
-            href="/SobreNosotros"
-            style={{ backgroundColor: "#ff3030", color: "#fcda51" }}>
+            href="/sobrenosotros"
+            style={{ backgroundColor: "#ff3030", color: "#fcda51" }}
+          >
             LEER MÁS
           </Button>
         </Col>
