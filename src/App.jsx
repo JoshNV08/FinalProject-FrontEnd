@@ -11,6 +11,7 @@ import MenuDrinks from "./components/Menu/MenuDrinks";
 import MenuDesserts from "./components/Menu/MenuDesserts";
 import MenuCoffee from "./components/Menu/MenuCoffee";
 import Information from "./pages/Information";
+import FaqPage from "./pages/FaqPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/sobrenosotros" element={<Information />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/login" element={<UserLogin />} />
+        <Route path="/faq" element={<FaqPage />} />
       </Routes>
     </>
   );
