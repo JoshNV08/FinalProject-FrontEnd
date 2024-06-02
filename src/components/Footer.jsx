@@ -49,7 +49,7 @@ function Footer() {
           </div>
           <div>
             <h5>
-              <a href="/descuentos">CUPONES</a>
+              <a href="/cupones">CUPONES</a>
             </h5>
             <h5>
               <a href="/contacto">CONTACTO</a>

@@ -1,3 +1,25 @@
 .contact{
 margin-left: 50px;
 }
+
+    .container {
+        padding: 20px;
+      }
+      
+      .textContactH2 {
+        margin-bottom: 20px;
+        font-size: 40px;
+      }
+      .textContactH4 {
+        font-size: 25px;
+        font-weight:700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .textContactP {
+        font-size: 20px;
+        font-weight: lighter;
+      }
+      strong {
+        font-weight: bold;
+      }

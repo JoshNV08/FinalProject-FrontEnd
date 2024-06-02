@@ -13,8 +13,11 @@ import MenuDesserts from "./components/Menu/MenuDesserts";
 import MenuCoffee from "./components/Menu/MenuCoffee";
 import Information from "./pages/Information";
 import FaqPage from "./pages/FaqPage";
+import Cupones from "./components/Others/Coupons";
 
 function App() {
+
+  
   return (
     <>
       <Nav />
@@ -32,6 +35,7 @@ function App() {
         <Route path="/trabajo" element={<WorkPage />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/faq" element={<FaqPage />} />
+        <Route path="/cupones" element={<Cupones />} />
       </Routes>
     </>
   );

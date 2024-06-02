@@ -63,9 +63,9 @@ function Nav() {
                 Login
               </BootstrapNav.Link>
               <BootstrapNav.Link
-                href="/contact"
-                className="fs-6 mb-2 text-contact"
-                style={{ fontWeight: "bolder", color: "#ff3030" }}
+                href="/trabajo"
+                className="mb-2 text-contact"
+                style={{ fontWeight: "bolder", color: "#ff3030", fontSize:'15px' }}
               >
                 Trabaja con Nosotros
               </BootstrapNav.Link>

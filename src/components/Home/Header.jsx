@@ -15,13 +15,12 @@ function Header() {
                 <span className="line">bocado</span>
                 <span className="line">una sonrisa</span>
               </h2>
-              <p className="text-center">¡Hamburguesas que te hacen feliz!</p>
+              <p className="text-md-left">¡Hamburguesas que te hacen feliz!</p>
               <Button
-                variant="transparent"
-                className="order-button rounded-5 fw-bold"
+                className="btnYellow rounded-5 fw-bold"
                 size='lg'
                 href="/menu">
-                ORDENA YA
+                <span>ORDENA YA</span>
               </Button>
             </div>
           </Col>

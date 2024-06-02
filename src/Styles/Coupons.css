@@ -1,0 +1,100 @@
+.cupones-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .wheel-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #333;
+  }
+  
+  .wheel-inner {
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    position: absolute;
+  }
+  
+  .wheel-segment {
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .wheel-segment span {
+    display: block;
+    transform: rotate(-25.7deg); /* Adjust for proper text orientation */
+    width: 100px; /* Adjust if necessary */
+  }
+  
+  .wheel-segment.segment-1 { background-color: #FF5733; }
+  .wheel-segment.segment-2 { background-color: #FFBD33; }
+  .wheel-segment.segment-3 { background-color: #75FF33; }
+  .wheel-segment.segment-4 { background-color: #33FF57; }
+  .wheel-segment.segment-5 { background-color: #33FFBD; }
+  .wheel-segment.segment-6 { background-color: #3375FF; }
+  .wheel-segment.segment-7 { background-color: #8D33FF; }
+  
+  .wheel-segment:nth-child(1) { transform: rotate(0deg) translateX(-100%) translateY(-100%); }
+.wheel-segment:nth-child(2) { transform: rotate(51.43deg) translateX(-100%) translateY(-100%); }
+.wheel-segment:nth-child(3) { transform: rotate(102.86deg) translateX(-100%) translateY(-100%); }
+.wheel-segment:nth-child(4) { transform: rotate(154.29deg) translateX(-100%) translateY(-100%); }
+.wheel-segment:nth-child(5) { transform: rotate(205.71deg) translateX(-100%) translateY(-100%); }
+.wheel-segment:nth-child(6) { transform: rotate(257.14deg) translateX(-100%) translateY(-100%); }
+.wheel-segment:nth-child(7) { transform: rotate(208.57deg) translateX(-100%) translateY(-100%); }
+
+  
+  .spinning .wheel-inner {
+    animation: spin 4s ease-out;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(1440deg); /* Ajusta el valor según sea necesario */
+    }
+  }
+  
+  .pointer {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #333;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
