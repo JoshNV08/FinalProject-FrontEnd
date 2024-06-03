@@ -35,35 +35,58 @@ function Work() {
           />
         </Col>
 
-        <Col md={6}>
+        <Col md={6} className="work">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
-            <Form id="form" onSubmit={handleSubmit} className="text-center ">
+            <Form id="form" onSubmit={handleSubmit} className="text-center textWork">
               <h2>Trabaja con Nosotros</h2>
 
-              <Form.Group controlId="formNombre" className="mb-4">
-                <Form.Label>Nombre</Form.Label>
-                <Form.Control type="text" placeholder="Nombre y Apellido completo" />
-              </Form.Group>
+              <div className="input-group mb-4">
+                <input
+                  required
+                  type="text"
+                  name="nombre"
+                  autoComplete="off"
+                  className="input rounded-4"
+                />
+                <label className="user-label-work">Nombre</label>
+              </div>
 
-              <Form.Group controlId="formEmail" className="mb-4">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Escribe tu Email" />
-              </Form.Group>
+              <div className="input-group mb-4">
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  autoComplete="off"
+                  className="input rounded-4"
+                />
+                <label className="user-label-work">Email</label>
+              </div>
 
-              <Form.Group controlId="formMensaje" className="mb-4">
-                <Form.Label>Mensaje</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder="¿Hay algo que creas importante contarnos?" />
-              </Form.Group>
+              <div className="input-group mb-4">
+                <textarea
+                  required
+                  name="mensaje"
+                  rows={3}
+                  className="input rounded-4"
+                ></textarea>
+                <label className="user-label-work">Mensaje</label>
+              </div>
 
-              <Form.Group controlId="formTelefono" className="mb-4">
-                <Form.Label>Teléfono</Form.Label>
-                <Form.Control type="tel" placeholder="Teléfono" />
-              </Form.Group>
+              <div className="input-group mb-4">
+                <input
+                  required
+                  type="tel"
+                  name="telefono"
+                  autoComplete="off"
+                  className="input rounded-4"
+                />
+                <label className="user-label-work">Teléfono</label>
+              </div>
 
               <Form.Group controlId="formFile" className="file-upload mb-4">
                 <Form.Label className="mt-3 label">Subir archivo *</Form.Label>

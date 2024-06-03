@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Wheel } from "react-custom-roulette";
 import "../../Styles/Coupons.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Confetti from "react-confetti";
 
 const data = [
   {
@@ -33,6 +34,7 @@ const data = [
 const Cupones = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(null);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length);
@@ -42,14 +44,20 @@ const Cupones = () => {
 
   useEffect(() => {
     if (prizeNumber !== null && prizeNumber !== 2) {
-      // Aquí podrías añadir lógica adicional cuando se gana un premio
+      setShowConfetti(true);
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000);
     }
   }, [prizeNumber]);
 
   return (
-    <Container fluid className="d-flex justify-content-center align-items-center">
+    <Container
+      fluid
+      className="d-flex justify-content-center align-items-center">
+      {showConfetti && <Confetti />}
       <Row className="justify-content-center">
-        <Col md={12}className="text-center">
+        <Col md={12} className="text-center">
           <Wheel
             mustStartSpinning={mustSpin}
             prizeNumber={prizeNumber}
@@ -58,7 +66,9 @@ const Cupones = () => {
               setMustSpin(false);
             }}
           />
-          <Button onClick={handleSpinClick} className="btnYellow rounded-5 mt-3">
+          <Button
+            onClick={handleSpinClick}
+            className="btnYellow rounded-5 mt-3">
             <span>Girar</span>
           </Button>
           {prizeNumber !== null && (
