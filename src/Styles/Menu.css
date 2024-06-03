@@ -16,10 +16,6 @@ ul li a:hover {
 ul li .active {
   color: #fe3030;
 }
-.order{
-  background-color: #fddb52;
-
-}
 
 @media (max-width: 767px) {
   ul li {
