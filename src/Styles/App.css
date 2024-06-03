@@ -3,14 +3,8 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: #f8f9fa;
-  cursor: url(../assets/mostaza.png), auto;
 
 }
-
-a, button, .btnYellow, .btnRed, Image {
-  cursor: url('../assets/kepchup.png'), auto !important;
-}
-
 
 a {
   text-decoration: none;
