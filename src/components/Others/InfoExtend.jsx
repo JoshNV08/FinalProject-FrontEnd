@@ -7,10 +7,13 @@ function InfoExtend() {
     <Container fluid className="ps-0" style={{ backgroundColor: "#fdfd96" }}>
       <Row className="align-items-center py-3">
         <div className="text-md-center text-center mx-sm-5 p-5">
-          <h1>¿Quienes Somos?</h1>
+          <h1 style={{ fontWeight: "bold" }}>¿Quienes Somos?</h1>
         </div>
         <Col md={5} className=" text-md-start text-center mx-sm-5">
-          <h2 display-5 fw-bold text-danger my-5>
+          <h2
+            style={{ fontWeight: "bold" }}
+            className="display-5 text-danger my-5"
+          >
             MISIÓN
           </h2>
           <p>
@@ -36,7 +39,10 @@ function InfoExtend() {
           />
         </Col>
         <Col md={5} className=" text-md-start text-center mx-sm-5">
-          <h2 display-5 fw-bold text-danger my-5>
+          <h2
+            style={{ fontWeight: "bold" }}
+            className="display-5 text-danger my-5"
+          >
             VISIÓN
           </h2>
           <p>
@@ -52,7 +58,10 @@ function InfoExtend() {
       </Row>
       <Row className="align-items-center py-3">
         <Col md={5} className=" text-md-start text-center mx-sm-5">
-          <h2 display-5 fw-bold text-danger my-5>
+          <h2
+            style={{ fontWeight: "bold" }}
+            className="display-5 text-danger my-5"
+          >
             VALORES Y FILOSOFÍA
           </h2>
           <p>Estos son los principios que nos han guiado en la tarea:</p>
@@ -73,13 +82,6 @@ function InfoExtend() {
             - Trabajamos como empresa escuela, confiamos e invertimos recursos
             en nuestro equipo, para que ellos como personas y colaboradores
             crezcan, y nos ayuden a crecer como empresa.
-          </p>
-          <p>
-            - Creemos en nuestra capacidad de integración y en la meritocracia.
-            Los funcionarios jóvenes aportan nuevas ideas, nuevos bríos, nuevos
-            puntos de vista. Los más antiguos brindan todo el saber acumulado
-            durante años de experiencia en el negocio, buscando la excelencia en
-            todos los órdenes.
           </p>
         </Col>
         <Col>
