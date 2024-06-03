@@ -7,6 +7,7 @@ import drinks from "../../data/drinks";
 import coffee from "../../data/coffee";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../Styles/ButtonRed.css";
 
 function MenuSection() {
   const [activeSection, setActiveSection] = useState(null);
@@ -172,10 +173,9 @@ function MenuSection() {
         <Button
           variant="transparent"
           href="/menu"
-          className="rounded-5"
-          size="lg"
-          style={{ backgroundColor: "#ff3030", color: "white" }}>
-          VER MENÚ
+          className="rounded-5 btnRed"
+          size="lg">
+          <span>VER MENÚ</span>
         </Button>
       </div>
     </Container>

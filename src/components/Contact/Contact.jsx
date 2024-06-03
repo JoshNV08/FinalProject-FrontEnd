@@ -1,44 +1,61 @@
 import React from "react";
-import { MDBInput, MDBBtn, MDBTextArea } from "mdb-react-ui-kit";
-import "../../Styles/Contact.css";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import "../../Styles/Contact.css"; // Make sure you have this CSS file
 
 function Contact() {
   return (
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-6">
-          <form id="form">
+    <Container>
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <Form id="form">
             <h2>Contact us</h2>
+            <Form.Group controlId="formName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Enter your name" />
+            </Form.Group>
 
-            <MDBInput label="Name" wrapperClass="mb-4" />
+            <Form.Group controlId="formEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter your email" />
+            </Form.Group>
 
-            <MDBInput
-              type="email"
-              label="Email address"
-              wrapperClass="mb-4"
-            />
+            <Form.Group controlId="formSubject">
+              <Form.Label>Subject</Form.Label>
+              <Form.Control type="text" placeholder="Enter subject" />
+            </Form.Group>
 
-            <MDBInput label="Subject" wrapperClass="mb-4" />
+            <Form.Group controlId="formMessage">
+              <Form.Label>Message</Form.Label>
+              <Form.Control as="textarea" rows={3} />
+            </Form.Group>
 
-            <MDBTextArea wrapperClass="mb-4" label="Message" />
+            <Button type="submit" block className="mt-3 btnYellow rounded-5">
+              <span>Send</span>
+            </Button>
+          </Form>
+        </Col>
 
-            <MDBBtn block className="my-4 button">
-              Send
-            </MDBBtn>
-          </form>
-        </div>
-
-        <div className="col-6 InfoContact">
+        <Col md={6} className="InfoContact">
           <h2>Información de Contacto</h2>
-          <p><strong>Teléfono:</strong> +598 99 856 458</p>
-          <p><strong>Email:</strong> contact@goodburger.uy</p>
+          <p>
+            <strong>Teléfono:</strong> +598 99 856 458
+          </p>
+          <p>
+            <strong>Email:</strong> contact@goodburger.uy
+          </p>
           <h4>Horario de Atención:</h4>
-          <p><strong>Lunes a Viernes:</strong> 7am - 10pm</p>
-          <p><strong>Sábado:</strong> 24 horas</p>
-          <p><strong>Domingo:</strong> 24 horas</p>
-        </div>
-      </div>
-    </div>
+          <p>
+            <strong>Lunes a Viernes:</strong> 7am - 10pm
+          </p>
+          <p>
+            <strong>Sábado:</strong> 24 horas
+          </p>
+          <p>
+            <strong>Domingo:</strong> 24 horas
+          </p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
