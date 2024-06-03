@@ -15,7 +15,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Solo tenemos un local crack.
+      Los dos locales tienen AutoBurger.
     </p>
   );
   const text3 = (
@@ -23,7 +23,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Si ya nos entregaste tu dinero lamento decirte que es nuestro.
+      Cualquier consulta o problema acerca de solicitar un reembolso de dinero contactarse a <a href="">goodburger@gmail.com.uy</a> 
     </p>
   );
   const text4 = (
@@ -31,7 +31,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      No podes, ya que ocultamos la receta de la canngreburger.
+      Todo producto contiene la debida información nutricional en la caja.
     </p>
   );
   const text5 = (
@@ -39,8 +39,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Si tenemos, pero no tenemos vehiculo para hacer el delivery. Solo vamos
-      caminando y demoramos de 100 minutos a 105.
+      Por el momento no tenemos delivery pero estamos trabajando en ello.
     </p>
   );
 

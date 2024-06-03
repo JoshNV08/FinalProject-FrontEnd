@@ -32,8 +32,8 @@ function Footer() {
           <div>
             <h5>SEGUINOS EN NUESTRAS REDES</h5>
             <p>
-              <a href="">Instagram</a> - <a href="">Facebook</a> -{" "}
-              <a href="">Twitter</a>
+              <a href="https://www.instagram.com/goodburger">Instagram</a> - <a href="https://www.facebook.com/goodburger">Facebook</a> -{" "}
+              <a href="https://x.com/goodburger">Twitter</a>
             </p>
           </div>
         </Col>
