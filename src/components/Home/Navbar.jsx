@@ -35,21 +35,21 @@ function Nav() {
                 Trabaja con Nosotros
               </BootstrapNav.Link>
               <div className="social-icons">
-                <BootstrapNav.Link href="https://www.facebook.com">
+                <BootstrapNav.Link href="https://www.facebook.com/goodburger">
                   <img
                     src="../src/assets/Facebook.png"
                     className="social-icon"
                     alt="Facebook"
                   />
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.Instagram.com">
+                <BootstrapNav.Link href="https://www.Instagram.com/goodburger">
                   <img
                     src="../src/assets/Instagram.png"
                     className="social-icon"
                     alt="Instagram"
                   />
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.x.com/">
+                <BootstrapNav.Link href="https://www.x.com/goodburger">
                   <img
                     src="../src/assets/Twitter.png"
                     className="social-icon"
@@ -70,21 +70,21 @@ function Nav() {
                 Trabaja con Nosotros
               </BootstrapNav.Link>
               <div className="social-icons">
-                <BootstrapNav.Link href="https://www.facebook.com">
+                <BootstrapNav.Link href="https://www.facebook.com/goodburger">
                   <img
                     src="../src/assets/Facebook.png"
                     className="social-icon"
                     alt="Facebook"
                   />
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.Instagram.com">
+                <BootstrapNav.Link href="https://www.Instagram.com/goodburger">
                   <img
                     src="../src/assets/Instagram.png"
                     className="social-icon"
                     alt="Instagram"
                   />
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.x.com/">
+                <BootstrapNav.Link href="https://www.x.com/goodburger">
                   <img
                     src="../src/assets/Twitter.png"
                     className="social-icon"
