@@ -77,11 +77,12 @@ function Contact() {
           </div>
           <Col md={12} className="social-contact">
           <div className="social-box rounded-5">
+            
             <h3>También contactanos por nuestras redes</h3>
             <div className="parent">
-              <button className="child childFacebook"><FaFacebook /></button>
-              <button className="child childTwitter"><FaTwitter /></button>
-              <button className="child childInstagram"><FaInstagram /></button>
+              <button className ="child childFacebook"><a href="https://facebook.com/goodburger"> <FaFacebook/></a></button>
+              <button className="child childTwitter"><a href="https://x.com/goodburger"> <FaTwitter/></a></button>
+              <button className="child childInstagram"><a href="https://instagram.com/goodburger"> <FaInstagram/></a></button>
             </div>
           </div>
         </Col>
