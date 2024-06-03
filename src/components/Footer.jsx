@@ -76,10 +76,8 @@ function Footer() {
             <h4>
               <a href="">rrhh@goodburger.com.uy</a>
             </h4>
-          <p className="text-muted">© 2024 GoodBurger. Todos los derechos reservados.</p>
           </div>
         </Col>
-        <p className="text-muted justify-content-end d-flex mt-3">© 2024 GoodBurger. Todos los derechos reservados.</p>
       </Row>
     </Container>
   );
