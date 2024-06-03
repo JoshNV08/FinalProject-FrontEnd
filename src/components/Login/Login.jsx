@@ -31,7 +31,7 @@ function Login() {
       <Container fluid className="containerLogin text-center">
         <Row className="justify-content-md-center mb-5">
           <Col md="12">
-            <div className="container">
+            <div className="container cardLogin">
               <h2 className="heading">{isLogin ? "Sign in" : "Register"}</h2>
 
               <div className="d-flex justify-content-center my-3">

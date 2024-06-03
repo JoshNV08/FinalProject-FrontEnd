@@ -14,7 +14,7 @@ function AboutUs() {
           />
         </Col>
         <Col md={5} className=" text-md-start text-center mx-sm-5">
-          <h2 className="display-5 fw-bold text-danger my-5 ">
+          <h2 className="display-5 fw-bold my-5" style={{color:'#fe3030'}}>
             Sobre Nosotros
           </h2>
           <p className="lead">

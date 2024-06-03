@@ -76,7 +76,7 @@ function Work() {
                 <p className="file-formats">pdf, jpg, jpeg, png, doc, docx, xls</p>
               </Form.Group>
 
-              <Button type="submit" className="btnYellow rounded-5">
+              <Button type="submit" className="btnYellow rounded-5 mb-5">
                 <span>Enviar</span>
               </Button>
             </Form>

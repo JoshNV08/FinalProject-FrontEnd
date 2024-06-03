@@ -1,57 +1,75 @@
-import React, { useState } from "react";
-import Confetti from "react-canvas-confetti";
+import React, { useState, useEffect } from "react";
+import { Wheel } from "react-custom-roulette";
 import "../../Styles/Coupons.css";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
-const coupons = [
-  "10% Off",
-  "20% Off",
-  "30% Off",
-  "50% Off",
-  "Free Item",
-  "Buy 1 Get 1 Free",
-  "No Win",
+const data = [
+  {
+    option: "10% OFF",
+    style: { backgroundColor: "#ffcc00", textColor: "#fe3031" },
+  },
+  {
+    option: "Envio Gratis",
+    style: { backgroundColor: "#fe3031", textColor: "#ffcc00" },
+  },
+  {
+    option: "Nada",
+    style: { backgroundColor: "#ffcc00", textColor: "#fe3031" },
+  },
+  {
+    option: "Refresco Gratis",
+    style: { backgroundColor: "#fe3031", textColor: "#ffcc00" },
+  },
+  {
+    option: "Papas de Regalo",
+    style: { backgroundColor: "#ffcc00", textColor: "#fe3031" },
+  },
+  {
+    option: "2x1",
+    style: { backgroundColor: "#fe3031", textColor: "#ffcc00" },
+  },
 ];
 
 const Cupones = () => {
-  const [spinning, setSpinning] = useState(false);
-  const [selectedCoupon, setSelectedCoupon] = useState(null);
-  const [showConfetti, setShowConfetti] = useState(false);
+  const [mustSpin, setMustSpin] = useState(false);
+  const [prizeNumber, setPrizeNumber] = useState(null);
 
-  const spinWheel = () => {
-    setSpinning(true);
-    setShowConfetti(false);
-    setTimeout(() => {
-      const randomIndex = Math.floor(Math.random() * coupons.length);
-      setSelectedCoupon(coupons[randomIndex]);
-      setSpinning(false);
-      setShowConfetti(true);
-    }, 4000); // Duración de la animación
+  const handleSpinClick = () => {
+    const newPrizeNumber = Math.floor(Math.random() * data.length);
+    setPrizeNumber(newPrizeNumber);
+    setMustSpin(true);
   };
 
+  useEffect(() => {
+    if (prizeNumber !== null && prizeNumber !== 2) {
+      // Aquí podrías añadir lógica adicional cuando se gana un premio
+    }
+  }, [prizeNumber]);
+
   return (
-    <div className="cupones-container">
-      {showConfetti && <Confetti />}
-      <div className="wheel-container">
-        <div className={`wheel ${spinning ? "spinning" : ""}`}>
-          <div className="wheel-inner">
-            {coupons.map((coupon, index) => (
-              <div key={index} className={`wheel-segment segment-${index + 1}`}>
-                <span>{coupon}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="pointer"></div>
-        <button onClick={spinWheel} disabled={spinning}>
-          {spinning ? "Spinning..." : "Spin the Wheel"}
-        </button>
-        {selectedCoupon && !spinning && (
-          <div className="result">
-            You won: <strong>{selectedCoupon}</strong>
-          </div>
-        )}
-      </div>
-    </div>
+    <Container fluid className="d-flex justify-content-center align-items-center">
+      <Row className="justify-content-center">
+        <Col md={12}className="text-center">
+          <Wheel
+            mustStartSpinning={mustSpin}
+            prizeNumber={prizeNumber}
+            data={data}
+            onStopSpinning={() => {
+              setMustSpin(false);
+            }}
+          />
+          <Button onClick={handleSpinClick} className="btnYellow rounded-5 mt-3">
+            <span>Girar</span>
+          </Button>
+          {prizeNumber !== null && (
+            <div className="mt-3">
+              <h2>¡Felicidades!</h2>
+              <h3>Ganaste: {data[prizeNumber].option}</h3>
+            </div>
+          )}
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

@@ -95,3 +95,15 @@
     box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffcc00da;
   }
   
+  .cardLogin {
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+   
+  }
+
+  @media (max-width: 768px) {
+    .containerLogin {
+      margin-top: 3%;
+    }
+}
