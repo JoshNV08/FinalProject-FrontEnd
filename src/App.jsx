@@ -14,6 +14,7 @@ import MenuCoffee from "./components/Menu/MenuCoffee";
 import Information from "./pages/Information";
 import FaqPage from "./pages/FaqPage";
 import CouponsPage from "./pages/CouponsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<UserLogin />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/cupones" element={<CouponsPage />} />
+        <Route path="/priv" element={<PrivacyPage/>} />
       </Routes>
     </>
   );
