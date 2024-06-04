@@ -64,7 +64,7 @@ function Footer() {
               {" "}
               <a href="/trabajo">TRABAJA CON NOSOTROS</a>
             </h5>
-            <h5>
+            <h5>v
               <a href="/faq">PREGUNTAS FRECUENTES</a>
             </h5>
             <h5>
@@ -77,9 +77,12 @@ function Footer() {
               <a href="">rrhh@goodburger.com.uy</a>
             </h4>
           </div>
+          
         </Col>
+        <p className="text-muted justify-content-end d-flex">© 2024 GoodBurger. Todos los derechos reservados.</p>
       </Row>
     </Container>
+    
   );
 }
 

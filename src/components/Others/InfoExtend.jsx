@@ -4,7 +4,7 @@ import "../../Styles/InfoExtend.css";
 
 function InfoExtend() {
   return (
-    <Container fluid className="ps-0" style={{ backgroundColor: "#ffffff" }}>
+    <Container fluid className="ps-0" >
       <Row className="align-items-center py-3">
         <div className="text-md-center text-center">
           <h1 style={{ fontWeight: "bold" }}>¿Quienes Somos?</h1>
@@ -12,8 +12,8 @@ function InfoExtend() {
         <div className="d-flex justify-content-center">
           <Col md={5} className=" text-md-start text-center">
             <h2
-              style={{ fontWeight: "bold" }}
-              className="display-5 text-danger my-5 text-center"
+              style={{ fontWeight: "bold", color:'#fe3031' }}
+              className="display-5 my-5 text-center"
             >
               MISIÓN
             </h2>
@@ -25,8 +25,8 @@ function InfoExtend() {
           </Col>
           <Col md={5} className=" text-md-start text-center mx-sm-5">
             <h2
-              style={{ fontWeight: "bold" }}
-              className="display-5 text-danger my-5 text-center"
+              style={{ fontWeight: "bold", color:'#fe3031' }}
+              className="display-5 my-5 text-center"
             >
               VISIÓN
             </h2>
