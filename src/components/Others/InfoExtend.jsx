@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "../../Styles/InfoExtend.css";
 
 function InfoExtend() {
@@ -42,6 +42,72 @@ function InfoExtend() {
             </p>
           </Col>
         </div>
+      </Row>
+      <Row className="d-flex align-items-center justify-contents-center text-center p-4">
+        <Col xs={6} md={6} lg={3}>
+          <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Body>
+              <Card.Title>Joshua Nuñez</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} md={6} lg={3}>
+          <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Body>
+              <Card.Title>Ezequiel Clavijo</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} md={6} lg={3}>
+          <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Body>
+              <Card.Title>Sebastián De León</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6} md={6} lg={3}>
+          <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Body>
+              <Card.Title>Nicolás Dos Santos</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <Card.Link href="#">Card Link</Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+        </Col>
       </Row>
     </Container>
   );
