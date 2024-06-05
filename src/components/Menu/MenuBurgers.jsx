@@ -31,7 +31,7 @@ function MenuBurgers() {
         {filteredBurgers.map((burger) => (
           <Col md={4} key={burger.id} className="my-3 col-6">
             <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={burger.image} />
+              <Card.Img variant="top" src={burger.photo} />
               <Card.Body>
                 <Card.Title>{burger.name}</Card.Title>
                 <Card.Text>{burger.description}</Card.Text>

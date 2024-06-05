@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import axios from "axios";
 import Slider from "react-slick";
-import burgers from "../../data/burgers";
-import snacks from "../../data/snacks";
-import drinks from "../../data/drinks";
-import coffee from "../../data/coffee";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../Styles/ButtonRed.css";
@@ -15,6 +12,28 @@ function MenuSection() {
   const handleSectionClick = (section) => {
     setActiveSection(section === activeSection ? null : section);
   };
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/products");
+        console.log(response.data);
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching the products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+  console.log(products);
+
+  const filteredBurgers = products.filter((item) => item.categoryId === 1);
+  const filteredSnacks = products.filter((item) => item.categoryId === 2);
+  const filteredDrinks = products.filter((item) => item.categoryId === 3);
+  const filteredCoffee = products.filter((item) => item.categoryId === 5);
 
   const settings = {
     dots: true,
@@ -114,10 +133,10 @@ function MenuSection() {
         <div>
           <Slider {...settings} className="mt-2 mb-5">
             {activeSection === "burgers" &&
-              burgers.map((burger) => (
+              filteredBurgers.map((burger) => (
                 <div key={burger.id}>
                   <Card className="rounded-5 mx-1">
-                    <Card.Img variant="top" src={burger.image} />
+                    <Card.Img variant="top" src='https://goodburger.s3.us-east-2.amazonaws.com/burgerMenu.png' />
                     <Card.Body>
                       <Card.Title>{burger.name}</Card.Title>
                       <Card.Text>{burger.description}</Card.Text>
@@ -127,10 +146,10 @@ function MenuSection() {
                 </div>
               ))}
             {activeSection === "snacks" &&
-              snacks.map((snack) => (
+              filteredSnacks.map((snack) => (
                 <div key={snack.id}>
                   <Card className="rounded-5 mx-1">
-                    <Card.Img variant="top" src={snack.image} />
+                    <Card.Img variant="top" src={snack.photo} />
                     <Card.Body>
                       <Card.Title>{snack.name}</Card.Title>
                       <Card.Text>{snack.description}</Card.Text>
@@ -140,10 +159,10 @@ function MenuSection() {
                 </div>
               ))}
             {activeSection === "drinks" &&
-              drinks.map((drink) => (
+              filteredDrinks.map((drink) => (
                 <div key={drink.id}>
                   <Card className="rounded-5 mx-1">
-                    <Card.Img variant="top" src={drink.image} />
+                    <Card.Img variant="top" src={drink.photo} />
                     <Card.Body>
                       <Card.Title>{drink.name}</Card.Title>
                       <Card.Text>{drink.description}</Card.Text>
@@ -153,10 +172,10 @@ function MenuSection() {
                 </div>
               ))}
             {activeSection === "coffee" &&
-              coffee.map((coffee) => (
+              filteredCoffee.map((coffee) => (
                 <div key={coffee.id}>
                   <Card className="rounded-5 mx-1">
-                    <Card.Img variant="top" src={coffee.image} />
+                    <Card.Img variant="top" src={coffee.photo} />
                     <Card.Body>
                       <Card.Title>{coffee.name}</Card.Title>
                       <Card.Text>{coffee.description}</Card.Text>
