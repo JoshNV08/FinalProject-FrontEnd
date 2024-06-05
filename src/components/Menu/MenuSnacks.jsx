@@ -31,7 +31,7 @@ function MenuSnacks() {
         {filteredSnacks.map((snack) => (
           <Col md={4} key={snack.id} className="my-3 col-6">
             <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={snack.image} />
+              <Card.Img variant="top" src={snack.photo} />
               <Card.Body>
                 <Card.Title>{snack.name}</Card.Title>
                 <Card.Text>{snack.description}</Card.Text>

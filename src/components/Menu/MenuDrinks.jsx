@@ -33,7 +33,7 @@ function MenuDrinks() {
         {filteredDrinks.map((drink) => (
           <Col md={4} key={drink.id} className="my-3 col-6">
             <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={drink.image} />
+              <Card.Img variant="top" src={drink.photo} />
               <Card.Body>
                 <Card.Title>{drink.name}</Card.Title>
                 <Card.Text>{drink.description}</Card.Text>

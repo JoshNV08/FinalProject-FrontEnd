@@ -136,7 +136,7 @@ function MenuSection() {
               filteredBurgers.map((burger) => (
                 <div key={burger.id}>
                   <Card className="rounded-5 mx-1">
-                    <Card.Img variant="top" src='https://goodburger.s3.us-east-2.amazonaws.com/burgerMenu.png' />
+                    <Card.Img variant="top" src={burger.photo} />
                     <Card.Body>
                       <Card.Title>{burger.name}</Card.Title>
                       <Card.Text>{burger.description}</Card.Text>
