@@ -38,7 +38,9 @@ Puede deshabilitar las cookies en su navegador, pero hacerlo puede afectar su ca
                 </div>
             </div>
             <hr />
+            <div className="mb-3">
             <span className="text-muted">© 2024 GoodBurger. Todos los derechos reservados.</span>
+            </div>
         </div>
     );
 }
