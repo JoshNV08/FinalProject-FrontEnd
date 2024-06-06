@@ -18,9 +18,7 @@ function InfoExtend() {
               MISIÓN
             </h2>
             <p>
-              Ser la cadena de restaurantes de hamburguesas preferida de la
-              gente, la más rentable, proyectada a futuro y con las personas más
-              talentosas, alineados a la visión y los valores de Good Burguer.
+            Nuestra misión en Good Burguer es ser reconocidos como la cadena de restaurantes de hamburguesas preferida por la gente, destacando por nuestra rentabilidad y proyección hacia el futuro. Nos esforzamos por reunir a las personas más talentosas y comprometidas, quienes están totalmente alineadas con nuestra visión y valores, para ofrecer experiencias excepcionales y sabrosas hamburguesas que deleiten a nuestros clientes en cada visita.
             </p>
           </Col>
           <Col md={5} className=" text-md-start text-center mx-sm-5">
@@ -46,7 +44,7 @@ function InfoExtend() {
       <Row className="d-flex align-items-center justify-contents-center text-center p-4">
         <Col xs={6} md={6} lg={3}>
           <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Img variant="top" src="src\assets\joshua_kimmich.png" />
             <Card.Body>
               <Card.Title>Joshua Nuñez</Card.Title>
               <Card.Text>
@@ -62,7 +60,7 @@ function InfoExtend() {
         </Col>
         <Col xs={6} md={6} lg={3}>
           <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Img variant="top" src="src\assets\eze.png" />
             <Card.Body>
               <Card.Title>Ezequiel Clavijo</Card.Title>
               <Card.Text>
@@ -78,7 +76,7 @@ function InfoExtend() {
         </Col>
         <Col xs={6} md={6} lg={3}>
           <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Img variant="top" src="src\assets\seba.png" />
             <Card.Body>
               <Card.Title>Sebastián De León</Card.Title>
               <Card.Text>
@@ -94,7 +92,7 @@ function InfoExtend() {
         </Col>
         <Col xs={6} md={6} lg={3}>
           <Card className="rounded-5 mb-4" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Img variant="top" src="src\assets\nico.png" />
             <Card.Body>
               <Card.Title>Nicolás Dos Santos</Card.Title>
               <Card.Text>
