@@ -14,6 +14,8 @@ function Filter() {
     }
   };
 
+  const getClassName = ({ isActive }) => (isActive ? "active-link" : "");
+
   return (
     <div className="order d-flex justify-content-center">
       <div className="rounded-1 v-system-bar subheader theme--light">
@@ -21,40 +23,40 @@ function Filter() {
           <li>
             <NavLink
               to="/menu/menu-burgers"
-              isActive={() => location.pathname === "/menu/menu-burgers"}
-              onClick={(e) => handleCategoryClick("burgers", e)}>
+              onClick={(e) => handleCategoryClick("burgers", e)}
+              className={getClassName}>
               🍔 Burgers
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/menu/menu-snacks"
-              isActive={() => location.pathname === "/menu/menu-snacks"}
-              onClick={(e) => handleCategoryClick("snacks", e)}>
+              onClick={(e) => handleCategoryClick("snacks", e)}
+              className={getClassName}>
               🍟 Snacks
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/menu/menu-bebidas"
-              isActive={() => location.pathname === "/menu/menu-bebidas"}
-              onClick={(e) => handleCategoryClick("bebidas", e)}>
+              onClick={(e) => handleCategoryClick("bebidas", e)}
+              className={getClassName}>
               🥤 Bebidas
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/menu/menu-postres"
-              isActive={() => location.pathname === "/menu/menu-postres"}
-              onClick={(e) => handleCategoryClick("postres", e)}>
+              onClick={(e) => handleCategoryClick("postres", e)}
+              className={getClassName}>
               🍨 Postres
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/menu/menu-coffee"
-              isActive={() => location.pathname === "/menu/menu-coffee"}
-              onClick={(e) => handleCategoryClick("coffee", e)}>
+              onClick={(e) => handleCategoryClick("coffee", e)}
+              className={getClassName}>
               ☕ Coffee
             </NavLink>
           </li>

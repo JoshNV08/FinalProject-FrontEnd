@@ -7,15 +7,12 @@ ul{
   
 }
 
-ul li:hover {
-  transform: scale(1.1);
-}
-ul li a:hover {
+.active-link {
   color: #fe3030;
+  font-weight: bold;
+  font-size: 28px;
 }
-ul li .active {
-  color: #fe3030;
-}
+
 
 @media (max-width: 767px) {
   ul li {
@@ -25,5 +22,8 @@ ul li .active {
     padding-top: 40px;
     text-align: center;
   }
- 
+  .active-link {
+    font-size: 20px;
+  }
+  
 }
