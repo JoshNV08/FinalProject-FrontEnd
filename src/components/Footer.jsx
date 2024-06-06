@@ -64,7 +64,7 @@ function Footer() {
               {" "}
               <a href="/trabajo">TRABAJA CON NOSOTROS</a>
             </h5>
-            <h5>v
+            <h5>
               <a href="/faq">PREGUNTAS FRECUENTES</a>
             </h5>
             <h5>
