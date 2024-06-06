@@ -62,6 +62,7 @@ function BurgerModel() {
         minDistance={5}
         maxDistance={8}
         enableZoom={false}
+        enablePan={false}
       />
     </Canvas>
   );
