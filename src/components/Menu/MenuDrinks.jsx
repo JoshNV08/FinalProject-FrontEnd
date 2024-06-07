@@ -38,7 +38,7 @@ function MenuDrinks() {
                 <Card.Title>{drink.name}</Card.Title>
                 <Card.Text>{drink.description}</Card.Text>
               </Card.Body>
-              <Button as="a" href={`/productmenu/${drink.id}`}>Agregar a Carrito</Button>
+              <Button className="btn btn-warning" href={`/productmenu/${drink.id}`}>Agregar a Carrito</Button>
             </Card>
           </Col>
         ))}

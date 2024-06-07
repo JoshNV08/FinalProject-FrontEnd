@@ -35,7 +35,7 @@ function MenuCoffee() {
                 <Card.Title>{coffee.name}</Card.Title>
                 <Card.Text>{coffee.description}</Card.Text>
               </Card.Body>
-              <Button as="a" href={`/productmenu/${coffee.id}`}>Agregar a Carrito</Button>
+              <Button className="btn btn-warning" href={`/productmenu/${coffee.id}`}>Agregar a Carrito</Button>
             </Card>
           </Col>
         ))}

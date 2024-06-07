@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
                 <Card.Title>{products.name}</Card.Title>
                 <Card.Text>{products.description}</Card.Text>
               </Card.Body>
-              <Button as="a" href={`/productmenu/${products.id}`}>Agregar a Carrito</Button>
+              <Button className="btn btn-warning" href={`/productmenu/${products.id}`}>Agregar a Carrito</Button>
             </Card>
           </Col>
         ))}

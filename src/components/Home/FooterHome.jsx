@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../../Styles/FooterHome.css";
 
 function FooterHome() {
@@ -53,24 +54,24 @@ function FooterHome() {
             </div>
             <div>
               <h5>
-                <a href="/cupones">CUPONES</a>
+                <Link to="/cupones">CUPONES</Link>
               </h5>
               <h5>
-                <a href="/contacto">CONTACTO</a>
+                <Link to="/contacto">CONTACTO</Link>
               </h5>
               <h5>
-                <a href="/sobrenosotros">SOBRE NOSOTROS</a>
-              </h5>
-              <h5>
-                {" "}
-                <a href="/trabajo">TRABAJA CON NOSOTROS</a>
-              </h5>
-              <h5>
-                <a href="/faq">PREGUNTAS FRECUENTES</a>
+                <Link to="/sobrenosotros">SOBRE NOSOTROS</Link>
               </h5>
               <h5>
                 {" "}
-                <a href="/priv">POLITICA DE PRIVACIDAD</a>
+                <Link to="/trabajo">TRABAJA CON NOSOTROS</Link>
+              </h5>
+              <h5>
+                <Link to="/faq">PREGUNTAS FRECUENTES</Link>
+              </h5>
+              <h5>
+                {" "}
+                <Link to="/priv">POLITICA DE PRIVACIDAD</Link>
               </h5>
             </div>
             <div>
