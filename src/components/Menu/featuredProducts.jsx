@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {Container, Row, Col, Card} from 'react-bootstrap'
+import {Container, Row, Col, Card, Button} from 'react-bootstrap'
 
 const FeaturedProducts = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -31,6 +31,7 @@ const FeaturedProducts = () => {
                 <Card.Title>{products.name}</Card.Title>
                 <Card.Text>{products.description}</Card.Text>
               </Card.Body>
+              <Button as="a" href={`/productmenu/${products.id}`}>Agregar a Carrito</Button>
             </Card>
           </Col>
         ))}

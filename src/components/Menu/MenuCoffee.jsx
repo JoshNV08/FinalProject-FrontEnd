@@ -1,6 +1,5 @@
 import React from "react";
-import coffee from "../../data/coffee";
-import { Col, Row, Card, Container } from "react-bootstrap";
+import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/MenuCards.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -24,6 +23,7 @@ function MenuCoffee() {
   console.log(products);
 
   const FilteredCoffee = products.filter((item) => item.categoryId === 5);
+
   return (
     <Container className="py-5 text-center">
       <Row>
@@ -35,6 +35,7 @@ function MenuCoffee() {
                 <Card.Title>{coffee.name}</Card.Title>
                 <Card.Text>{coffee.description}</Card.Text>
               </Card.Body>
+              <Button as="a" href={`/productmenu/${coffee.id}`}>Agregar a Carrito</Button>
             </Card>
           </Col>
         ))}

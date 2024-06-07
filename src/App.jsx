@@ -15,6 +15,7 @@ import Information from "./pages/Information";
 import FaqPage from "./pages/FaqPage";
 import CouponsPage from "./pages/CouponsPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import ProductMenu from "./pages/ProductMenu";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="menu-postres" element={<MenuDesserts />} />
           <Route path="menu-coffee" element={<MenuCoffee />} />
         </Route>
+        <Route path="/productmenu/:id" element={<ProductMenu/>}/>
         <Route path="/sobrenosotros" element={<Information />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/trabajo" element={<WorkPage />} />

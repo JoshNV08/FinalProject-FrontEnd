@@ -1,6 +1,5 @@
 import React from "react";
-import snacks from "../../data/snacks";
-import { Col, Row, Card, Container } from "react-bootstrap";
+import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/MenuCards.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -36,6 +35,7 @@ function MenuSnacks() {
                 <Card.Title>{snack.name}</Card.Title>
                 <Card.Text>{snack.description}</Card.Text>
               </Card.Body>
+              <Button as="a" href={`/productmenu/${snack.id}`}>Agregar a Carrito</Button>
             </Card>
           </Col>
         ))}
