@@ -25,65 +25,98 @@ function OneProduct({ id }) {
     console.log(`${e.target.name}: ${e.target.value}`);
   }
 
-
-
   function renderCustomizationOptions() {
-    if (product.categoryId === 1) {
-      return (
-        <>
-          <Form.Group className="mb-3">
-            <Form.Label>Quitar</Form.Label>
-            <Form.Select
-              name="removeOptions"
-              onChange={handleCustomizationChange}>
-              <option value="noLettuce">Sin Lechuga</option>
-              <option value="noTomato">Sin Tomate</option>
-              <option value="noMeat">Sin Carne</option>
-              <option value="noBread">Sin Pan</option>
-              <option value="noCondiments">Sin Condimentos</option>
-            </Form.Select>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Add-ons</Form.Label>
-            <Form.Select name="addons" onChange={handleCustomizationChange}>
-              <option value="extraCheese">Extra Cheese</option>
-              <option value="bacon">Bacon</option>
-            </Form.Select>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Special Instructions</Form.Label>
-            <Form.Control
-              as="textarea"
-              name="specialInstructions"
-              placeholder="Anything else you want to add?"
-              onChange={handleCustomizationChange}
-            />
-          </Form.Group>
-        </>
-      );
-    } else if (product.categoryId === 3) {
-      return (
-        <>
-          <Form.Group className="mb-3">
-            <Form.Label>Choose your Size</Form.Label>
-            <Form.Select name="size" onChange={handleCustomizationChange}>
-              <option value="zero">Zero</option>
-              <option value="original">Comun</option>
-              <option value="light">Light</option>
-            </Form.Select>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Temperatura</Form.Label>
-            <Form.Select name="extras" onChange={handleCustomizationChange}>
-              <option value="natural">Natural</option>
-              <option value="cold">Fria</option>
-            </Form.Select>
-          </Form.Group>
-        </>
-      );
-    }
+    return product.categoryId === 1 ? (
+      <>
+        <Form.Group className="mb-3">
+          <Form.Label>Quitar</Form.Label>
+          <Form.Select name="removeOptions" onChange={handleCustomizationChange}>
+            
+          <option value placeholder="">Seleccione que desea sacar</option>
+            <option value="noLettuce">Sin Lechuga</option>
+            <option value="noTomato">Sin Tomate</option>
+            <option value="noMeat">Sin Carne</option>
+            <option value="noBread">Sin Pan</option>
+            <option value="noCondiments">Sin Condimentos</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Extras</Form.Label>
+          <Form.Select name="addons" onChange={handleCustomizationChange}>
+            <option value="extraCheese">Extra Cheese</option>
+            <option value="bacon">Bacon</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Indicación para su pedido</Form.Label>
+          <Form.Control
+            as="textarea"
+            name="specialInstructions"
+            placeholder="Te gustaría algo en especial?"
+            onChange={handleCustomizationChange}
+          />
+        </Form.Group>
+      </>
+    ) : product.categoryId === 3 ? (
+      <>
+        <Form.Group className="mb-3">
+          <Form.Label>Choose your Size</Form.Label>
+          <Form.Select name="size" onChange={handleCustomizationChange}>
+            <option value="zero">Zero</option>
+            <option value="original">Comun</option>
+            <option value="light">Light</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Temperatura</Form.Label>
+          <Form.Select name="extras" onChange={handleCustomizationChange}>
+            <option value="natural">Natural</option>
+            <option value="cold">Fria</option>
+          </Form.Select>
+        </Form.Group>
+      </>
+    ) : product.categoryId === 2 ? (
+      <>
+        <Form.Group className="mb-3">
+          <Form.Label>Elija el tamaño</Form.Label>
+          <Form.Select name="size" onChange={handleCustomizationChange}>
+          <option value placeholder="">Seleccione tamaño</option>
+            <option value="zero">Mediano</option>
+            <option value="original">Grande</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Extra</Form.Label>
+          <Form.Select name="extras" onChange={handleCustomizationChange}>
+          <option value placeholder="">Seleccione extras</option>
+            <option value="natural">Bacon</option>
+            <option value="cold">Cheddar</option>
+          </Form.Select>
+        </Form.Group>
+      </>
+    ) : product.categoryId === 5 ? (
+      <>
+        <Form.Group className="mb-3">
+          <Form.Label>Selecciona ingrediente</Form.Label>
+          <Form.Select name="size" onChange={handleCustomizationChange}>
+            <option value placeholder="">Seleccione</option>
+            <option value="zero">Azúcar</option>
+            <option value="original">Edulcorante</option>
+            <option value="light">Stevia</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Tamaño</Form.Label>
+          <Form.Select name="extras" onChange={handleCustomizationChange}>
+          <option value placeholder="">Seleccione tamaño</option>
+            <option value="natural">Mediano</option>
+            <option value="cold">Grande</option>
+          </Form.Select>
+        </Form.Group>
+      </>
+    )
+    : null;
   }
-
   return (
     <Container>
       <Row>
