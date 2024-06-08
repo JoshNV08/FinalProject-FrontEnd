@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row, Card, Container, Button } from "react-bootstrap";
-import "../../Styles/MenuCards.css";
+import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { CSSTransition } from "react-transition-group";
 import { Facebook, Google, Twitter, Instagram } from "react-bootstrap-icons";
-import "../../Styles/Login.css";
-import "../../Styles/ButtonYellow.css";
-import "../../Styles/ButtonRed.css";
+import "../../Styles/Others/Login.css";
+import "../../Styles/Buttons/ButtonYellow.css";
+import "../../Styles/Buttons/ButtonRed.css";
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import Slider from "react-slick";
 import testimonials from "../../data/testimonials";
-import "../../Styles/Testimonials.css";
+import "../../Styles/Home/Testimonials.css";
 
 function Testimonials() {
   const settings = {

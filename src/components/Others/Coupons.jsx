@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Wheel } from "react-custom-roulette";
-import "../../Styles/Coupons.css";
+import "../../Styles/Others/Coupons.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Confetti from "react-confetti";
 

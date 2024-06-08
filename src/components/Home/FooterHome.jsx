@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../../Styles/FooterHome.css";
+import "../../Styles/Home/FooterHome.css";
 
 function FooterHome() {
   return (

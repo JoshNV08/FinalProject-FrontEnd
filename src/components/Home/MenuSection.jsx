@@ -4,7 +4,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../Styles/ButtonRed.css";
+import "../../Styles/Buttons/ButtonRed.css";
 
 function MenuSection() {
   const [activeSection, setActiveSection] = useState(null);

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "../../Styles/Work.css";
-import "../../Styles/ButtonYellow.css";
+import "../../Styles/Others/Work.css";
+import "../../Styles/Buttons/ButtonYellow.css";
 
 function Work() {
   const [selectedFile, setSelectedFile] = useState(null);

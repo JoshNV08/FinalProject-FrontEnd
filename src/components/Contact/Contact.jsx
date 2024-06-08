@@ -1,8 +1,8 @@
 import React from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import "../../Styles/Contact.css";
-import "../../Styles/ButtonRed.css";
+import "../../Styles/Others/Contact.css";
+import "../../Styles/Buttons/ButtonRed.css";
 
 function Contact() {
   return (

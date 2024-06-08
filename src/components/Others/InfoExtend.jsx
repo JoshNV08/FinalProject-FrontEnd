@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Linkedin, Github, Instagram, Twitter } from "react-bootstrap-icons";
-import "../../Styles/InfoExtend.css";
+import "../../Styles/Others/InfoExtend.css";
 
 function InfoExtend() {
   return (
-    <Container >
+    <Container>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
           <h1 style={{ fontWeight: "bold" }}>¿Quienes Somos?</h1>

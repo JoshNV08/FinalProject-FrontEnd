@@ -32,7 +32,7 @@ function OneProduct({ id }) {
           <Form.Label>Quitar</Form.Label>
           <Form.Select name="removeOptions" onChange={handleCustomizationChange}>
             
-          <option value placeholder="">Seleccione que desea sacar</option>
+          <option value='' disabled >Seleccione que desea sacar</option>
             <option value="noLettuce">Sin Lechuga</option>
             <option value="noTomato">Sin Tomate</option>
             <option value="noMeat">Sin Carne</option>
@@ -43,6 +43,7 @@ function OneProduct({ id }) {
         <Form.Group className="mb-3">
           <Form.Label>Extras</Form.Label>
           <Form.Select name="addons" onChange={handleCustomizationChange}>
+          <option value='' disabled >Agrega un extra</option>
             <option value="extraCheese">Extra Cheese</option>
             <option value="bacon">Bacon</option>
           </Form.Select>
@@ -121,7 +122,7 @@ function OneProduct({ id }) {
     <Container>
       <Row>
         <div className="d-flex justify-content-start my-3">
-          <Button as="a" size="sm" href="/menu" className="btnYellow">
+          <Button as="a" size="sm" href="/menu" className="btnYellow rounded-5">
             <span>Volver al Menu</span>
           </Button>
         </div>
@@ -142,7 +143,7 @@ function OneProduct({ id }) {
             <Form>
               <fieldset>
                 {renderCustomizationOptions()}
-                <Button type="submit" className="btnYellow">
+                <Button type="submit" className="btnYellow rounded-5">
                   <span>Agregar al carrito</span>
                 </Button>
               </fieldset>

@@ -6,7 +6,7 @@ import {
   Row,
   Nav as BootstrapNav,
 } from "react-bootstrap";
-import "../../Styles/Navbar.css";
+import "../../Styles/Home/Navbar.css";
 
 function Nav() {
   return (
