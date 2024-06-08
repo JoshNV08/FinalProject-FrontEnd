@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
+import '../../Styles/Buttons/ButtonsMenu.css'
 
 function OneProduct({ id }) {
   const [product, setProduct] = useState(null);
@@ -32,7 +33,7 @@ function OneProduct({ id }) {
           <Form.Label>Quitar</Form.Label>
           <Form.Select name="removeOptions" onChange={handleCustomizationChange}>
             
-          <option value='' disabled >Seleccione que desea sacar</option>
+          <option value='' >Seleccione que desea sacar</option>
             <option value="noLettuce">Sin Lechuga</option>
             <option value="noTomato">Sin Tomate</option>
             <option value="noMeat">Sin Carne</option>
@@ -43,7 +44,7 @@ function OneProduct({ id }) {
         <Form.Group className="mb-3">
           <Form.Label>Extras</Form.Label>
           <Form.Select name="addons" onChange={handleCustomizationChange}>
-          <option value='' disabled >Agrega un extra</option>
+            <option value=''>Agrega un extra</option>
             <option value="extraCheese">Extra Cheese</option>
             <option value="bacon">Bacon</option>
           </Form.Select>
@@ -120,38 +121,46 @@ function OneProduct({ id }) {
   }
   return (
     <Container>
-      <Row>
-        <div className="d-flex justify-content-start my-3">
-          <Button as="a" size="sm" href="/menu" className="btnYellow rounded-5">
-            <span>Volver al Menu</span>
-          </Button>
-        </div>
-        <Col md={6}>
-          {product && (
-            <>
-              <h3>{product.name}</h3>
-              <img
-                src={product.photo}
-                alt={product.name}
-                style={{ width: "70%" }}
-              />
-            </>
-          )}
-        </Col>
-        <Col md={6}>
-          {product && (
-            <Form>
-              <fieldset>
-                {renderCustomizationOptions()}
-                <Button type="submit" className="btnYellow rounded-5">
-                  <span>Agregar al carrito</span>
-                </Button>
-              </fieldset>
-            </Form>
-          )}
-        </Col>
-      </Row>
-    </Container>
+    <Row className="align-items-center my-3">
+      <Col xs="auto">
+        <Button as="a" size="sm" href="/menu" className="btnMenu rounded-5">
+          <span>Volver al Menu</span>
+        </Button>
+      </Col>
+      <Col className='justify-content-end d-flex mx-md-3'>
+        {product && (
+          <h2 className="mb-0 ">{product.name}</h2>
+        )}
+      </Col>
+    </Row>
+    <Row>
+      <Col md={6}>
+        {product && (
+          <div className="text-center">
+            <img
+              src={product.photo}
+              alt={product.name}
+              className="img-fluid rounded"
+              style={{ width: '100%', maxWidth: '400px' }}
+            />
+          </div>
+        )}
+      </Col>
+      <Col md={6}>
+        {product && (
+          <Form className="p-3">
+            <fieldset>
+              {renderCustomizationOptions()}
+              <Button type="submit" className="btnMenu rounded-5 mt-3 w-100">
+                <span>Agregar al carrito</span>
+              </Button>
+            </fieldset>
+          </Form>
+        )}
+      </Col>
+    </Row>
+  </Container>
+
   );
 }
 
