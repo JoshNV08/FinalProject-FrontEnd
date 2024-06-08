@@ -25,18 +25,7 @@ function OneProduct({ id }) {
     console.log(`${e.target.name}: ${e.target.value}`);
   }
 
-  /* 
-  
-  Che Seba, entre a arreglar el diseño, me mato el aburrimiento y me puse a programar. 
-  Ahí quedó la lógica para que sea diferente según la categoria de producto. Hice más o menos lo mismo que hiciste en el coso de menú verificando el categortid y según eso muestra su respectivo form. Igual queda agregar y ajustar un par de cosas y agregar los forms de los demás productos.  
 
-  Habría que hacer que estos filtros cambien también dependiendo del producto en si, tipo no todas las bebidas tienen las mismas opciones, o buscar una forma de que quede sencillo y evitar hacerlo, porque la verdad alta paja hacer todo eso jajaj.
-
-  Por ahora lo dejo así.
-
-  Pd: Ahora que pienso, no hay que hacer un coso para que se muestre mas de una foto de cada producto? Onda que se pueda ver el producto desde diferentes ángulos o algo así.
-
-  */
 
   function renderCustomizationOptions() {
     if (product.categoryId === 1) {
