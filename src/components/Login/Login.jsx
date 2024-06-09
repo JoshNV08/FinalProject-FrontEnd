@@ -42,7 +42,7 @@ function Login() {
                 type="email"
                 className="input rounded-5"
               />
-              <label className="user-label-work">Email or Username</label>
+              <label className="user-label-login">Email or Username</label>
             </div>
             <div className="input-group">
               <input
@@ -50,7 +50,7 @@ function Login() {
                 type="password"
                 className="input rounded-5"
               />
-              <label className="user-label-work">Password</label>
+              <label className="user-label-login">Password</label>
             </div>
             <button type="submit" className="form-btn btnRed rounded-5">
               <span>Sign in</span>
@@ -71,7 +71,7 @@ function Login() {
                 type="text"
                 className="input rounded-5"
               />
-              <label className="user-label-work">Username</label>
+              <label className="user-label-login">Username</label>
             </div>
             <div className="input-group">
               <input
@@ -79,7 +79,7 @@ function Login() {
                 type="email"
                 className="input rounded-5"
               />
-              <label className="user-label-work">Email</label>
+              <label className="user-label-login">Email</label>
             </div>
             <div className="input-group">
               <input
@@ -87,7 +87,7 @@ function Login() {
                 type="password"
                 className="input rounded-5"
               />
-              <label className="user-label-work">Password</label>
+              <label className="user-label-login">Password</label>
             </div>
             <button type="submit" className="form-btn btnYellow rounded-5">
               <span>Register</span>

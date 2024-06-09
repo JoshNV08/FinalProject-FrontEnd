@@ -39,18 +39,18 @@
 
 .burgerLogin1 {
   top: 35%;
-  left: 90%;
+  left: 91%;
   transform: translate(-50%, -50%) rotate(-10deg);
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
 }
 
 .burgerLogin2 {
   top: 45%;
-  right: 60%;
+  right: 59%;
   transform: translate(-50%, -50%) rotate(10deg);
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
 }
 
 .login-page {
@@ -188,7 +188,7 @@
   width: 100%;
 }
 
-.user-label-work {
+.user-label-login {
   position: absolute;
   left: 15px;
   color: #6b6a6a;
@@ -203,8 +203,8 @@
   border: 1.5px solid #ffcc00;
 }
 
-.input:focus ~ .user-label-work,
-.input:valid ~ .user-label-work {
+.input:focus ~ .user-label-login,
+.input:valid ~ .user-label-login {
   transform: translateY(-50%) scale(0.8);
   background-color: white;
   color: #fe3031;

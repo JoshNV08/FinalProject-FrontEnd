@@ -8,16 +8,16 @@ function InfoExtend() {
     <Container>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h1 style={{ fontWeight: "bold" }}>¿Quienes Somos?</h1>
+          <h1 style={{ fontWeight: "bold" }}>¿Quiénes Somos?</h1>
         </div>
-        <Col md={5} xs={12} className="text-center">
+        <Col md={6} xs={12} className="text-center">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
             className="display-5 mb-4 mt-5 text-center">
             MISIÓN
           </h2>
           <p>
-            Nuestra misión en Good Burguer es ser reconocidos como la cadena de
+            Nuestra misión en Good Burger es ser reconocidos como la cadena de
             restaurantes de hamburguesas preferida por la gente, destacando por
             nuestra rentabilidad y proyección hacia el futuro. Nos esforzamos
             por reunir a las personas más talentosas y comprometidas, quienes
@@ -26,15 +26,15 @@ function InfoExtend() {
             deleiten a nuestros clientes en cada visita.
           </p>
         </Col>
-        <Col md={5} xs={12} className="text-center mx-sm-5">
+        <Col md={6} xs={12} className="text-center ">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
             className="display-5  mb-4 mt-3 mt-lg-5 text-center">
             VISIÓN
           </h2>
           <p>
-            Somos Good Burguer S.A., nos encontramos operando en Montevideo y
-            Punta del Este. En Good Burguer servimos con orgullo las mejores
+            Somos Good Burger S.A., nos encontramos operando en Montevideo y
+            Punta del Este. En Good Burger servimos con orgullo las mejores
             hamburguesas, así como una variedad de auténticos productos
             preparados al momento y cuando nuestros clientes lo necesitan,
             siendo la mejor experiencia de comida rápida en el país. Contamos
