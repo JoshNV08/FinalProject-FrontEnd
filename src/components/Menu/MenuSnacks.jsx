@@ -25,22 +25,39 @@ function MenuSnacks() {
   const filteredSnacks = products.filter((item) => item.categoryId === 2);
 
   return (
-    <Container className="py-5 text-center">
-      <Row>
+    <div className="container py-5 text-center">
+      <div className="row">
         {filteredSnacks.map((snack) => (
-          <Col md={4} key={snack.id} className="my-3 col-6">
-            <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={snack.photo} />
-              <Card.Body>
-                <Card.Title>{snack.name}</Card.Title>
-                <Card.Text>{snack.description}</Card.Text>
-              </Card.Body>
-              <Button className="btn btn-warning" href={`/productmenu/${snack.id}`}>Agregar a Carrito</Button>
-            </Card>
-          </Col>
+          <div className="col-md-4 col-6 my-3" key={snack.id}>
+            <div className="rounded-5 custom-card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <div className="text-dark d-flex justify-content-start mx-4 mt-3">
+                    <h5>${snack.price}</h5>
+                  </div>
+                  <img
+                    src={snack.photo}
+                    alt={snack.name}
+                    className="card-img-top"
+                  />
+                </div>
+                <div className="card-back">
+                
+                      <h5 className="card-title">{snack.name}</h5>
+                    
+                  <p>{snack.description}</p>
+                  <a
+                    href={`/productmenu/${snack.id}`}
+                    className="btn btn-warning rounded-4">
+                    Agregar a Carrito
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
 

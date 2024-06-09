@@ -27,22 +27,39 @@ function MenuDrinks() {
   const filteredDrinks = products.filter((item) => item.categoryId === 3);
 
   return (
-    <Container className="py-5 text-center">
-      <Row>
+    <div className="container py-5 text-center">
+      <div className="row">
         {filteredDrinks.map((drink) => (
-          <Col md={4} key={drink.id} className="my-3 col-6">
-            <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={drink.photo} />
-              <Card.Body>
-                <Card.Title>{drink.name}</Card.Title>
-                <Card.Text>{drink.description}</Card.Text>
-              </Card.Body>
-              <Button className="btn btn-warning" href={`/productmenu/${drink.id}`}>Agregar a Carrito</Button>
-            </Card>
-          </Col>
+          <div className="col-md-4 col-6 my-3" key={drink.id}>
+            <div className="rounded-5 custom-card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <div className="text-dark d-flex justify-content-start mx-4 mt-3">
+                    <h5>${drink.price}</h5>
+                  </div>
+                  <img
+                    src={drink.photo}
+                    alt={drink.name}
+                    className="card-img-top"
+                  />
+                </div>
+                <div className="card-back">
+                
+                      <h5 className="card-title">{drink.name}</h5>
+                    
+                  <p>{drink.description}</p>
+                  <a
+                    href={`/productmenu/${drink.id}`}
+                    className="btn btn-warning rounded-4">
+                    Agregar a Carrito
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
 

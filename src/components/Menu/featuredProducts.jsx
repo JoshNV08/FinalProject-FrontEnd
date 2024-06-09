@@ -23,17 +23,34 @@ const FeaturedProducts = () => {
       <Container className="py-5 text-center">
       <h2>Productos Destacados</h2>
       <Row>
-        {featuredProducts.map((products) => (
-          <Col md={4} key={products.id} className="my-3 col-6">
-            <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={products.photo} />
-              <Card.Body>
-                <Card.Title>{products.name}</Card.Title>
-                <Card.Text>{products.description}</Card.Text>
-              </Card.Body>
-              <Button className="btn btn-warning" href={`/productmenu/${products.id}`}>Agregar a Carrito</Button>
-            </Card>
-          </Col>
+      {featuredProducts.map((product) => (
+          <div className="col-md-4 col-6 my-3" key={product.id}>
+            <div className="rounded-5 custom-card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <div className="text-dark d-flex justify-content-start mx-4 mt-3">
+                    <h5>${product.price}</h5>
+                  </div>
+                  <img
+                    src={product.photo}
+                    alt={product.name}
+                    className="card-img-top"
+                  />
+                </div>
+                <div className="card-back">
+                
+                      <h5 className="card-title">{product.name}</h5>
+                    
+                  <p>{product.description}</p>
+                  <a
+                    href={`/productmenu/${product.id}`}
+                    className="btn btn-warning rounded-4">
+                    Agregar a Carrito
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </Row>
     </Container>

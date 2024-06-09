@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -25,22 +24,39 @@ function MenuBurgers() {
   const filteredBurgers = products.filter((item) => item.categoryId === 1);
 
   return (
-    <Container className="py-5 text-center">
-      <Row>
+    <div className="container py-5 text-center">
+      <div className="row">
         {filteredBurgers.map((burger) => (
-          <Col md={4} key={burger.id} className="my-3 col-6">
-            <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={burger.photo} />
-              <Card.Body>
-                <Card.Title>{burger.name}</Card.Title>
-                <Card.Text>{burger.description}</Card.Text>
-              </Card.Body>
-              <Button className="btn btn-warning" href={`/productmenu/${burger.id}`}>Agregar a Carrito</Button>
-            </Card>
-          </Col>
+          <div className="col-md-4 col-6 my-3" key={burger.id}>
+            <div className="rounded-5 custom-card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <div className="text-dark d-flex justify-content-start mx-4 mt-3">
+                    <h5>${burger.price}</h5>
+                  </div>
+                  <img
+                    src={burger.photo}
+                    alt={burger.name}
+                    className="card-img-top"
+                  />
+                </div>
+                <div className="card-back">
+                
+                      <h5 className="card-title">{burger.name}</h5>
+                    
+                  <p>{burger.description}</p>
+                  <a
+                    href={`/productmenu/${burger.id}`}
+                    className="btn btn-warning rounded-4">
+                    Agregar a Carrito
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 }
 

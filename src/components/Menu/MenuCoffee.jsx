@@ -24,24 +24,41 @@ function MenuCoffee() {
 
   const FilteredCoffee = products.filter((item) => item.categoryId === 5);
 
-  return (
-    <Container className="py-5 text-center">
-      <Row>
-        {FilteredCoffee.map((coffee) => (
-          <Col md={4} key={coffee.id} className="my-3 col-6">
-            <Card className="rounded-5 custom-card">
-              <Card.Img variant="top" src={coffee.photo} />
-              <Card.Body>
-                <Card.Title>{coffee.name}</Card.Title>
-                <Card.Text>{coffee.description}</Card.Text>
-              </Card.Body>
-              <Button className="btn btn-warning" href={`/productmenu/${coffee.id}`}>Agregar a Carrito</Button>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
-  );
+    return (
+      <div className="container py-5 text-center">
+        <div className="row">
+          {FilteredCoffee.map((coffee) => (
+            <div className="col-md-4 col-6 my-3" key={coffee.id}>
+              <div className="rounded-5 custom-card">
+                <div className="card-inner">
+                  <div className="card-front">
+                    <div className="text-dark d-flex justify-content-start mx-4 mt-3">
+                      <h5>${coffee.price}</h5>
+                    </div>
+                    <img
+                      src={coffee.photo}
+                      alt={coffee.name}
+                      className="card-img-top"
+                    />
+                  </div>
+                  <div className="card-back">
+                  
+                        <h5 className="card-title">{coffee.name}</h5>
+                      
+                    <p>{coffee.description}</p>
+                    <a
+                      href={`/productmenu/${coffee.id}`}
+                      className="btn btn-warning rounded-4">
+                      Agregar a Carrito
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
 }
 
 export default MenuCoffee;

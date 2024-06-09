@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { CSSTransition } from "react-transition-group";
-import { Facebook, Google, Twitter, Instagram } from "react-bootstrap-icons";
+import { Google, Facebook } from "react-bootstrap-icons";
 import "../../Styles/Others/Login.css";
 import "../../Styles/Buttons/ButtonYellow.css";
-import "../../Styles/Buttons/ButtonRed.css";
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -14,7 +12,7 @@ function Login() {
   }
 
   return (
-    <>
+    <div className="login-page">
       <div className="burger-images-container">
         <img
           src="src/assets/BurgerLogin1.png"
@@ -28,108 +26,93 @@ function Login() {
         />
       </div>
 
-      <Container fluid className="containerLogin text-center">
-        <Row className="justify-content-md-center mb-5">
-          <Col md="12">
-            <div className="container cardLogin">
-              <h2 className="heading">{isLogin ? "Sign in" : "Register"}</h2>
+      <div className="form-container">
+        <h2 className="title">{isLogin ? "Sign in" : "Register"}</h2>
 
-              <div className="d-flex justify-content-center my-3">
-                <Button variant="outline-primary" className="mx-1">
-                  <Facebook />
-                </Button>
-                <Button variant="outline-danger" className="mx-1">
-                  <Google />
-                </Button>
-                <Button variant="outline-info" className="mx-1">
-                  <Twitter />
-                </Button>
-                <Button variant="outline-warning" className="mx-1">
-                  <Instagram />
-                </Button>
-              </div>
-
-              <h5 className="text-center my-3">or</h5>
-
-              <CSSTransition
-                in={isLogin}
-                timeout={300}
-                classNames="fade"
-                unmountOnExit>
-                <Form>
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email or username</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Enter email or username"
-                      className="inputLogin"
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Password"
-                      className="inputLogin"
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Remember me" />
-                  </Form.Group>
-                  <Button type="submit" className="btnRed rounded-5">
-                    <span>Sign in</span>
-                  </Button>
-                </Form>
-              </CSSTransition>
-
-              <CSSTransition
-                in={!isLogin}
-                timeout={300}
-                classNames="fade"
-                unmountOnExit>
-                <Form>
-                  <Form.Group controlId="formBasicUsername">
-                    <Form.Label>Nombre de Usuario</Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter username"
-                      className="inputRegister"
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Enter email"
-                      className="inputRegister"
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Contraseña</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Ingresar Contraseña"
-                      className="inputRegister"
-                    />
-                  </Form.Group>
-                  <Button type="submit" className="mt-2 btnYellow rounded-5">
-                    <span>Registrarse</span>
-                  </Button>
-                </Form>
-              </CSSTransition>
-
-              <div className="text-center mt-3">
-                <a href="#" onClick={toggleForm}>
-                  {isLogin
-                    ? "Not a member? Register"
-                    : "Already a member? Login"}
-                </a>
-              </div>
+        <CSSTransition
+          in={isLogin}
+          timeout={300}
+          classNames="fade"
+          unmountOnExit
+        >
+          <form className="form">
+            <div className="input-group">
+              <input
+                required
+                type="email"
+                className="input rounded-5"
+              />
+              <label className="user-label-work">Email or Username</label>
             </div>
-          </Col>
-        </Row>
-      </Container>
-    </>
+            <div className="input-group">
+              <input
+                required
+                type="password"
+                className="input rounded-5"
+              />
+              <label className="user-label-work">Password</label>
+            </div>
+            <button type="submit" className="form-btn btnRed rounded-5">
+              <span>Sign in</span>
+            </button>
+          </form>
+        </CSSTransition>
+
+        <CSSTransition
+          in={!isLogin}
+          timeout={300}
+          classNames="fade"
+          unmountOnExit
+        >
+          <form className="form">
+            <div className="input-group">
+              <input
+                required
+                type="text"
+                className="input rounded-5"
+              />
+              <label className="user-label-work">Username</label>
+            </div>
+            <div className="input-group">
+              <input
+                required
+                type="email"
+                className="input rounded-5"
+              />
+              <label className="user-label-work">Email</label>
+            </div>
+            <div className="input-group">
+              <input
+                required
+                type="password"
+                className="input rounded-5"
+              />
+              <label className="user-label-work">Password</label>
+            </div>
+            <button type="submit" className="form-btn btnYellow rounded-5">
+              <span>Register</span>
+            </button>
+          </form>
+        </CSSTransition>
+
+        <div className="buttons-container">
+          <button className="apple-login-button">
+            <Facebook className="apple-icon" />
+            <span>Sign in with Facebook</span>
+          </button>
+          <button className="google-login-button">
+            <Google className="google-icon" />
+            <span>Sign in with Google</span>
+          </button>
+        </div>
+
+        <div className="text-center mt-3">
+          <span onClick={toggleForm} className="sign-up-link">
+            {isLogin ? "Not a member? Register" : "Already a member? Login"}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
 
