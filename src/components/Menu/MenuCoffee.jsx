@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/Menu/MenuCards.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -22,12 +21,12 @@ function MenuCoffee() {
   }, []);
   console.log(products);
 
-  const FilteredCoffee = products.filter((item) => item.categoryId === 5);
+  const filteredCoffee = products.filter((item) => item.categoryId === 5);
 
     return (
       <div className="container py-5 text-center">
         <div className="row">
-          {FilteredCoffee.map((coffee) => (
+          {filteredCoffee.map((coffee) => (
             <div className="col-md-4 col-6 my-3" key={coffee.id}>
               <div className="rounded-5 custom-card">
                 <div className="card-inner">
