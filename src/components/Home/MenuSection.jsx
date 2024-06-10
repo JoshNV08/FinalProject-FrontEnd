@@ -68,7 +68,7 @@ function MenuSection() {
 
       <Row className="mt-4">
         <Col xs={6} md={4}>
-          <Card className="rounded-5 mb-4">
+          <Card className="rounded-5 mb-4" style={{height:'90%'}}>
             <Card.Img variant="top" src="../src/assets/burgerMenu.png" />
             <Card.Body>
               <Card.Title>HAMBURGUESAS</Card.Title>
@@ -83,7 +83,7 @@ function MenuSection() {
           </Card>
         </Col>
         <Col xs={6} md={4}>
-          <Card className="rounded-5 mb-4">
+          <Card className="rounded-5 mb-4" style={{height:'90%'}}>
             <Card.Img variant="top" src="../src/assets/Fritas.png" />
             <Card.Body>
               <Card.Title>PAPAS FRITAS</Card.Title>
@@ -97,8 +97,8 @@ function MenuSection() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} md={4}>
-          <Card className="rounded-5 mb-4">
+        <Col xs={6} md={4} >
+          <Card className="rounded-5 mb-4"  style={{height:'90%'}}>
             <Card.Img variant="top" src="../src/assets/Coca.png" />
             <Card.Body>
               <Card.Title>BEBIDAS</Card.Title>
@@ -112,8 +112,8 @@ function MenuSection() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} md={4} className="d-md-none text-center">
-          <Card className="rounded-5 mb-4">
+        <Col xs={6} md={4} className="d-md-none text-center" >
+          <Card className="rounded-5 mb-4"  style={{height:'90%'}}>
             <Card.Img variant="top" src="../src/assets/Coffee.png" />
             <Card.Body>
               <Card.Title>CAFETERÍA</Card.Title>
@@ -131,7 +131,7 @@ function MenuSection() {
 
       {activeSection && (
         <div>
-          <Slider {...settings} className="mt-2 mb-5">
+          <Slider {...settings} className="mt-0 mb-5">
             {activeSection === "burgers" &&
               filteredBurgers.map((burger) => (
                 <div key={burger.id}>
