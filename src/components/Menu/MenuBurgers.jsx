@@ -3,6 +3,7 @@ import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import burgers from "../../data/burger";
 
 function MenuBurgers() {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ function MenuBurgers() {
 
   return (
     <>
-      <div className="container py-5 text-center d-none d-md-block">
+      <div className="container py-5 text-center">
         <div className="row">
           {filteredBurgers.map((burger) => (
             <div className="col-md-4 col-6 my-3" key={burger.id}>
@@ -56,30 +57,6 @@ function MenuBurgers() {
           ))}
         </div>
       </div>
-      
-      <Container className="py-5 text-center d-block d-md-none">
-        <Row>
-          {filteredBurgers.map((burger) => (
-            <Col md={4} xs={6} className="my-3" key={burger.id}>
-              <Card className="rounded-5 card-boot">
-                <Card.Img variant="top" src={burger.photo} alt={burger.name} />
-                <Card.Body>
-                  <Card.Title>{burger.name}</Card.Title>
-                  <Card.Text>
-                    {burger.description}
-                    <br />${burger.price}
-                  </Card.Text>
-                  <Button
-                    href={`/productmenu/${burger.id}`}
-                    className="btn btn-warning-card2 rounded-4">
-                    Agregar a Carrito
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
     </>
   );
 }
