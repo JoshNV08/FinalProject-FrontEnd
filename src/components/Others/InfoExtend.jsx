@@ -13,7 +13,8 @@ function InfoExtend() {
         <Col md={6} xs={12} className="text-center">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5 mb-4 mt-5 text-center">
+            className="display-5 mb-4 mt-5 text-center"
+          >
             MISIÓN
           </h2>
           <p>
@@ -29,7 +30,8 @@ function InfoExtend() {
         <Col md={6} xs={12} className="text-center ">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5  mb-4 mt-3 mt-lg-5 text-center">
+            className="display-5  mb-4 mt-3 mt-lg-5 text-center"
+          >
             VISIÓN
           </h2>
           <p>
@@ -48,7 +50,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/Joshua.png" className="" />
             <Card.Body>
@@ -82,14 +85,19 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden">
-            <Card.Img variant="top" src="src/assets/eze.png" />
+            <Card.Img variant="top" src="src/assets/ezee.png" />
             <Card.Body>
               <Card.Title>Ezequiel Clavijo</Card.Title>
+              <span>Cofundador</span>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                <p className="textCard">
+                  Ex músico y deportista, actual programador.
+                  <br /> En busca de algo que le apasione y asegure su futuro ha
+                  encontrado su vocación.
+                </p>
               </Card.Text>
             </Card.Body>
             <Card.Body>
@@ -112,7 +120,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden ">
             <Card.Img variant="top" src="src/assets/seba.jpeg" />
             <Card.Body>
@@ -147,7 +156,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/nico.png" />
             <Card.Body>
