@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import "../../Styles/Others/Modal.css";
 
 function NotAvailable({ handleClose }) {
   const [show, setShow] = useState(true);
 
   return (
     <>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} dialogClassName="custom-modal">
         <Modal.Header closeButton>
-          <Modal.Title>Función no disponible</Modal.Title>
+          <Modal.Title className="title-modal">Función no disponible</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div
@@ -37,7 +38,7 @@ function NotAvailable({ handleClose }) {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className='btn-modal' onClick={handleClose}>
             Volver atrás
           </Button>
         </Modal.Footer>
