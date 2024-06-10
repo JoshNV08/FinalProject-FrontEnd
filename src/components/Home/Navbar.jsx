@@ -5,8 +5,10 @@ import {
   Col,
   Row,
   Nav as BootstrapNav,
+  Button,
 } from "react-bootstrap";
 import "../../Styles/Home/Navbar.css";
+
 
 function Nav() {
   return (
@@ -34,6 +36,7 @@ function Nav() {
               <BootstrapNav.Link href="/trabajo" className="fs-5 text-contact">
                 Trabaja con Nosotros
               </BootstrapNav.Link>
+              <Button><a href="/cart">Cart</a></Button>
               <div className="social-icons">
                 <BootstrapNav.Link href="https://www.facebook.com/goodburger">
                   <img

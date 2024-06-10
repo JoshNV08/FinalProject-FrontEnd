@@ -1,11 +1,11 @@
 import React from "react";
 import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import burgers from "../../data/burger";
 
 function MenuBurgers() {
+
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

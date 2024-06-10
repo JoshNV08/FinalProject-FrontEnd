@@ -16,6 +16,7 @@ import FaqPage from "./pages/FaqPage";
 import CouponsPage from "./pages/CouponsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import ProductMenu from "./pages/ProductMenu";
+import CartPage from "./pages/CartPage";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="menu-coffee" element={<MenuCoffee />} />
         </Route>
         <Route path="/productmenu/:id" element={<ProductMenu/>}/>
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/sobrenosotros" element={<Information />} />
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/trabajo" element={<WorkPage />} />
