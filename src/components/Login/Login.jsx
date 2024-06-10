@@ -3,12 +3,22 @@ import { CSSTransition } from "react-transition-group";
 import { Google, Facebook } from "react-bootstrap-icons";
 import "../../Styles/Others/Login.css";
 import "../../Styles/Buttons/ButtonYellow.css";
+import NotAvailable from "../Others/NotAvailable"; 
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   function toggleForm() {
     setIsLogin(!isLogin);
+  }
+
+  function handleModalLogin() {
+    setShowModal(true);
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
   }
 
   return (
@@ -96,11 +106,11 @@ function Login() {
         </CSSTransition>
 
         <div className="buttons-container">
-          <button className="apple-login-button">
+          <button className="apple-login-button" onClick={handleModalLogin}>
             <Facebook className="apple-icon" />
             <span>Sign in with Facebook</span>
           </button>
-          <button className="google-login-button">
+          <button className="google-login-button" onClick={handleModalLogin}>
             <Google className="google-icon" />
             <span>Sign in with Google</span>
           </button>
@@ -112,6 +122,8 @@ function Login() {
           </span>
         </div>
       </div>
+
+      {showModal && <NotAvailable handleClose={handleCloseModal} />}
     </div>
   );
 }
