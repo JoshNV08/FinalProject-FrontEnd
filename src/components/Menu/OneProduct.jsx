@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
-import { useDispatch } from "react-redux";
-import { addItem } from "../cartSlice";
 import "../../Styles/Buttons/ButtonsMenu.css";
 
 function OneProduct({ id }) {
   const [product, setProduct] = useState(null);
-  const dispatch = useDispatch();
-
-  function addToCart() {
-    if (product) {
-      dispatch(
-        addItem({ id: product.id, name: product.name, price: product.price })
-      );
-    }
-  }
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -138,49 +127,46 @@ function OneProduct({ id }) {
     ) : null;
   }
 
-    return (
-      <Container>
-        <Row className="align-items-center my-3">
-          <Col xs="auto">
-            <Button as="a" size="sm" href="/menu" className="btnMenu rounded-5">
-              <span>Volver al Menu</span>
-            </Button>
-          </Col>
-          <Col className="justify-content-end d-flex mx-md-3">
-            {product && <h2 className="mb-0 ">{product.name}</h2>}
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            {product && (
-              <div className="text-center">
-                <img
-                  src={product.photo}
-                  alt={product.name}
-                  className="img-fluid rounded"
-                  style={{ width: "100%", maxWidth: "400px" }}
-                />
-              </div>
-            )}
-          </Col>
-          <Col md={6}>
-            {product && (
-              <Form className="p-3">
-                <fieldset>
-                  {renderCustomizationOptions()}
-                  <Button
-                    className="btnMenu rounded-5 mt-3 w-100"
-                    href="/cart"
-                    onClick={addToCart}>
-                    <span>Agregar al carrito</span>
-                  </Button>
-                </fieldset>
-              </Form>
-            )}
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      <Row className="align-items-center my-3">
+        <Col xs="auto">
+          <Button as="a" size="sm" href="/menu" className="btnMenu rounded-5">
+            <span>Volver al Menu</span>
+          </Button>
+        </Col>
+        <Col className="justify-content-end d-flex mx-md-3">
+          {product && <h2 className="mb-0 ">{product.name}</h2>}
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
+          {product && (
+            <div className="text-center">
+              <img
+                src={product.photo}
+                alt={product.name}
+                className="img-fluid rounded"
+                style={{ width: "100%", maxWidth: "400px" }}
+              />
+            </div>
+          )}
+        </Col>
+        <Col md={6}>
+          {product && (
+            <Form className="p-3">
+              <fieldset>
+                {renderCustomizationOptions()}
+                <Button className="btnMenu rounded-5 mt-3 w-100" href="/cart">
+                  <span>Agregar al carrito</span>
+                </Button>
+              </fieldset>
+            </Form>
+          )}
+        </Col>
+      </Row>
+    </Container>
+  );
+}
 
 export default OneProduct;
