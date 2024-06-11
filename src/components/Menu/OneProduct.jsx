@@ -49,7 +49,7 @@ function OneProduct({ id }) {
                 <option value="noMeat">Sin Carne</option>
                 <option value="noBread">Sin Pan</option>
                 <option value="noCondiments">Sin Condimentos</option>
-              </Form.Select>
+              </Form.Select>``
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Extras</Form.Label>
