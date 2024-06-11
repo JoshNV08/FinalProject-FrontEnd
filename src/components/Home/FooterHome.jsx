@@ -81,7 +81,7 @@ function FooterHome() {
               
             </div>
           </Col>
-          <p className="text-muted justify-content-end d-flex">© 2024 GoodBurger. Todos los derechos reservados.</p>
+          <p className="text-muted justify-content-md-end d-flex">© 2024 GoodBurger. Todos los derechos reservados.</p>
         </Row>
       </Container>
     </div>
