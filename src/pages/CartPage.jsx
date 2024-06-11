@@ -1,4 +1,6 @@
-import Cart from "../components/Cart";
+
+import React from 'react';
+import Cart from '../components/Cart/Cart';
 
 function CartPage () {
     return (
