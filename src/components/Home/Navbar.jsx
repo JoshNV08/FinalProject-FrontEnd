@@ -30,13 +30,16 @@ function Nav() {
             className="d-flex justify-content-end align-items-center"
           >
             <BootstrapNav className="d-none d-md-flex">
+              
               <BootstrapNav.Link href="/login" className="fs-5 text-contact">
                 Login
               </BootstrapNav.Link>
               <BootstrapNav.Link href="/trabajo" className="fs-5 text-contact">
                 Trabaja con Nosotros
               </BootstrapNav.Link>
-              <Button><a href="/cart">Cart</a></Button>
+              <BootstrapNav.Link href="/cart">
+                <i class="bi bi-bag-check" style={{fontSize:'25px', color:'#fe3030'}}></i>
+              </BootstrapNav.Link>
               <div className="social-icons">
                 <BootstrapNav.Link href="https://www.facebook.com/goodburger">
                   <img
@@ -62,6 +65,9 @@ function Nav() {
               </div>
             </BootstrapNav>
             <div className="d-flex d-md-none flex-column align-items-end">
+            <BootstrapNav.Link href="/cart">
+                <i class="bi bi-bag-check" style={{fontSize:'25px', color:'#fe3030'}}></i>
+              </BootstrapNav.Link>
               <BootstrapNav.Link href="/login" className="fs-5 text-contact">
                 Login
               </BootstrapNav.Link>
