@@ -13,7 +13,7 @@ function AboutUs() {
             style={{ width: "103%" }}
           />
         </Col>
-        <Col md={5} className=" text-md-start text-center mx-sm-5 mb-5 mb-md-0">
+        <Col md={5} className=" text-md-start text-center mx-sm-0 mx-md-4 mb-5 mb-md-0">
           <h2 className="display-5 fw-bold my-5" style={{color:'#fe3030'}}>
             Sobre Nosotros
           </h2>

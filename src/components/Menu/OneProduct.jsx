@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { useDispatch } from "react-redux";
-import { addItem } from "../cartSlice";
-import '../../Styles/Buttons/ButtonsMenu.css';
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
+import "../../Styles/Buttons/ButtonsMenu.css";
+import { addToCart } from "../../features/Cart/cartSlice";
 
 function OneProduct({ id }) {
   const [product, setProduct] = useState(null);
+  const { items: products, status } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // Usa useNavigate
 
-  function addToCart() {
-    if (product) {
-      dispatch(addItem({ id: product.id, name: product.name, price: product.price }));
-    }
-  }
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+    navigate("/cart"); // Usa navigate en lugar de history.push
+  };
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(`http://localhost:3000/products/${id}`);
-        console.log(response.data);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching the product:", error);
@@ -35,7 +36,6 @@ function OneProduct({ id }) {
 
   function renderCustomizationOptions() {
     if (!product) return null;
-
     switch (product.categoryId) {
       case 1:
         return (
@@ -76,7 +76,6 @@ function OneProduct({ id }) {
             <Form.Group className="mb-3">
               <Form.Label>Choose your Size</Form.Label>
               <Form.Select name="size" onChange={handleCustomizationChange}>
-                <option value="">Seleccione tamaño</option>
                 <option value="zero">Zero</option>
                 <option value="original">Comun</option>
                 <option value="light">Light</option>
@@ -85,9 +84,8 @@ function OneProduct({ id }) {
             <Form.Group className="mb-3">
               <Form.Label>Temperatura</Form.Label>
               <Form.Select name="extras" onChange={handleCustomizationChange}>
-                <option value="">Seleccione temperatura</option>
                 <option value="natural">Natural</option>
-                <option value="cold">Fría</option>
+                <option value="cold">Fria</option>
               </Form.Select>
             </Form.Group>
           </>
@@ -99,16 +97,16 @@ function OneProduct({ id }) {
               <Form.Label>Elija el tamaño</Form.Label>
               <Form.Select name="size" onChange={handleCustomizationChange}>
                 <option value="">Seleccione tamaño</option>
-                <option value="mediano">Mediano</option>
-                <option value="grande">Grande</option>
+                <option value="zero">Mediano</option>
+                <option value="original">Grande</option>
               </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Extra</Form.Label>
               <Form.Select name="extras" onChange={handleCustomizationChange}>
                 <option value="">Seleccione extras</option>
-                <option value="bacon">Bacon</option>
-                <option value="cheddar">Cheddar</option>
+                <option value="natural">Bacon</option>
+                <option value="cold">Cheddar</option>
               </Form.Select>
             </Form.Group>
           </>
@@ -118,19 +116,19 @@ function OneProduct({ id }) {
           <>
             <Form.Group className="mb-3">
               <Form.Label>Selecciona ingrediente</Form.Label>
-              <Form.Select name="ingredient" onChange={handleCustomizationChange}>
+              <Form.Select name="size" onChange={handleCustomizationChange}>
                 <option value="">Seleccione</option>
-                <option value="sugar">Azúcar</option>
-                <option value="sweetener">Edulcorante</option>
-                <option value="stevia">Stevia</option>
+                <option value="zero">Azúcar</option>
+                <option value="original">Edulcorante</option>
+                <option value="light">Stevia</option>
               </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Tamaño</Form.Label>
-              <Form.Select name="size" onChange={handleCustomizationChange}>
+              <Form.Select name="extras" onChange={handleCustomizationChange}>
                 <option value="">Seleccione tamaño</option>
-                <option value="medium">Mediano</option>
-                <option value="large">Grande</option>
+                <option value="natural">Mediano</option>
+                <option value="cold">Grande</option>
               </Form.Select>
             </Form.Group>
           </>
@@ -160,7 +158,7 @@ function OneProduct({ id }) {
                 src={product.photo}
                 alt={product.name}
                 className="img-fluid rounded"
-                style={{ width: '100%', maxWidth: '400px' }}
+                style={{ width: "100%", maxWidth: "400px" }}
               />
             </div>
           )}
@@ -170,7 +168,7 @@ function OneProduct({ id }) {
             <Form className="p-3">
               <fieldset>
                 {renderCustomizationOptions()}
-                <Button className="btnMenu rounded-5 mt-3 w-100" href="/cart" onClick={addToCart}>
+                <Button className="btnMenu rounded-5 mt-3 w-100" onClick={() => handleAddToCart(product)}>
                   <span>Agregar al carrito</span>
                 </Button>
               </fieldset>
