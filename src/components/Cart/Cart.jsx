@@ -6,7 +6,7 @@ import {
   decreaseCart,
   getTotals,
   removeFromCart,
-} from "../../features/Cart/cartSlice";
+} from "../../redux/cartSlice";
 import '../../Styles/Cart/Cart.css';
 import { Link } from "react-router-dom";
 import { FaTrash, FaArrowLeft, FaPlus, FaMinus } from "react-icons/fa";

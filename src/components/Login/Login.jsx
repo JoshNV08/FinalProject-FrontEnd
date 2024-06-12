@@ -4,10 +4,10 @@ import { Google, Facebook } from "react-bootstrap-icons";
 import "../../Styles/Others/Login.css";
 import "../../Styles/Buttons/ButtonYellow.css";
 import NotAvailable from "../Others/NotAvailable";
-import { login } from "../../redux/loginSlice";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { useEffect } from "react";
+import { setToken } from "../../redux/userSlice";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -15,7 +15,6 @@ function Login() {
   const [username, setUsername] = useState("");
   const [isLogged, setIsLogged] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const [token, setToken] = useState("");
   const dispatch = useDispatch();
 
   // useEffect(() => {
@@ -38,7 +37,7 @@ function Login() {
         email,
         password,
       });
-      setToken(response.data.token);
+      dispatch(setToken(response.data.token));
     } catch (error) {
       // TODO: implementar react-tostify
       console.error("Error al logear", error);

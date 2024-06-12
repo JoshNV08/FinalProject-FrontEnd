@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../../Styles/Buttons/ButtonsMenu.css";
-import { addToCart } from "../../features/Cart/cartSlice";
+import { addToCart } from "../../redux/cartSlice";
 
 function OneProduct({ id }) {
   const [product, setProduct] = useState(null);
   const { items: products, status } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -20,7 +20,9 @@ function OneProduct({ id }) {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/products/${id}`);
+        const response = await axios.get(
+          `http://localhost:3000/products/${id}`
+        );
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching the product:", error);
@@ -167,7 +169,9 @@ function OneProduct({ id }) {
             <Form className="p-3">
               <fieldset>
                 {renderCustomizationOptions()}
-                <Button className="btnMenu rounded-5 mt-3 w-100" onClick={() => handleAddToCart(product)}>
+                <Button
+                  className="btnMenu rounded-5 mt-3 w-100"
+                  onClick={() => handleAddToCart(product)}>
                   <span>Agregar al carrito</span>
                 </Button>
               </fieldset>
