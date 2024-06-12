@@ -19,7 +19,6 @@ function MenuSection() {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:3000/products");
-        console.log(response.data);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching the products:", error);
@@ -28,7 +27,7 @@ function MenuSection() {
 
     fetchProducts();
   }, []);
-  console.log(products);
+
 
   const filteredBurgers = products.filter((item) => item.categoryId === 1);
   const filteredSnacks = products.filter((item) => item.categoryId === 2);
@@ -68,7 +67,7 @@ function MenuSection() {
 
       <Row className="mt-4">
         <Col xs={6} md={4}>
-          <Card className="rounded-5 mb-4" style={{height:'90%'}}>
+          <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/burgerMenu.png" />
             <Card.Body>
               <Card.Title>HAMBURGUESAS</Card.Title>
@@ -83,7 +82,7 @@ function MenuSection() {
           </Card>
         </Col>
         <Col xs={6} md={4}>
-          <Card className="rounded-5 mb-4" style={{height:'90%'}}>
+          <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/Fritas.png" />
             <Card.Body>
               <Card.Title>PAPAS FRITAS</Card.Title>
@@ -97,8 +96,8 @@ function MenuSection() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} md={4} >
-          <Card className="rounded-5 mb-4"  style={{height:'90%'}}>
+        <Col xs={6} md={4}>
+          <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/Coca.png" />
             <Card.Body>
               <Card.Title>BEBIDAS</Card.Title>
@@ -112,8 +111,8 @@ function MenuSection() {
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={6} md={4} className="d-md-none text-center" >
-          <Card className="rounded-5 mb-4"  style={{height:'90%'}}>
+        <Col xs={6} md={4} className="d-md-none text-center">
+          <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/Coffee.png" />
             <Card.Body>
               <Card.Title>CAFETERÍA</Card.Title>

@@ -10,7 +10,6 @@ function MenuCoffee() {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:3000/products");
-        console.log(response.data);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching the products:", error);
@@ -19,7 +18,6 @@ function MenuCoffee() {
 
     fetchProducts();
   }, []);
-  console.log(products);
 
   const filteredCoffee = products.filter((item) => item.categoryId === 5);
 

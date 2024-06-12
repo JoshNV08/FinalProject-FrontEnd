@@ -11,7 +11,6 @@ initialState: {
 },
 reducers : {
   login: (state, action) => {
-    console.log(action.payload, "hola")
 state.user = action.payload
   },
   logout: (state, action) => {
