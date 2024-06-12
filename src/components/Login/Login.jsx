@@ -4,8 +4,68 @@ import { Google, Facebook } from "react-bootstrap-icons";
 import "../../Styles/Others/Login.css";
 import "../../Styles/Buttons/ButtonYellow.css";
 import NotAvailable from "../Others/NotAvailable"; 
+import { login } from "../../features/Login/loginSlice"
+import { useDispatch } from "react-redux";  
+import axios from "axios";
+import { useEffect } from "react";
+
 
 function Login() {
+    const [email, setEmail] = useState("");
+    const [Username, setUserName] = useState("");
+    const [token, setToken] = useState("");
+    const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
+
+
+   
+    useEffect(() => {
+      const LoginUser = async () => {
+      try {
+        const response = await axios.post("http://localhost:3000/tokens");
+        console.log(response.data);
+        setToken(response.data);
+      } catch (error) {
+        console.error("Error al logear", error);
+      }
+    };
+
+    LoginUser();
+
+    const body = {
+      email: 'email',
+      password: 'password'
+  };
+  
+  async function addUser() {
+      try {
+          const response = await axios.post('/tokens', body);
+          console.log(response);
+      } catch (error) {
+          console.log(error);
+      }
+  }
+  
+  addUser();
+  
+    })
+
+  
+
+
+
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      dispatch(
+        login({
+         name: name,
+         email: email,
+         password: password,
+         loggedIn: true,
+        })
+      );
+    };
   const [isLogin, setIsLogin] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
@@ -45,20 +105,24 @@ function Login() {
           classNames="fade"
           unmountOnExit
         >
-          <form className="form">
+          <form className="form" onSubmit={(e) => handleSubmit(e)}>
             <div className="input-group">
               <input
                 required
                 type="email"
                 className="input rounded-5"
+                value={email} 
+             onChange={(e) => setEmail(e.target.value)}
               />
-              <label className="user-label-login">Email or Username</label>
+              <label className="user-label-login">Email</label>
             </div>
             <div className="input-group">
               <input
                 required
                 type="password"
                 className="input rounded-5"
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label className="user-label-login">Password</label>
             </div>
@@ -74,12 +138,14 @@ function Login() {
           classNames="fade"
           unmountOnExit
         >
-          <form className="form">
+          <form className="form" onSubmit={(e) => handleSubmit(e)}>
             <div className="input-group">
               <input
                 required
-                type="text"
+                type="name"
+                value={Username}
                 className="input rounded-5"
+                onChange={(e) => setUserName(e.target.value)}
               />
               <label className="user-label-login">Username</label>
             </div>
@@ -88,6 +154,8 @@ function Login() {
                 required
                 type="email"
                 className="input rounded-5"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label className="user-label-login">Email</label>
             </div>
@@ -96,6 +164,8 @@ function Login() {
                 required
                 type="password"
                 className="input rounded-5"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label className="user-label-login">Password</label>
             </div>
