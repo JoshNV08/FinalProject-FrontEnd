@@ -50,16 +50,11 @@ function Login() {
   
     })
 
-  
-
-
-
-
     const handleSubmit = (e) => {
       e.preventDefault();
       dispatch(
         login({
-         name: name,
+         Username: Username,
          email: email,
          password: password,
          loggedIn: true,
