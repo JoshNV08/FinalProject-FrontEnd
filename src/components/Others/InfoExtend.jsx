@@ -163,8 +163,12 @@ function InfoExtend() {
             <Card.Body>
               <Card.Title>Nicolás Dos Santos</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                <span>Cofundador</span>
+                <p className="textCard">
+                  Entusiasta de la tecnología y la innovación, ha mostrado una
+                  creatividad excepcional en el ámbito digital.
+                  <br /> El papá de los pollitos...
+                </p>
               </Card.Text>
             </Card.Body>
             <Card.Body>
