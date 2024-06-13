@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productsReducer, { productsFetch } from "./productsSlice";
+import productsReducer from "./productsSlice";
 import userReducer from "./userSlice";
 import cartReducer, { getTotals } from "./cartSlice";
 const store = configureStore({
@@ -10,6 +10,5 @@ const store = configureStore({
   },
 });
 
-store.dispatch(productsFetch());
 store.dispatch(getTotals());
 export default store;
