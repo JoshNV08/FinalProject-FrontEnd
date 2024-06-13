@@ -88,7 +88,7 @@ function InfoExtend() {
           className="d-flex justify-content-center text-center"
         >
           <Card className="rounded-4 mb-4 overflow-hidden">
-            <Card.Img variant="top" src="src/assets/ezee.png" />
+            <Card.Img variant="top" src="src/assets/eze.png" />
             <Card.Body>
               <Card.Title>Ezequiel Clavijo</Card.Title>
               <span>Cofundador</span>
