@@ -53,7 +53,7 @@ const Cart = () => {
                 <img src={cartItem.photo} alt={cartItem.name} />
                 <div className="cart-product-details">
                   <h3>{cartItem.name}</h3>
-                  <p>{cartItem.desc}</p>
+                  <p>{cartItem.description}</p>
                   <div className="cart-product-quantity">
                     <button onClick={() => handleDecreaseCart(cartItem)}>
                       <FaMinus />
