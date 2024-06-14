@@ -6,7 +6,6 @@ import "../../Styles/Buttons/ButtonYellow.css";
 import NotAvailable from "../Others/NotAvailable";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { useEffect } from "react";
 import { setToken } from "../../redux/userSlice";
 
 function Login() {
@@ -16,20 +15,6 @@ function Login() {
   const [isLogged, setIsLogged] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   const loginUser = async () => {
-  //     try {
-  //       const response = await axios.post("http://localhost:3000/tokens");
-  //       console.log(response.data);
-  //       setToken(response.data);
-  //     } catch (error) {
-  //       console.error("Error al logear", error);
-  //     }
-  //   };
-
-  //   loginUser();
-  // });
 
   const getToken = async () => {
     try {
@@ -48,15 +33,6 @@ function Login() {
     e.preventDefault();
 
     getToken();
-
-    // dispatch(
-    //   login({
-    //     username: username,
-    //     email: email,
-    //     password: password,
-    //     loggedIn: true,
-    //   })
-    // );
   };
 
   function toggleForm() {
