@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import InfoExtend from "../components/Others/InfoExtend";
 
 function Information() {

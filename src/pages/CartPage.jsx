@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Cart from '../components/Cart/Cart';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/Footer'
 
 function CartPage () {
     return (
