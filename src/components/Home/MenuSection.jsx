@@ -134,9 +134,9 @@ function MenuSection() {
             {activeSection === "burgers" &&
               filteredBurgers.map((burger) => (
                 <div key={burger.id}>
-                  <Card className="rounded-5 mx-1">
+                  <Card className="fix rounded-5 h-75 mx-1">
                     <Card.Img variant="top" src={burger.photo} />
-                    <Card.Body>
+                    <Card.Body className="">
                       <Card.Title>{burger.name}</Card.Title>
                       <Card.Text>{burger.description}</Card.Text>
                       <Card.Text>Price: ${burger.price}</Card.Text>
@@ -160,7 +160,7 @@ function MenuSection() {
             {activeSection === "drinks" &&
               filteredDrinks.map((drink) => (
                 <div key={drink.id}>
-                  <Card className="rounded-5 mx-1">
+                  <Card className="rounded-5 img mx-1">
                     <Card.Img variant="top" src={drink.photo} />
                     <Card.Body>
                       <Card.Title>{drink.name}</Card.Title>

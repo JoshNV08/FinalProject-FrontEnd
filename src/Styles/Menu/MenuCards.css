@@ -1,6 +1,12 @@
 .custom-card {
   perspective: 1000px;
 }
+.fix{
+  height: 425px !important;
+}
+.img{
+  height: 425px !important;
+}
 
 .card-inner {
   width: 100%;
