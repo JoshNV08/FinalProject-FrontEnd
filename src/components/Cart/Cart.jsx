@@ -7,9 +7,10 @@ import {
   getTotals,
   removeFromCart,
 } from "../../redux/cartSlice";
-import '../../Styles/Cart/Cart.css';
+import "../../Styles/Cart/Cart.css";
 import { Link } from "react-router-dom";
 import { FaTrash, FaArrowLeft, FaPlus, FaMinus } from "react-icons/fa";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -33,10 +34,9 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container">
-      <h2>Shopping Cart</h2>
-      <div className="cart-content">
-        <div className="cart-items">
+    <Container className="cart-container my-5">
+      <Row className="cart-content">
+        <Col sm={12} md={7} className="cart-items shadow-lg rounded-5 me-4">
           {cart.cartItems.length === 0 ? (
             <div className="cart-empty">
               <p>Your cart is currently empty</p>
@@ -49,26 +49,30 @@ const Cart = () => {
             </div>
           ) : (
             cart.cartItems.map((cartItem) => (
-              <div className="cart-item" key={cartItem.id}>
+              <div className="cart-item " key={cartItem.id}>
                 <img src={cartItem.photo} alt={cartItem.name} />
                 <div className="cart-product-details">
                   <h3>{cartItem.name}</h3>
                   <p>{cartItem.description}</p>
                   <div className="cart-product-quantity">
-                    <button onClick={() => handleDecreaseCart(cartItem)}>
+                    <Button
+                      variant="outline-secondary"
+                      onClick={() => handleDecreaseCart(cartItem)}>
                       <FaMinus />
-                    </button>
+                    </Button>
                     <div className="count">{cartItem.cartQuantity}</div>
-                    <button onClick={() => handleAddToCart(cartItem)}>
+                    <Button
+                      variant="outline-secondary"
+                      onClick={() => handleAddToCart(cartItem)}>
                       <FaPlus />
-                    </button>
+                    </Button>
                   </div>
-                  <button
+                  <Button
+                    variant="link"
                     onClick={() => handleRemoveFromCart(cartItem)}
-                    className="remove-btn"
-                  >
+                    className="remove-btn">
                     <FaTrash />
-                  </button>
+                  </Button>
                 </div>
                 <div className="cart-product-total-price">
                   ${cartItem.price * cartItem.cartQuantity}
@@ -76,8 +80,8 @@ const Cart = () => {
               </div>
             ))
           )}
-        </div>
-        <div className="cart-summary">
+        </Col>
+        <Col sm={12} md={4} className="cart-summary shadow-lg rounded-5">
           <h3>Order Summary</h3>
           {cart.cartItems.length > 0 ? (
             <>
@@ -86,10 +90,15 @@ const Cart = () => {
                 <span className="amount">${cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <button className="checkout-btn">Check out</button>
-              <button className="clear-btn" onClick={handleClearCart}>
+              <Button variant="none" className="checkout-btn">
+                Check out
+              </Button>
+              <Button
+                variant="none"
+                className="clear-btn"
+                onClick={handleClearCart}>
                 Clear Cart
-              </button>
+              </Button>
             </>
           ) : (
             <div className="empty-summary">
@@ -102,9 +111,9 @@ const Cart = () => {
               <span>Continue Shopping</span>
             </Link>
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
