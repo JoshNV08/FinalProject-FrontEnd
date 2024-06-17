@@ -38,6 +38,7 @@ function App() {
         <Route path="/contacto" element={<ContactPage />} />
         <Route path="/trabajo" element={<WorkPage />} />
         <Route path="/login" element={<UserLogin />} />
+        <Route path="/register" element={<UserLogin />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/cupones" element={<CouponsPage />} />
         <Route path="/priv" element={<PrivacyPage/>} />
