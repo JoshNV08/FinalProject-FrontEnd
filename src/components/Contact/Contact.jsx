@@ -46,8 +46,7 @@ function Contact() {
                 required
                 name="message"
                 rows={3}
-                className="input rounded-5"
-              ></textarea>
+                className="input rounded-5"></textarea>
               <label className="user-label">Message</label>
             </div>
             <Button type="submit" block className="mt-1 btnRed rounded-5">
@@ -57,37 +56,50 @@ function Contact() {
         </Col>
         <Col md={6} className="info-contact">
           <div className="info-box rounded-5">
-            <h2>Información de Contacto</h2>
+            <h2>Contact Information</h2>
             <p>
-              <strong>Teléfono:</strong> +598 99 856 458
+              <strong>Phone:</strong> +598 99 856 458
             </p>
             <p>
               <strong>Email:</strong> contact@goodburger.uy
             </p>
-            <h4>Horario de Atención:</h4>
+            <h4>Business Hours:</h4>
             <p>
-              <strong>Lunes a Viernes:</strong> 7am - 10pm
+              <strong>Monday to Friday:</strong> 7am - 10pm
             </p>
             <p>
-              <strong>Sábado:</strong> 24 horas
+              <strong>Saturday:</strong> 24 hours
             </p>
             <p>
-              <strong>Domingo:</strong> 24 horas
+              <strong>Sunday:</strong> 24 hours
             </p>
           </div>
           <Col md={12} className="social-contact">
-          <div className="social-box rounded-5">
-            
-            <h3>También contactanos por nuestras redes</h3>
-            <div className="parent">
-              <button className ="child childFacebook"><a href="https://facebook.com/goodburger"> <FaFacebook/></a></button>
-              <button className="child childTwitter"><a href="https://x.com/goodburger"> <FaTwitter/></a></button>
-              <button className="child childInstagram"><a href="https://instagram.com/goodburger"> <FaInstagram/></a></button>
+            <div className="social-box rounded-5">
+              <h3>Also contact us through our social networks</h3>
+              <div className="parent">
+                <button className="child childFacebook">
+                  <a href="https://facebook.com/goodburger">
+                    {" "}
+                    <FaFacebook />
+                  </a>
+                </button>
+                <button className="child childTwitter">
+                  <a href="https://x.com/goodburger">
+                    {" "}
+                    <FaTwitter />
+                  </a>
+                </button>
+                <button className="child childInstagram">
+                  <a href="https://instagram.com/goodburger">
+                    {" "}
+                    <FaInstagram />
+                  </a>
+                </button>
+              </div>
             </div>
-          </div>
+          </Col>
         </Col>
-        </Col>
-        
       </Row>
     </Container>
   );

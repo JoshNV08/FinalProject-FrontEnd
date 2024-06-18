@@ -62,15 +62,15 @@ function MenuSection() {
 
   return (
     <Container className="align-items-center justify-contents-center text-center p-4">
-      <h2 className="fs-1 font-weight-bold">¿Qué te ofrecemos?</h2>
-      <p className="text-muted fs-5">Sólo lo mejor para vos</p>
+      <h2 className="fs-1 font-weight-bold">What do we offer you?</h2>
+      <p className="text-muted fs-5">Only the best for you</p>
 
       <Row className="mt-4">
         <Col xs={6} md={4}>
           <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/burgerMenu.png" />
             <Card.Body>
-              <Card.Title>HAMBURGUESAS</Card.Title>
+              <Card.Title>BURGERS</Card.Title>
               <Button
                 variant="link"
                 onClick={() => handleSectionClick("burgers")}>
@@ -85,7 +85,7 @@ function MenuSection() {
           <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/Fritas.png" />
             <Card.Body>
-              <Card.Title>PAPAS FRITAS</Card.Title>
+              <Card.Title>FRENCH FRIES</Card.Title>
               <Button
                 variant="link"
                 onClick={() => handleSectionClick("snacks")}>
@@ -100,7 +100,7 @@ function MenuSection() {
           <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/Coca.png" />
             <Card.Body>
-              <Card.Title>BEBIDAS</Card.Title>
+              <Card.Title>DRINKS</Card.Title>
               <Button
                 variant="link"
                 onClick={() => handleSectionClick("drinks")}>
@@ -115,7 +115,7 @@ function MenuSection() {
           <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
             <Card.Img variant="top" src="../src/assets/Coffee.png" />
             <Card.Body>
-              <Card.Title>CAFETERÍA</Card.Title>
+              <Card.Title>COFFEE</Card.Title>
               <Button
                 variant="link"
                 onClick={() => handleSectionClick("coffee")}>
@@ -193,7 +193,7 @@ function MenuSection() {
           href="/menu"
           className="rounded-5 btnRed"
           size="lg">
-          <span>VER MENÚ</span>
+          <span>MENU</span>
         </Button>
       </div>
     </Container>

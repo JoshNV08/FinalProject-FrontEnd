@@ -41,7 +41,7 @@ function Filter() {
               to="/menu/menu-bebidas"
               onClick={(e) => handleCategoryClick("bebidas", e)}
               className={getClassName}>
-              🥤 Bebidas
+              🥤 Drinks
             </NavLink>
           </li>
           <li>
@@ -49,7 +49,7 @@ function Filter() {
               to="/menu/menu-postres"
               onClick={(e) => handleCategoryClick("postres", e)}
               className={getClassName}>
-              🍨 Postres
+              🍨 Desserts
             </NavLink>
           </li>
           <li>

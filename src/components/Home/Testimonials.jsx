@@ -29,8 +29,8 @@ function Testimonials() {
       <Container fluid className="testimonials-container pb-5">
         <Row className="text-center mb-3">
           <Col>
-            <h2>¿Qué dicen nuestros clientes?</h2>
-            <p>Dejanos tu opinión en nuestras redes</p>
+            <h2>What our clients say about the service?</h2>
+            <p>Let us your opinion on instagram</p>
           </Col>
         </Row>
         <Row>

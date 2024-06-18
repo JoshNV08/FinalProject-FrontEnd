@@ -15,11 +15,11 @@ function AboutUs() {
         </Col>
         <Col md={5} className=" text-md-start text-center mx-sm-0 mx-md-4 mb-5 mb-md-0">
           <h2 className="display-5 fw-bold my-5" style={{color:'#fe3030'}}>
-            Sobre Nosotros
+            About Us
           </h2>
           <p className="lead">
-            Descubre la excelencia en hamburguesas desde 2024. En busca de la
-            perfección en cada bocado. Somos la casa de la buena hamburguesa.
+          Discover excellence in burgers since 2024. In search of perfection
+          perfection in every bite. We are the home of the good burger.
           </p>
           <Button
             variant="transparent"
@@ -28,7 +28,7 @@ function AboutUs() {
             href="/sobrenosotros"
             style={{ backgroundColor: "#ff3030", color: "#fcda51" }}
           >
-            LEER MÁS
+            READ MORE
           </Button>
         </Col>
       </Row>

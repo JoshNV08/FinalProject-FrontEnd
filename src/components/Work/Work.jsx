@@ -43,7 +43,7 @@ function Work() {
             exit="exit"
           >
             <Form id="form" onSubmit={handleSubmit} className="text-center textWork">
-              <h2>Trabaja con Nosotros</h2>
+              <h2>Work with us</h2>
 
               <div className="input-group mb-4">
                 <input
@@ -89,7 +89,7 @@ function Work() {
               </div>
 
               <Form.Group controlId="formFile" className="file-upload mb-4">
-                <Form.Label className="mt-3 label">Subir archivo *</Form.Label>
+                <Form.Label className="mt-3 label">Upload file *</Form.Label>
                 <Form.Control
                   type="file"
                   size="sm"
@@ -100,7 +100,7 @@ function Work() {
               </Form.Group>
 
               <Button type="submit" className="btnYellow rounded-5 mb-5">
-                <span>Enviar</span>
+                <span>Send</span>
               </Button>
             </Form>
           </motion.div>

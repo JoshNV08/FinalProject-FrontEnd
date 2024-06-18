@@ -15,13 +15,13 @@ function Footer() {
         </Col>
         <Col md={3} className="text">
           <div>
-            <h5>NUESTROS HORARIOS</h5>
-            <p>Lunes a Viernes: 7am - 10pm</p>
-            <p>Sábado: 24 horas</p>
-            <p>Domingo: 24 horas</p>
+            <h5>OUR SCHEDULES</h5>
+            <p>Monday at Friday: 7am - 10pm</p>
+            <p>Saturday: 24 hours</p>
+            <p>Sunday: 24 hours</p>
           </div>
           <div>
-            <h5>SUCURSALES</h5>
+            <h5>BRANCHES</h5>
             <p>
               <a href="https://www.google.com/maps/place/Av.+18+de+Julio+1056,+11100+Montevideo,+Departamento+de+Montevideo/@-34.9062121,-56.195986,17z/data=!3m1!4b1!4m6!3m5!1s0x959f802d4c7794a1:0xc078cf8ccece51ef!8m2!3d-34.9062165!4d-56.1934111!16s%2Fg%2F11gh01lrvd?entry=ttu">
                 18 de Julio 1056, Montevideo
@@ -32,7 +32,7 @@ function Footer() {
             </p>
           </div>
           <div>
-            <h5>SEGUINOS EN NUESTRAS REDES</h5>
+            <h5>FOLLOW US ON UR SOCIAL NETWORKS</h5>
             <p>
               <a href="https://www.instagram.com/goodburger">Instagram</a> -{" "}
               <a href="https://www.facebook.com/goodburger">Facebook</a> -{" "}
@@ -42,7 +42,7 @@ function Footer() {
         </Col>
         <Col md={3} className="text">
           <div>
-            <h5>DESCARGA NUESTRA APP</h5>
+            <h5>DOWNLOAD OUR APP</h5>
             <p>
               <a href="">IOS</a>
             </p>
@@ -52,24 +52,24 @@ function Footer() {
           </div>
           <div>
             <h5>
-              <a href="/cupones">CUPONES</a>
+              <a href="/cupones">COUPONS</a>
             </h5>
             <h5>
-              <a href="/contacto">CONTACTO</a>
+              <a href="/contacto">CONTACT</a>
             </h5>
             <h5>
-              <a href="/sobrenosotros">SOBRE NOSOTROS</a>
-            </h5>
-            <h5>
-              {" "}
-              <a href="/trabajo">TRABAJA CON NOSOTROS</a>
-            </h5>
-            <h5>
-              <a href="/faq">PREGUNTAS FRECUENTES</a>
+              <a href="/sobrenosotros">ABOUT US</a>
             </h5>
             <h5>
               {" "}
-              <a href="/priv">POLITICA DE PRIVACIDAD</a>
+              <a href="/trabajo">WORK WITH US</a>
+            </h5>
+            <h5>
+              <a href="/faq">FREQUENT QUESTIONS</a>
+            </h5>
+            <h5>
+              {" "}
+              <a href="/priv">POLITICY OF PRIVACY</a>
             </h5>
           </div>
           <div>
@@ -79,7 +79,7 @@ function Footer() {
           </div>
           
         </Col>
-        <p className="text-muted justify-content-end d-flex">© 2024 GoodBurger. Todos los derechos reservados.</p>
+        <p className="text-muted justify-content-end d-flex">© 2024 GoodBurger. All rights reserved</p>
       </Row>
     </Container>
     

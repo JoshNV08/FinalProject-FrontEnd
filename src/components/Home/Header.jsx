@@ -11,16 +11,16 @@ function Header() {
           <Col md={6} className="text-center text-md-left">
             <div className="banner-text text-md-left">
               <h2 className="text-md-start">
-                <span className="line">Cada</span>
-                <span className="line">bocado</span>
-                <span className="line">una sonrisa</span>
+                <span className="line">Every</span>
+                <span className="line">bite</span>
+                <span className="line">a smile</span>
               </h2>
-              <p className="text-md-left">¡Hamburguesas que te hacen feliz!</p>
+              <p className="text-md-left">¡Burgers that make you happy!</p>
               <Button
                 className="btnYellow rounded-5 fw-bold"
                 size='lg'
                 href="/menu">
-                <span>ORDENA YA</span>
+                <span>ORDER NOW</span>
               </Button>
             </div>
           </Col>

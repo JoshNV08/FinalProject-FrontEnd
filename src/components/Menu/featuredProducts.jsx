@@ -21,7 +21,7 @@ const FeaturedProducts = () => {
   return (
     <div>
       <Container className="py-5 text-center">
-      <h2>Productos Destacados</h2>
+      <h2>Featured Products</h2>
       <Row>
       {featuredProducts.map((product) => (
           <div className="col-md-4 col-6 my-3" key={product.id}>
@@ -45,7 +45,7 @@ const FeaturedProducts = () => {
                   <a
                     href={`/productmenu/${product.id}`}
                     className="btn btn-warning rounded-4">
-                    Agregar a Carrito
+                    Add to cart
                   </a>
                 </div>
               </div>

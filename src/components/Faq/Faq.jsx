@@ -7,7 +7,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Si, ya que estamos asociados a VISA.
+      Yes, as we are associated with VISA.
     </p>
   );
   const text2 = (
@@ -15,7 +15,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Los dos locales tienen AutoBurger.
+      Both locations have AutoBurger.
     </p>
   );
   const text3 = (
@@ -23,7 +23,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Cualquier consulta o problema acerca de solicitar un reembolso de dinero contactarse a <a href="">goodburger@gmail.com.uy</a> 
+      Any questions or problems about requesting a refund contact us at <a href="">goodburger@gmail.com.uy</a> 
     </p>
   );
   const text4 = (
@@ -31,7 +31,7 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Todo producto contiene la debida información nutricional en la caja.
+      All products contain the appropriate nutritional information on the box.
     </p>
   );
   const text5 = (
@@ -39,42 +39,42 @@ const Faq = () => {
       style={{
         paddingLeft: 24,
       }}>
-      Por el momento no tenemos delivery pero estamos trabajando en ello.
+      At the moment we have no delivery but we are working on it.
     </p>
   );
 
   const items = [
     {
       key: "1",
-      label: "¿Puedo usar tarjeta de débito VISA?",
+      label: "Can I use VISA debit card?",
       children: text1,
     },
     {
       key: "2",
-      label: "¿Qué locales tienen AutoBurger?",
+      label: "Which locations have AutoBurger?",
       children: text2,
     },
     {
       key: "3",
-      label: "¿Cómo puedo solucionar un reembolso de dinero?",
+      label: "How can I solve a cashback?",
       children: text3,
     },
     {
       key: "4",
       label:
-        "¿Dónde puedo encontrar información nutricional sobre los productos?",
+        "Where can I find nutritional information about products?",
       children: text4,
     },
     {
       key: "5",
-      label: "¿Tienen alguna aplicación para utilizar delivery?",
+      label: "Do you have any applications to use delivery?",
       children: text5,
     },
   ];
 
   return (
     <>
-      <h1 className="container">Preguntas más frecuentes</h1>
+      <h1 className="container">Frequently Asked Questions</h1>
       <Collapse
         className="container mb-5"
         items={items}

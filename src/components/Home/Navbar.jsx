@@ -32,7 +32,7 @@ function Nav() {
                 Login
               </BootstrapNav.Link>
               <BootstrapNav.Link href="/trabajo" className="fs-5 text-contact">
-                Trabaja con Nosotros
+                Work with us
               </BootstrapNav.Link>
               <BootstrapNav.Link href="/cart">
                 <i
@@ -80,7 +80,7 @@ function Nav() {
                   color: "#ff3030",
                   fontSize: "15px",
                 }}>
-                Trabaja con Nosotros
+                Work with us
               </BootstrapNav.Link>
               <div className="social-icons">
                 <BootstrapNav.Link href="https://www.facebook.com/goodburger">
