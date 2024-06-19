@@ -32,7 +32,7 @@ function Footer() {
             </p>
           </div>
           <div>
-            <h5>FOLLOW US ON UR SOCIAL NETWORKS</h5>
+            <h5>FOLLOW US</h5>
             <p>
               <a href="https://www.instagram.com/goodburger">Instagram</a> -{" "}
               <a href="https://www.facebook.com/goodburger">Facebook</a> -{" "}
@@ -52,24 +52,24 @@ function Footer() {
           </div>
           <div>
             <h5>
-              <a href="/cupones">COUPONS</a>
+              <a href="/coupons">COUPONS</a>
             </h5>
             <h5>
-              <a href="/contacto">CONTACT</a>
+              <a href="/contact">CONTACT</a>
             </h5>
             <h5>
-              <a href="/sobrenosotros">ABOUT US</a>
+              <a href="/aboutus">ABOUT US</a>
             </h5>
             <h5>
               {" "}
-              <a href="/trabajo">WORK WITH US</a>
+              <a href="/workwithus">WORK WITH US</a>
             </h5>
             <h5>
               <a href="/faq">FREQUENT QUESTIONS</a>
             </h5>
             <h5>
               {" "}
-              <a href="/priv">POLITICY OF PRIVACY</a>
+              <a href="/privacy">POLITICY OF PRIVACY</a>
             </h5>
           </div>
           <div>
@@ -77,9 +77,9 @@ function Footer() {
               <a href="">rrhh@goodburger.com.uy</a>
             </h4>
           </div>
-          
+          <span className="text-muted justify-content-end d-flex">© 2024 GoodBurger. All rights reserved</span>
         </Col>
-        <p className="text-muted justify-content-end d-flex">© 2024 GoodBurger. All rights reserved</p>
+       
       </Row>
     </Container>
     

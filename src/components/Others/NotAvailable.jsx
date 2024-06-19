@@ -9,7 +9,7 @@ function NotAvailable({ handleClose }) {
     <>
       <Modal show={show} onHide={handleClose} dialogClassName="custom-modal">
         <Modal.Header closeButton>
-          <Modal.Title className="title-modal">Función no disponible</Modal.Title>
+          <Modal.Title className="title-modal">Function Not Available</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div
@@ -18,28 +18,24 @@ function NotAvailable({ handleClose }) {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
-            }}>
+            }}
+          >
             <img
               src="../../src/assets/BurgerModal.png"
-              alt="Producto no disponible"
+              alt="Product not available"
               style={{ width: "50%" }}
             />
             <div className="text-center">
-              <p>
-                Lo sentimos, pero esta función no está disponible actualmente.
-              </p>
-              <p>Estaremos implementándola próximamente.</p>
-              <p>
-                No olvides registrarte para estar enterado de todas las
-                novedades.
-              </p>
-              <p>¡Muchas Gracias!</p>
+              <p>Sorry, but this function is currently not available.</p>
+              <p>We will be implementing it soon.</p>
+              <p>Don't forget to register to stay informed about all the updates.</p>
+              <p>Thank you very much!</p>
             </div>
           </div>
         </Modal.Body>
         <Modal.Footer>
           <Button className='btn-modal' onClick={handleClose}>
-            Volver atrás
+            Go Back
           </Button>
         </Modal.Footer>
       </Modal>

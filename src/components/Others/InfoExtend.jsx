@@ -8,40 +8,28 @@ function InfoExtend() {
     <Container>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h1 style={{ fontWeight: "bold" }}>¿Quiénes Somos?</h1>
+          <h1 style={{ fontWeight: "bold" }}>Who Are We?</h1>
         </div>
         <Col md={6} xs={12} className="text-center">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
             className="display-5 mb-4 mt-5 text-center"
           >
-            MISIÓN
+            MISSION
           </h2>
           <p>
-            Nuestra misión en Good Burger es ser reconocidos como la cadena de
-            restaurantes de hamburguesas preferida por la gente, destacando por
-            nuestra rentabilidad y proyección hacia el futuro. Nos esforzamos
-            por reunir a las personas más talentosas y comprometidas, quienes
-            están totalmente alineadas con nuestra visión y valores, para
-            ofrecer experiencias excepcionales y sabrosas hamburguesas que
-            deleiten a nuestros clientes en cada visita.
+            Our mission at Good Burger is to be recognized as the preferred burger restaurant chain by people, standing out for our profitability and projection towards the future. We strive to bring together the most talented and committed individuals, who are fully aligned with our vision and values, to offer exceptional experiences and delicious burgers that delight our customers on every visit.
           </p>
         </Col>
         <Col md={6} xs={12} className="text-center ">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5  mb-4 mt-3 mt-lg-5 text-center"
+            className="display-5 mb-4 mt-3 mt-lg-5 text-center"
           >
-            VISIÓN
+            VISION
           </h2>
           <p>
-            Somos Good Burger S.A., nos encontramos operando en Montevideo y
-            Punta del Este. En Good Burger servimos con orgullo las mejores
-            hamburguesas, así como una variedad de auténticos productos
-            preparados al momento y cuando nuestros clientes lo necesitan,
-            siendo la mejor experiencia de comida rápida en el país. Contamos
-            con una oferta de productos de excelente calidad, esmerada atención
-            y un ambiente sorprendente, alineado con la filosofía de la empresa.
+            We are Good Burger S.A., operating in Montevideo and Punta del Este. At Good Burger, we proudly serve the best burgers, as well as a variety of authentic products prepared on the spot and when our customers need them, providing the best fast food experience in the country. We offer high-quality products, excellent service, and an amazing atmosphere, aligned with the company's philosophy.
           </p>
         </Col>
       </Row>
@@ -56,12 +44,11 @@ function InfoExtend() {
             <Card.Img variant="top" src="src/assets/Joshua.png" className="" />
             <Card.Body>
               <Card.Title>Joshua Nuñez</Card.Title>
-              <span>Cofundador</span>
+              <span>Co-founder</span>
               <Card.Text>
                 <p className="textCard">
-                  Programador, Diseñador, Filántropo.
-                  <br />A su corta edad a revolucionado el mercado con sus
-                  ideas. <br /> Un talento increíble con un futuro brillante.
+                  Programmer, Designer, Philanthropist.
+                  <br /> At a young age, he has revolutionized the market with his ideas. <br /> An incredible talent with a bright future.
                 </p>
               </Card.Text>
             </Card.Body>
@@ -91,12 +78,11 @@ function InfoExtend() {
             <Card.Img variant="top" src="src/assets/eze.png" />
             <Card.Body>
               <Card.Title>Ezequiel Clavijo</Card.Title>
-              <span>Cofundador</span>
+              <span>Co-founder</span>
               <Card.Text>
                 <p className="textCard">
-                  Ex músico y deportista, actual programador.
-                  <br /> En busca de algo que le apasione y asegure su futuro ha
-                  encontrado su vocación.
+                  Former musician and athlete, now a programmer.
+                  <br /> In search of something that he is passionate about and ensures his future, he has found his vocation.
                 </p>
               </Card.Text>
             </Card.Body>
@@ -127,12 +113,10 @@ function InfoExtend() {
             <Card.Body>
               <Card.Title>Sebastián De León</Card.Title>
               <Card.Text>
-                <span>Cofundador</span>
+                <span>Co-founder</span>
                 <p className="textCard">
-                  Apasionado por el desarrollo y los deportes, ha demostrado un
-                  talento único en el mercado.
-                  <br /> Con una habilidad destacada en Valorant, su futuro es
-                  prometedor.
+                  Passionate about development and sports, he has shown unique talent in the market.
+                  <br /> With outstanding skill in Valorant, his future is promising.
                 </p>
               </Card.Text>
             </Card.Body>
@@ -163,11 +147,10 @@ function InfoExtend() {
             <Card.Body>
               <Card.Title>Nicolás Dos Santos</Card.Title>
               <Card.Text>
-                <span>Cofundador</span>
+                <span>Co-founder</span>
                 <p className="textCard">
-                  Entusiasta de la tecnología y la innovación, ha mostrado una
-                  creatividad excepcional en el ámbito digital.
-                  <br /> El papá de los pollitos...
+                  Enthusiast of technology and innovation, he has shown exceptional creativity in the digital field.
+                  <br /> The "father of the chicks"...
                 </p>
               </Card.Text>
             </Card.Body>

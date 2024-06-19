@@ -19,8 +19,8 @@ function FooterHome() {
             <div>
               <h5>OUR SCHEDULES</h5>
               <p>Monday at Friday: 7am - 10pm</p>
-              <p>Saturday: 24 horas</p>
-              <p>Sunday: 24 horas</p>
+              <p>Saturday: 24 hours</p>
+              <p>Sunday: 24 hours</p>
             </div>
             <div>
               <h5>BRANCHES</h5>
@@ -34,7 +34,7 @@ function FooterHome() {
               </p>
             </div>
             <div>
-              <h5><h5>FOLLOW US ON UR SOCIAL NETWORKS</h5></h5>
+              <h5><h5>FOLLOW US</h5></h5>
               <p>
                 <a href="https://www.instagram.com/goodburger">Instagram</a> -{" "}
                 <a href="https://www.facebook.com/goodburger">Facebook</a> -{" "}
@@ -54,24 +54,24 @@ function FooterHome() {
             </div>
             <div>
               <h5>
-                <Link to="/cupones">COUPONS</Link>
+                <Link to="/coupons">COUPONS</Link>
               </h5>
               <h5>
-                <Link to="/contacto">CONTACT</Link>
+                <Link to="/contact">CONTACT</Link>
               </h5>
               <h5>
-                <Link to="/sobrenosotros">ABOUT US</Link>
+                <Link to="/aboutus">ABOUT US</Link>
               </h5>
               <h5>
                 {" "}
-                <Link to="/trabajo">WORK WITH US</Link>
+                <Link to="/workwithus">WORK WITH US</Link>
               </h5>
               <h5>
                 <Link to="/faq">FREQUENTLY QUESTIONS</Link>
               </h5>
               <h5>
                 {" "}
-                <Link to="/priv">POLITICY OF PRIVACY</Link>
+                <Link to="/privacy">POLITICY OF PRIVACY</Link>
               </h5>
             </div>
             <div>
@@ -80,8 +80,9 @@ function FooterHome() {
               </h4>
               
             </div>
+            <span className="text-muted justify-content-md-end d-flex">© 2024 GoodBurger. All rights reserved.</span>
           </Col>
-          <p className="text-muted justify-content-md-end d-flex">© 2024 GoodBurger. All rights reserved.</p>
+          
         </Row>
       </Container>
     </div>

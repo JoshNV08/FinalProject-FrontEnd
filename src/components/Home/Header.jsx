@@ -11,9 +11,9 @@ function Header() {
           <Col md={6} className="text-center text-md-left">
             <div className="banner-text text-md-left">
               <h2 className="text-md-start">
-                <span className="line">Every</span>
-                <span className="line">bite</span>
-                <span className="line">a smile</span>
+                <span className="line">Savor</span>
+                <span className="line">Each Bite</span>
+                <span className="line">With Smiles</span>
               </h2>
               <p className="text-md-left">¡Burgers that make you happy!</p>
               <Button

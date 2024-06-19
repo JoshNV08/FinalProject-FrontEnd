@@ -10,19 +10,19 @@ const data = [
     style: { backgroundColor: "#ffcc00", textColor: "#fe3031" },
   },
   {
-    option: "Envio Gratis",
+    option: "Free Shipping",
     style: { backgroundColor: "#fe3031", textColor: "#ffcc00" },
   },
   {
-    option: "Nada",
+    option: "Nothing",
     style: { backgroundColor: "#ffcc00", textColor: "#fe3031" },
   },
   {
-    option: "Refresco Gratis",
+    option: "Free Drink",
     style: { backgroundColor: "#fe3031", textColor: "#ffcc00" },
   },
   {
-    option: "Papas de Regalo",
+    option: "Free Fries",
     style: { backgroundColor: "#ffcc00", textColor: "#fe3031" },
   },
   {
@@ -31,7 +31,7 @@ const data = [
   },
 ];
 
-const Cupones = () => {
+const Coupons = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(null);
   const [showConfetti, setShowConfetti] = useState(false);
@@ -69,12 +69,12 @@ const Cupones = () => {
           <Button
             onClick={handleSpinClick}
             className="btnYellow rounded-5 mt-3">
-            <span>Girar</span>
+            <span>Spin</span>
           </Button>
           {prizeNumber !== null && (
             <div className="mt-3">
-              <h2>¡Felicidades!</h2>
-              <h3>Ganaste: {data[prizeNumber].option}</h3>
+              <h2>Congratulations!</h2>
+              <h3>You won: {data[prizeNumber].option}</h3>
             </div>
           )}
         </Col>
@@ -83,4 +83,4 @@ const Cupones = () => {
   );
 };
 
-export default Cupones;
+export default Coupons;

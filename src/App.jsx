@@ -28,19 +28,19 @@ function App() {
         <Route path="/menu" element={<MenuPage />}>
           <Route path="menu-burgers" element={<MenuBurgers />} />
           <Route path="menu-snacks" element={<MenuSnacks />} />
-          <Route path="menu-bebidas" element={<MenuDrinks />} />
-          <Route path="menu-postres" element={<MenuDesserts />} />
+          <Route path="menu-drinks" element={<MenuDrinks />} />
+          <Route path="menu-desserts" element={<MenuDesserts />} />
           <Route path="menu-coffee" element={<MenuCoffee />} />
         </Route>
         <Route path="/productmenu/:id" element={<ProductMenu/>}/>
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/sobrenosotros" element={<Information />} />
-        <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/trabajo" element={<WorkPage />} />
+        <Route path="/aboutus" element={<Information />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/workwithus" element={<WorkPage />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/faq" element={<FaqPage />} />
-        <Route path="/cupones" element={<CouponsPage />} />
-        <Route path="/priv" element={<PrivacyPage/>} />
+        <Route path="/coupons" element={<CouponsPage />} />
+        <Route path="/privacy" element={<PrivacyPage/>} />
       </Routes>
     </>
   );

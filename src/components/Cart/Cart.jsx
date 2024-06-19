@@ -35,7 +35,7 @@ const Cart = () => {
 
   return (
     <Container className="cart-container my-5">
-      <Row className="cart-content">
+      <Row className="justify-content-center">
         <Col sm={12} md={7} className="cart-items shadow-lg rounded-5 me-4">
           {cart.cartItems.length === 0 ? (
             <div className="cart-empty">
@@ -49,7 +49,7 @@ const Cart = () => {
             </div>
           ) : (
             cart.cartItems.map((cartItem) => (
-              <div className="cart-item " key={cartItem.id}>
+              <div className="cart-item" key={cartItem.id}>
                 <img src={cartItem.photo} alt={cartItem.name} />
                 <div className="cart-product-details">
                   <h3>{cartItem.name}</h3>
@@ -57,20 +57,23 @@ const Cart = () => {
                   <div className="cart-product-quantity">
                     <Button
                       variant="outline-secondary"
-                      onClick={() => handleDecreaseCart(cartItem)}>
+                      onClick={() => handleDecreaseCart(cartItem)}
+                    >
                       <FaMinus />
                     </Button>
                     <div className="count">{cartItem.cartQuantity}</div>
                     <Button
                       variant="outline-secondary"
-                      onClick={() => handleAddToCart(cartItem)}>
+                      onClick={() => handleAddToCart(cartItem)}
+                    >
                       <FaPlus />
                     </Button>
                   </div>
                   <Button
                     variant="link"
                     onClick={() => handleRemoveFromCart(cartItem)}
-                    className="remove-btn">
+                    className="remove-btn"
+                  >
                     <FaTrash />
                   </Button>
                 </div>
@@ -96,7 +99,8 @@ const Cart = () => {
               <Button
                 variant="none"
                 className="clear-btn"
-                onClick={handleClearCart}>
+                onClick={handleClearCart}
+              >
                 Clear Cart
               </Button>
             </>
@@ -118,3 +122,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

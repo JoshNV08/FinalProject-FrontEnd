@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {Container, Row, Col, Card, Button} from 'react-bootstrap'
+import {Container, Row} from 'react-bootstrap'
 
 const FeaturedProducts = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -45,7 +45,7 @@ const FeaturedProducts = () => {
                   <a
                     href={`/productmenu/${product.id}`}
                     className="btn btn-warning rounded-4">
-                    Add to cart
+                    Buy Product
                   </a>
                 </div>
               </div>

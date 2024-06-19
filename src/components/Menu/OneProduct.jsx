@@ -41,32 +41,32 @@ function OneProduct({ id }) {
     return product.categoryId === 1 ? (
       <>
         <Form.Group className="mb-3">
-          <Form.Label>Quitar</Form.Label>
+          <Form.Label>Remove</Form.Label>
           <Form.Select
             name="removeOptions"
             onChange={handleCustomizationChange}>
-            <option value="">Seleccione que desea sacar</option>
-            <option value="noLettuce">Sin Lechuga</option>
-            <option value="noTomato">Sin Tomate</option>
-            <option value="noMeat">Sin Carne</option>
-            <option value="noBread">Sin Pan</option>
-            <option value="noCondiments">Sin Condimentos</option>
+            <option value="">Select what you want to remove</option>
+            <option value="noLettuce">No Lettuce</option>
+            <option value="noTomato">No Tomato</option>
+            <option value="noMeat">No Meat</option>
+            <option value="noBread">No Bread</option>
+            <option value="noCondiments">No Condiments</option>
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Extras</Form.Label>
+          <Form.Label>Add-ons</Form.Label>
           <Form.Select name="addons" onChange={handleCustomizationChange}>
-            <option value="">Agrega un extra</option>
+            <option value="">Add an extra</option>
             <option value="extraCheese">Extra Cheese</option>
             <option value="bacon">Bacon</option>
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Indicación para su pedido</Form.Label>
+          <Form.Label>Special Instructions</Form.Label>
           <Form.Control
             as="textarea"
             name="specialInstructions"
-            placeholder="Te gustaría algo en especial?"
+            placeholder="Would you like anything special?"
             onChange={handleCustomizationChange}
           />
         </Form.Group>
@@ -77,36 +77,32 @@ function OneProduct({ id }) {
           <Form.Label>Choose your Size</Form.Label>
           <Form.Select name="size" onChange={handleCustomizationChange}>
             <option value="zero">Zero</option>
-            <option value="original">Comun</option>
+            <option value="original">Original</option>
             <option value="light">Light</option>
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Temperatura</Form.Label>
+          <Form.Label>Temperature</Form.Label>
           <Form.Select name="extras" onChange={handleCustomizationChange}>
             <option value="natural">Natural</option>
-            <option value="cold">Fria</option>
+            <option value="cold">Cold</option>
           </Form.Select>
         </Form.Group>
       </>
     ) : product.categoryId === 2 ? (
       <>
         <Form.Group className="mb-3">
-          <Form.Label>Elija el tamaño</Form.Label>
+          <Form.Label>Choose the size</Form.Label>
           <Form.Select name="size" onChange={handleCustomizationChange}>
-            <option value placeholder="">
-              Seleccione tamaño
-            </option>
-            <option value="zero">Mediano</option>
-            <option value="original">Grande</option>
+            <option value="">Select size</option>
+            <option value="zero">Medium</option>
+            <option value="original">Large</option>
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Extra</Form.Label>
           <Form.Select name="extras" onChange={handleCustomizationChange}>
-            <option value placeholder="">
-              Seleccione extras
-            </option>
+            <option value="">Select extras</option>
             <option value="natural">Bacon</option>
             <option value="cold">Cheddar</option>
           </Form.Select>
@@ -115,24 +111,20 @@ function OneProduct({ id }) {
     ) : product.categoryId === 5 ? (
       <>
         <Form.Group className="mb-3">
-          <Form.Label>Selecciona ingrediente</Form.Label>
+          <Form.Label>Select ingredient</Form.Label>
           <Form.Select name="size" onChange={handleCustomizationChange}>
-            <option value placeholder="">
-              Seleccione
-            </option>
-            <option value="zero">Azúcar</option>
-            <option value="original">Edulcorante</option>
+            <option value="">Select</option>
+            <option value="zero">Sugar</option>
+            <option value="original">Sweetener</option>
             <option value="light">Stevia</option>
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Tamaño</Form.Label>
+          <Form.Label>Size</Form.Label>
           <Form.Select name="extras" onChange={handleCustomizationChange}>
-            <option value placeholder="">
-              Seleccione tamaño
-            </option>
-            <option value="natural">Mediano</option>
-            <option value="cold">Grande</option>
+            <option value="">Select size</option>
+            <option value="natural">Medium</option>
+            <option value="cold">Large</option>
           </Form.Select>
         </Form.Group>
       </>
@@ -144,7 +136,7 @@ function OneProduct({ id }) {
       <Row className="align-items-center my-3">
         <Col xs="auto">
           <Button as="a" size="sm" href="/menu" className="btnMenu rounded-5">
-            <span>Volver al Menu</span>
+            <span>Back to Menu</span>
           </Button>
         </Col>
         <Col className="justify-content-end d-flex mx-md-3">
@@ -172,7 +164,7 @@ function OneProduct({ id }) {
                 <Button
                   className="btnMenu rounded-5 mt-3 w-100"
                   onClick={() => handleAddToCart(product)}>
-                  <span>Agregar al carrito</span>
+                  <span>Add to Cart</span>
                 </Button>
               </fieldset>
             </Form>

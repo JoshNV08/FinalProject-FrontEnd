@@ -25,7 +25,7 @@ function AboutUs() {
             variant="transparent"
             size="lg"
             className="my-3 rounded-5 fw-bold"
-            href="/sobrenosotros"
+            href="/aboutus"
             style={{ backgroundColor: "#ff3030", color: "#fcda51" }}
           >
             READ MORE
