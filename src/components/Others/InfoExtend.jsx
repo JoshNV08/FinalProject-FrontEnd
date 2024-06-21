@@ -13,7 +13,8 @@ function InfoExtend() {
         <Col md={6} xs={12} className="text-center">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5 mb-4 mt-5 text-center">
+            className="display-5 mb-4 mt-5 text-center"
+          >
             MISSION
           </h2>
           <p>
@@ -28,7 +29,8 @@ function InfoExtend() {
         <Col md={6} xs={12} className="text-center ">
           <h2
             style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5 mb-4 mt-3 mt-lg-5 text-center">
+            className="display-5 mb-4 mt-3 mt-lg-5 text-center"
+          >
             VISION
           </h2>
           <p>
@@ -46,7 +48,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/Joshua.png" className="" />
             <Card.Body>
@@ -74,7 +77,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/eze.png" />
             <Card.Body>
@@ -89,10 +93,10 @@ function InfoExtend() {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://github.com/EzeClavijo">
+              <Card.Link href="https://www.linkedin.com/in/ezequiel-clavijo-051030-/">
                 <Linkedin size={20} />
               </Card.Link>
-              <Card.Link href="#">
+              <Card.Link href="https://github.com/EzeClavijo">
                 <Github size={20} />
               </Card.Link>
             </Card.Body>
@@ -102,7 +106,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden ">
             <Card.Img variant="top" src="src/assets/seba.jpeg" />
             <Card.Body>
@@ -131,7 +136,8 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center">
+          className="d-flex justify-content-center text-center"
+        >
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/nico.png" />
             <Card.Body>
@@ -146,10 +152,10 @@ function InfoExtend() {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://github.com/Nico2santos">
+              <Card.Link href="https://uy.linkedin.com/in/nicol%C3%A1s-dos-santos-?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fuy.linkedin.com%2Fpub%2Fdir%2FNicol%25C3%25A1s%2FDos%2BSantos%2Fuy-0-Uruguay">
                 <Linkedin size={20} />
               </Card.Link>
-              <Card.Link href="#">
+              <Card.Link href="https://github.com/Nico2santos">
                 <Github size={20} />
               </Card.Link>
             </Card.Body>
