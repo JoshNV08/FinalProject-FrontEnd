@@ -9,11 +9,16 @@ import {
 import "../../Styles/Home/Navbar.css";
 
 import Logo from "../../assets/Logo.png";
-import FacebookIcon from "../../assets/Facebook.png";
-import InstagramIcon from "../../assets/Instagram.png";
-import TwitterIcon from "../../assets/Twitter.png";
 
 function Nav() {
+  const iconStyle = {
+    fontSize: "25px",
+    color: "#fe3030",
+    backgroundColor: "#ffcc00",
+    padding: "5px",
+    borderRadius: "25%",
+  };
+
   return (
     <Navbar className="navbar-custom">
       <Container>
@@ -47,25 +52,13 @@ function Nav() {
               </BootstrapNav.Link>
               <div className="social-icons">
                 <BootstrapNav.Link href="https://www.facebook.com/goodburger">
-                  <img
-                    src={FacebookIcon}
-                    className="social-icon"
-                    alt="Facebook"
-                  />
+                  <i className="bi bi-facebook" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.Instagram.com/goodburger">
-                  <img
-                    src={InstagramIcon}
-                    className="social-icon"
-                    alt="Instagram"
-                  />
+                <BootstrapNav.Link href="https://www.instagram.com/goodburger">
+                  <i className="bi bi-instagram" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.x.com/goodburger">
-                  <img
-                    src={TwitterIcon}
-                    className="social-icon"
-                    alt="Twitter"
-                  />
+                <BootstrapNav.Link href="https://www.twitter.com/goodburger">
+                  <i className="bi bi-twitter-x" style={iconStyle}></i>
                 </BootstrapNav.Link>
               </div>
             </BootstrapNav>
@@ -92,25 +85,13 @@ function Nav() {
               </BootstrapNav.Link>
               <div className="social-icons">
                 <BootstrapNav.Link href="https://www.facebook.com/goodburger">
-                  <img
-                    src={FacebookIcon}
-                    className="social-icon"
-                    alt="Facebook"
-                  />
+                  <i className="bi bi-facebook" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.Instagram.com/goodburger">
-                  <img
-                    src={InstagramIcon}
-                    className="social-icon"
-                    alt="Instagram"
-                  />
+                <BootstrapNav.Link href="https://www.instagram.com/goodburger">
+                  <i className="bi bi-instagram" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.x.com/goodburger">
-                  <img
-                    src={TwitterIcon}
-                    className="social-icon"
-                    alt="Twitter"
-                  />
+                <BootstrapNav.Link href="https://www.twitter.com/goodburger">
+                  <i className="bi bi-twitter-x" style={iconStyle}></i>
                 </BootstrapNav.Link>
               </div>
             </div>
