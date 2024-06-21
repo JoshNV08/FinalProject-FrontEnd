@@ -16,9 +16,13 @@ function Work() {
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, x: '-100vw' },
-    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 120 } },
-    exit: { opacity: 0, x: '100vw', transition: { ease: 'easeInOut' } },
+    hidden: { opacity: 0, x: "-100vw" },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 120 },
+    },
+    exit: { opacity: 0, x: "100vw", transition: { ease: "easeInOut" } },
   };
 
   return (
@@ -42,7 +46,11 @@ function Work() {
             animate="visible"
             exit="exit"
           >
-            <Form id="form" onSubmit={handleSubmit} className="text-center textWork">
+            <Form
+              id="form"
+              onSubmit={handleSubmit}
+              className="text-center textWork"
+            >
               <h2>Work with us</h2>
 
               <div className="input-group mb-4">
@@ -53,7 +61,7 @@ function Work() {
                   autoComplete="off"
                   className="input rounded-4"
                 />
-                <label className="user-label-work">Nombre</label>
+                <label className="user-label-work">Name</label>
               </div>
 
               <div className="input-group mb-4">
@@ -74,7 +82,7 @@ function Work() {
                   rows={3}
                   className="input rounded-4"
                 ></textarea>
-                <label className="user-label-work">Mensaje</label>
+                <label className="user-label-work">Message</label>
               </div>
 
               <div className="input-group mb-4">
@@ -85,7 +93,7 @@ function Work() {
                   autoComplete="off"
                   className="input rounded-4"
                 />
-                <label className="user-label-work">Teléfono</label>
+                <label className="user-label-work">Phone Number</label>
               </div>
 
               <Form.Group controlId="formFile" className="file-upload mb-4">
@@ -96,7 +104,9 @@ function Work() {
                   onChange={handleFileChange}
                   accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls"
                 />
-                <p className="file-formats">pdf, jpg, jpeg, png, doc, docx, xls</p>
+                <p className="file-formats">
+                  pdf, jpg, jpeg, png, doc, docx, xls
+                </p>
               </Form.Group>
 
               <Button type="submit" className="btnYellow rounded-5 mb-5">
