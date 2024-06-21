@@ -50,7 +50,7 @@ function MenuDrinks() {
                   <a
                     href={`/productmenu/${drink.id}`}
                     className="btn btn-warning rounded-4">
-                    Agregar a Carrito
+                    Buy Product
                   </a>
                 </div>
               </div>

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import burgers from "../../data/burger";
 
 function MenuBurgers() {
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -46,8 +45,9 @@ function MenuBurgers() {
                     <p>{burger.description}</p>
                     <a
                       href={`/productmenu/${burger.id}`}
-                      className="btn btn-warning rounded-4">
-                      Agregar a Carrito
+                      className="btn btn-warning rounded-4"
+                    >
+                      Buy Product
                     </a>
                   </div>
                 </div>

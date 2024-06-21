@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import {Container, Row} from 'react-bootstrap'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Container, Row } from "react-bootstrap";
 
 const FeaturedProducts = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -8,10 +8,12 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/products/featured');
+        const response = await axios.get(
+          "http://localhost:3000/products/featured"
+        );
         setFeaturedProducts(response.data);
       } catch (error) {
-        console.error('Error fetching featured products', error);
+        console.error("Error fetching featured products", error);
       }
     };
 
@@ -21,39 +23,39 @@ const FeaturedProducts = () => {
   return (
     <div>
       <Container className="py-5 text-center">
-      <h2>Featured Products</h2>
-      <Row>
-      {featuredProducts.map((product) => (
-          <div className="col-md-4 col-6 my-3" key={product.id}>
-            <div className="rounded-5 custom-card">
-              <div className="card-inner">
-                <div className="card-front">
-                  <div className="text-dark d-flex justify-content-start mx-4 mt-3">
-                    <h5>${product.price}</h5>
+        <h2>Featured Products</h2>
+        <Row>
+          {featuredProducts.map((product) => (
+            <div className="col-md-4 col-6 my-3" key={product.id}>
+              <div className="rounded-5 custom-card">
+                <div className="card-inner">
+                  <div className="card-front">
+                    <div className="text-dark d-flex justify-content-start mx-4 mt-3">
+                      <h5>${product.price}</h5>
+                    </div>
+                    <img
+                      src={product.photo}
+                      alt={product.name}
+                      className="card-img-top"
+                    />
                   </div>
-                  <img
-                    src={product.photo}
-                    alt={product.name}
-                    className="card-img-top"
-                  />
-                </div>
-                <div className="card-back">
-                
-                      <h5 className="card-title">{product.name}</h5>
-                    
-                  <p>{product.description}</p>
-                  <a
-                    href={`/productmenu/${product.id}`}
-                    className="btn btn-warning rounded-4">
-                    Buy Product
-                  </a>
+                  <div className="card-back">
+                    <h5 className="card-title">{product.name}</h5>
+
+                    <p>{product.description}</p>
+                    <a
+                      href={`/productmenu/${product.id}`}
+                      className="btn btn-warning rounded-4"
+                    >
+                      Buy Product
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Row>
-    </Container>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 };
