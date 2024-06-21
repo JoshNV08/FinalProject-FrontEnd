@@ -35,26 +35,32 @@ const Coupons = () => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(null);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [showPrize, setShowPrize] = useState(false);
 
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length);
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
+    setShowPrize(false);
+    setShowConfetti(false); // Hide confetti when starting a new spin
+  };
+
+  const handleStopSpinning = () => {
+    setMustSpin(false);
+    setShowPrize(true);
   };
 
   useEffect(() => {
-    if (prizeNumber !== null && prizeNumber !== 2) {
+    if (showPrize && prizeNumber !== 2) {
       setShowConfetti(true);
       setTimeout(() => {
         setShowConfetti(false);
       }, 5000);
     }
-  }, [prizeNumber]);
+  }, [showPrize, prizeNumber]);
 
   return (
-    <Container
-      fluid
-      className="d-flex justify-content-center align-items-center">
+    <Container fluid className="d-flex justify-content-center align-items-center">
       {showConfetti && <Confetti />}
       <Row className="justify-content-center">
         <Col md={12} className="text-center">
@@ -62,16 +68,12 @@ const Coupons = () => {
             mustStartSpinning={mustSpin}
             prizeNumber={prizeNumber}
             data={data}
-            onStopSpinning={() => {
-              setMustSpin(false);
-            }}
+            onStopSpinning={handleStopSpinning}
           />
-          <Button
-            onClick={handleSpinClick}
-            className="btnYellow rounded-5 mt-3">
+          <Button onClick={handleSpinClick} className="btnYellow rounded-5 mt-3">
             <span>Spin</span>
           </Button>
-          {prizeNumber !== null && (
+          {showPrize && (
             <div className="mt-3">
               <h2>Congratulations!</h2>
               <h3>You won: {data[prizeNumber].option}</h3>
