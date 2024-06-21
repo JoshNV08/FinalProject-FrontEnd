@@ -24,7 +24,8 @@ function Filter() {
             <NavLink
               to="/menu/menu-burgers"
               onClick={(e) => handleCategoryClick("burgers", e)}
-              className={getClassName}>
+              className={getClassName}
+            >
               🍔 Burgers
             </NavLink>
           </li>
@@ -32,23 +33,26 @@ function Filter() {
             <NavLink
               to="/menu/menu-snacks"
               onClick={(e) => handleCategoryClick("snacks", e)}
-              className={getClassName}>
+              className={getClassName}
+            >
               🍟 Snacks
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/menu/menu-bebidas"
-              onClick={(e) => handleCategoryClick("bebidas", e)}
-              className={getClassName}>
+              to="/menu/menu-drinks"
+              onClick={(e) => handleCategoryClick("drinks", e)}
+              className={getClassName}
+            >
               🥤 Drinks
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/menu/menu-postres"
-              onClick={(e) => handleCategoryClick("postres", e)}
-              className={getClassName}>
+              to="/menu/menu-desserts"
+              onClick={(e) => handleCategoryClick("desserts", e)}
+              className={getClassName}
+            >
               🍨 Desserts
             </NavLink>
           </li>
@@ -56,7 +60,8 @@ function Filter() {
             <NavLink
               to="/menu/menu-coffee"
               onClick={(e) => handleCategoryClick("coffee", e)}
-              className={getClassName}>
+              className={getClassName}
+            >
               ☕ Coffee
             </NavLink>
           </li>
