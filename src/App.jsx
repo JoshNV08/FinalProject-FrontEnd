@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
@@ -17,9 +17,9 @@ import CouponsPage from "./pages/CouponsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import ProductMenu from "./pages/ProductMenu";
 import CartPage from "./pages/CartPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
-
   return (
     <>
       <Nav />
@@ -32,15 +32,16 @@ function App() {
           <Route path="menu-desserts" element={<MenuDesserts />} />
           <Route path="menu-coffee" element={<MenuCoffee />} />
         </Route>
-        <Route path="/productmenu/:id" element={<ProductMenu/>}/>
+        <Route path="/productmenu/:id" element={<ProductMenu />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/aboutus" element={<Information />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/workwithus" element={<WorkPage />} />
         <Route path="/login" element={<UserLogin />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/coupons" element={<CouponsPage />} />
-        <Route path="/privacy" element={<PrivacyPage/>} />
+        <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>
     </>
   );
