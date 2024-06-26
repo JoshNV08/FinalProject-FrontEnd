@@ -2,11 +2,15 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { Google, Facebook } from "react-bootstrap-icons";
+import "../../Styles/Others/Login.css";
+import "../../Styles/Buttons/ButtonYellow.css";
+import NotAvailable from "../Others/NotAvailable";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [showModal, setShowModal] = useState(false);
   const registerNodeRef = useRef(null);
 
   const handleSubmit = (e) => {
@@ -17,6 +21,10 @@ function Register() {
 
   function handleModalRegister() {
     setShowModal(true);
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
   }
 
   return (
@@ -98,6 +106,8 @@ function Register() {
           </Link>
         </div>
       </div>
+
+      {showModal && <NotAvailable handleClose={handleCloseModal} />}
     </div>
   );
 }

@@ -9,7 +9,9 @@ function NotAvailable({ handleClose }) {
     <>
       <Modal show={show} onHide={handleClose} dialogClassName="custom-modal">
         <Modal.Header closeButton>
-          <Modal.Title className="title-modal">Function Not Available</Modal.Title>
+          <Modal.Title className="title-modal">
+            Function Not Available
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div
@@ -28,13 +30,15 @@ function NotAvailable({ handleClose }) {
             <div className="text-center">
               <p>Sorry, but this function is currently not available.</p>
               <p>We will be implementing it soon.</p>
-              <p>Don't forget to register to stay informed about all the updates.</p>
+              <p>
+                Don't forget to register to stay informed about all the updates.
+              </p>
               <p>Thank you very much!</p>
             </div>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button className='btn-modal' onClick={handleClose}>
+          <Button className="btn-modal" onClick={handleClose}>
             Go Back
           </Button>
         </Modal.Footer>
