@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import { Google, Facebook } from "react-bootstrap-icons";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -13,6 +14,10 @@ function Register() {
     // Aquí iría la lógica para registrar al usuario
     console.log("Registrando usuario:", { username, email, password });
   };
+
+  function handleModalRegister() {
+    setShowModal(true);
+  }
 
   return (
     <div className="login-page">
@@ -75,6 +80,17 @@ function Register() {
             </button>
           </form>
         </CSSTransition>
+
+        <div className="buttons-container">
+          <button className="apple-login-button" onClick={handleModalRegister}>
+            <Facebook className="apple-icon" />
+            <span>Register with Facebook</span>
+          </button>
+          <button className="google-login-button" onClick={handleModalRegister}>
+            <Google className="google-icon" />
+            <span>Register with Google</span>
+          </button>
+        </div>
 
         <div className="text-center mt-3">
           <Link to="/login" className="sign-up-link">
