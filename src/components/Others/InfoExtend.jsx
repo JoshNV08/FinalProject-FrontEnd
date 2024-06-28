@@ -8,40 +8,26 @@ function InfoExtend() {
     <Container>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h1 style={{ fontWeight: "bold" }}>Who Are We?</h1>
+          <h1 className="custom-title" style={{ fontWeight: "bold" }}>
+            About this project
+          </h1>
         </div>
-        <Col md={6} xs={12} className="text-center">
-          <h2
-            style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5 mb-4 mt-5 text-center"
-          >
-            MISSION
-          </h2>
+        <Col md={12} xs={12} className="text-center">
           <p>
-            Our mission at Good Burger is to be recognized as the preferred
-            burger restaurant chain by people, standing out for our
-            profitability and projection towards the future. We strive to bring
-            together the most talented and committed individuals, who are fully
-            aligned with our vision and values, to offer exceptional experiences
-            and delicious burgers that delight our customers on every visit.
+            El presente sitio de e-commerce es un proyecto desarrollado por
+            estudiantes del Coding Bootcamp de Hack Academy. El Bootcamp es un
+            programa educativo extremadamente práctico de 3 meses y full-time,
+            donde los estudiantes invierten más de 600 horas a aprender sobre
+            Node.js, Express, React.js, SQL, MongoDB y Git.
           </p>
         </Col>
-        <Col md={6} xs={12} className="text-center ">
-          <h2
-            style={{ fontWeight: "bold", color: "#fe3031" }}
-            className="display-5 mb-4 mt-3 mt-lg-5 text-center"
-          >
-            VISION
-          </h2>
-          <p>
-            We are Good Burger S.A., operating in Montevideo and Punta del Este.
-            At Good Burger, we proudly serve the best burgers, as well as a
-            variety of authentic products prepared on the spot and when our
-            customers need them, providing the best fast food experience in the
-            country. We offer high-quality products, excellent service, and an
-            amazing atmosphere, aligned with the company's philosophy.
-          </p>
-        </Col>
+      </Row>
+      <Row className="d-flex justify-content-center py-3">
+        <div className="text-md-center text-center">
+          <h1 className="custom-titles pt-5" style={{ fontWeight: "bold" }}>
+            Team
+          </h1>
+        </div>
       </Row>
       <Row className="d-flex justify-content-center text-center">
         <Col
