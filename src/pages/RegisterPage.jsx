@@ -1,4 +1,4 @@
-import Register from "../Register/Register";
+import Register from "../components/Register/Register";
 import Footer from "../components/Footer/Footer";
 
 function RegisterPage() {

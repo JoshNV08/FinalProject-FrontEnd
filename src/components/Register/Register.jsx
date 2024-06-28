@@ -1,11 +1,16 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
+import { Google, Facebook } from "react-bootstrap-icons";
+import "../../Styles/Others/Login.css";
+import "../../Styles/Buttons/ButtonYellow.css";
+import NotAvailable from "../Others/NotAvailable";
 
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
+  const [showModal, setShowModal] = useState(false);
   const registerNodeRef = useRef(null);
 
   const handleSubmit = (e) => {
@@ -13,6 +18,14 @@ function Register() {
     // Aquí iría la lógica para registrar al usuario
     console.log("Registrando usuario:", { username, email, password });
   };
+
+  function handleModalRegister() {
+    setShowModal(true);
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
+  }
 
   return (
     <div className="login-page">
@@ -76,12 +89,25 @@ function Register() {
           </form>
         </CSSTransition>
 
+        <div className="buttons-container">
+          <button className="apple-login-button" onClick={handleModalRegister}>
+            <Facebook className="apple-icon" />
+            <span>Register with Facebook</span>
+          </button>
+          <button className="google-login-button" onClick={handleModalRegister}>
+            <Google className="google-icon" />
+            <span>Register with Google</span>
+          </button>
+        </div>
+
         <div className="text-center mt-3">
           <Link to="/login" className="sign-up-link">
             Already a member? Login
           </Link>
         </div>
       </div>
+
+      {showModal && <NotAvailable handleClose={handleCloseModal} />}
     </div>
   );
 }
