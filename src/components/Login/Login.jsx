@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { Google, Facebook } from "react-bootstrap-icons";
 import "../../Styles/Others/Login.css";
@@ -14,6 +14,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const loginNodeRef = useRef(null);
 
@@ -24,6 +25,8 @@ function Login() {
         password,
       });
       dispatch(setToken(response.data.token));
+      localStorage.setItem("token", response.data.token);
+      navigate("/profile");
     } catch (error) {
       console.error("Error al logear", error);
     }
