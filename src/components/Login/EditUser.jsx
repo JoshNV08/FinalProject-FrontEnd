@@ -30,7 +30,7 @@ const EditUser = () => {
     }
 
     axios
-      .get("http://localhost:3000/api/user/profile", {
+      .get("http://localhost:3000/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -69,7 +69,7 @@ const EditUser = () => {
     }
 
     axios
-      .put("http://localhost:3000/api/user/profile", user, {
+      .put("http://localhost:3000/user/profile", user, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -102,7 +102,7 @@ const EditUser = () => {
 
     axios
       .put(
-        "http://localhost:3000/api/user/password",
+        "http://localhost:3000/user/password",
         {
           currentPassword: passwords.currentPassword,
           newPassword: passwords.newPassword,
