@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Linkedin, Github, Instagram, Twitter } from "react-bootstrap-icons";
 import "../../Styles/Others/InfoExtend.css";
 
@@ -15,10 +16,11 @@ function InfoExtend() {
         <Col md={12} xs={12} className="text-center">
           <p>
             El presente sitio de e-commerce es un proyecto desarrollado por
-            estudiantes del Coding Bootcamp de Hack Academy. El Bootcamp es un
-            programa educativo extremadamente práctico de 3 meses y full-time,
-            donde los estudiantes invierten más de 600 horas a aprender sobre
-            Node.js, Express, React.js, SQL, MongoDB y Git.
+            estudiantes de Ánima FINEST - Hack Academy. El FINEST es un programa
+            educativo práctico de dos semestres, donde los estudiantes invierten
+            más de 600 horas a aprender sobre HTML, CSS, JavaScript, Node.js,
+            Express, React.js, SQL y Git.
+            <FontAwesomeIcon icon="fa-brands fa-js" />
           </p>
         </Col>
       </Row>
