@@ -16,7 +16,6 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Aquí iría la lógica para registrar al usuario
-    console.log("Registrando usuario:", { username, email, password });
   };
 
   function handleModalRegister() {

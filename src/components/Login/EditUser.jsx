@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Form, Card, Button, Alert } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  Card,
+  Button,
+  Alert,
+} from "react-bootstrap";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
-const EditUser = () => {
+function EditUser() {
+  const loggedUser = useSelector((state) => state.user);
   const [user, setUser] = useState({
     firstname: "",
     lastname: "",
@@ -20,19 +30,18 @@ const EditUser = () => {
 
   useEffect(() => {
     fetchProfile();
-  }, []);
+  }, [loggedUser.token]);
 
   const fetchProfile = () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
+    if (!loggedUser.token) {
       setError("No token found");
       return;
     }
 
     axios
-      .get("http://localhost:3000/user/profile", {
+      .get("http://localhost:3000/users/user/profile/" + loggedUser.id, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${loggedUser.token}`,
         },
       })
       .then((response) => {
@@ -217,6 +226,6 @@ const EditUser = () => {
       </Row>
     </Container>
   );
-};
+}
 
 export default EditUser;
