@@ -7,9 +7,9 @@ import "../../Styles/Others/InfoExtend.css";
 function InfoExtend() {
   return (
     <Container>
-      <Row className="d-flex justify-content-center py-3">
+      <Row className="custom-intro d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h1 className="custom-title" style={{ fontWeight: "bold" }}>
+          <h1 className="custom-title pb-3" style={{ fontWeight: "bold" }}>
             About this project
           </h1>
         </div>
@@ -20,7 +20,6 @@ function InfoExtend() {
             educativo práctico de dos semestres, donde los estudiantes invierten
             más de 600 horas a aprender sobre HTML, CSS, JavaScript, Node.js,
             Express, React.js, SQL y Git.
-            <FontAwesomeIcon icon="fa-brands fa-js" />
           </p>
         </Col>
       </Row>
