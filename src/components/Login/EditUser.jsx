@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Card,
-  Button,
-  Alert,
-} from "react-bootstrap";
+import { Container, Row, Col, Form, Card, Button, Alert } from "react-bootstrap";
 import axios from "axios";
 import { useSelector } from "react-redux";
 
@@ -29,17 +21,14 @@ function EditUser() {
   const [success, setSuccess] = useState("");
 
   useEffect(() => {
-    fetchProfile();
-  }, [loggedUser.token]);
+    if (loggedUser.token && loggedUser.id) {
+      fetchProfile();
+    }
+  }, [loggedUser.token, loggedUser.id]);
 
   const fetchProfile = () => {
-    if (!loggedUser.token) {
-      setError("No token found");
-      return;
-    }
-
     axios
-      .get("http://localhost:3000/users/user/profile/" + loggedUser.id, {
+      .get(`http://localhost:3000/users/profile/${loggedUser.id}`, {
         headers: {
           Authorization: `Bearer ${loggedUser.token}`,
         },
@@ -49,7 +38,7 @@ function EditUser() {
       })
       .catch((error) => {
         setError(
-          "Error al obtener usuario: " +
+          "Error fetching user: " +
             (error.response?.data?.error || error.message)
         );
       });
@@ -78,19 +67,19 @@ function EditUser() {
     }
 
     axios
-      .put("http://localhost:3000/user/profile", user, {
+      .put(`http://localhost:3000/users/profile/${loggedUser.id}`, user, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then(() => {
-        setSuccess("Perfil actualizado con éxito");
+        setSuccess("Profile updated successfully");
         setError("");
         fetchProfile();
       })
       .catch((error) => {
         setError(
-          "Error al actualizar el perfil: " +
+          "Error updating profile: " +
             (error.response?.data?.error || error.message)
         );
       });
@@ -99,7 +88,7 @@ function EditUser() {
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
     if (passwords.newPassword !== passwords.confirmPassword) {
-      setError("Las nuevas contraseñas no coinciden");
+      setError("New passwords do not match");
       return;
     }
 
@@ -111,7 +100,7 @@ function EditUser() {
 
     axios
       .put(
-        "http://localhost:3000/user/password",
+        `http://localhost:3000/users/password/${loggedUser.id}`,
         {
           currentPassword: passwords.currentPassword,
           newPassword: passwords.newPassword,
@@ -123,7 +112,7 @@ function EditUser() {
         }
       )
       .then(() => {
-        setSuccess("Contraseña actualizada con éxito");
+        setSuccess("Password updated successfully");
         setError("");
         setPasswords({
           currentPassword: "",
@@ -133,7 +122,7 @@ function EditUser() {
       })
       .catch((error) => {
         setError(
-          "Error al actualizar la contraseña: " +
+          "Error updating password: " +
             (error.response?.data?.error || error.message)
         );
       });
@@ -141,17 +130,17 @@ function EditUser() {
 
   return (
     <Container>
-      <h2>Perfil</h2>
+      <h2>Profile</h2>
       {error && <Alert variant="danger">{error}</Alert>}
       {success && <Alert variant="success">{success}</Alert>}
       <Row>
         <Col md={6}>
           <Card className="mb-3">
-            <Card.Header>Información Personal</Card.Header>
+            <Card.Header>Personal Information</Card.Header>
             <Card.Body>
               <Form onSubmit={handleProfileSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Nombre</Form.Label>
+                  <Form.Label>First Name</Form.Label>
                   <Form.Control
                     type="text"
                     name="firstname"
@@ -160,7 +149,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Apellido</Form.Label>
+                  <Form.Label>Last Name</Form.Label>
                   <Form.Control
                     type="text"
                     name="lastname"
@@ -177,8 +166,26 @@ function EditUser() {
                     onChange={handleProfileChange}
                   />
                 </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="phoneNumber"
+                    value={user.phoneNumber}
+                    onChange={handleProfileChange}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Address</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="address"
+                    value={user.address}
+                    onChange={handleProfileChange}
+                  />
+                </Form.Group>
                 <Button variant="primary" type="submit">
-                  Actualizar Información
+                  Update Information
                 </Button>
               </Form>
             </Card.Body>
@@ -186,11 +193,11 @@ function EditUser() {
         </Col>
         <Col md={6}>
           <Card className="mb-3">
-            <Card.Header>Contraseña</Card.Header>
+            <Card.Header>Password</Card.Header>
             <Card.Body>
               <Form onSubmit={handlePasswordSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Contraseña Actual</Form.Label>
+                  <Form.Label>Current Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="currentPassword"
@@ -199,7 +206,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Nueva Contraseña</Form.Label>
+                  <Form.Label>New Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="newPassword"
@@ -208,7 +215,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Confirmar Nueva Contraseña</Form.Label>
+                  <Form.Label>Confirm New Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="confirmPassword"
@@ -217,7 +224,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                  Actualizar Contraseña
+                  Update Password
                 </Button>
               </Form>
             </Card.Body>
