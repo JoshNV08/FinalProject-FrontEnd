@@ -7,7 +7,7 @@ import "../../Styles/Others/InfoExtend.css";
 function InfoExtend() {
   return (
     <Container>
-      <Row className="custom-intro d-flex justify-content-center py-3">
+      <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
           <h2 className="custom-title" style={{ fontWeight: "bold", color:"#fe3030" }}>
 
