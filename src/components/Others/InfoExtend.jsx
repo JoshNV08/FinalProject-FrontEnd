@@ -7,16 +7,17 @@ import "../../Styles/Others/InfoExtend.css";
 function InfoExtend() {
   return (
     <Container>
-      <Row className="d-flex justify-content-center py-3">
+      <Row className="custom-intro d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
           <h2 className="custom-title" style={{ fontWeight: "bold", color:"#fe3030" }}>
+
             About this project
           </h2>
         </div>
         <Col md={8} xs={12} className="text-center" style={{fontSize:"19px"}}>
           <p className="mt-3">
           The present e-commerce site is a project developed by students of Ánima FINEST - Hack Academy. FINEST is a hands-on educational program lasting two semesters, where students invest more than 600 hours learning about HTML, CSS, JavaScript, Node.js, Express, React.js, SQL, and Git.
-            <FontAwesomeIcon icon="fa-brands fa-js" />
+            <FontAwesomeIcon icon="fa-brands fa-js" />        
           </p>
         </Col>
       </Row>
@@ -51,7 +52,7 @@ function InfoExtend() {
               <Card.Link href="https://www.linkedin.com/in/joshua-nuñez">
                 <Linkedin size={20} />
               </Card.Link>
-              <Card.Link href="https://github.com/JoshNV08">
+              <Card.Link href="https://github.com/JoshNV0">
                 <Github size={20} />
               </Card.Link>
             </Card.Body>
