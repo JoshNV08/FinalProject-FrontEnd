@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  Card,
-  Button,
-  Alert,
-} from "react-bootstrap";
+import { Container, Row, Col, Form, Card, Button, Alert } from "react-bootstrap";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../redux/userSlice";
+import { useNavigate } from "react-router-dom";
 
 function EditUser() {
-  const loggedUser = useSelector((state) => state.user);
+  const userId = localStorage.getItem("userId");
   const [user, setUser] = useState({
     firstname: "",
     lastname: "",
@@ -27,21 +21,20 @@ function EditUser() {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    fetchProfile();
-  }, [loggedUser.token]);
-
-  const fetchProfile = () => {
-    if (!loggedUser.token) {
-      setError("No token found");
-      return;
+    if (userId) {
+      fetchProfile(userId);
     }
-
+  }, [userId]);
+  
+  const fetchProfile = (userId) => {
     axios
-      .get("http://localhost:3000/users/user/profile/" + loggedUser.id, {
+      .get(`http://localhost:3000/users/profile`, {
         headers: {
-          Authorization: `Bearer ${loggedUser.token}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
@@ -49,7 +42,7 @@ function EditUser() {
       })
       .catch((error) => {
         setError(
-          "Error al obtener usuario: " +
+          "Error fetching user: " +
             (error.response?.data?.error || error.message)
         );
       });
@@ -58,13 +51,6 @@ function EditUser() {
   const handleProfileChange = (e) => {
     setUser({
       ...user,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handlePasswordChange = (e) => {
-    setPasswords({
-      ...passwords,
       [e.target.name]: e.target.value,
     });
   };
@@ -78,28 +64,35 @@ function EditUser() {
     }
 
     axios
-      .put("http://localhost:3000/user/profile", user, {
+      .put(`http://localhost:3000/users/profile`, user, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then(() => {
-        setSuccess("Perfil actualizado con éxito");
+        setSuccess("Profile updated successfully");
         setError("");
-        fetchProfile();
+        fetchProfile(userId);
       })
       .catch((error) => {
         setError(
-          "Error al actualizar el perfil: " +
+          "Error updating profile: " +
             (error.response?.data?.error || error.message)
         );
       });
   };
 
+  const handlePasswordChange = (e) => {
+    setPasswords({
+      ...passwords,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
     if (passwords.newPassword !== passwords.confirmPassword) {
-      setError("Las nuevas contraseñas no coinciden");
+      setError("New passwords do not match");
       return;
     }
 
@@ -110,48 +103,47 @@ function EditUser() {
     }
 
     axios
-      .put(
-        "http://localhost:3000/user/password",
-        {
-          currentPassword: passwords.currentPassword,
-          newPassword: passwords.newPassword,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+      .put('http://localhost:3000/users/profile', {
+        currentPassword: passwords.currentPassword,
+        newPassword: passwords.newPassword
+      }, {
+        headers: {
+          Authorization: `Bearer ${token}`
         }
-      )
-      .then(() => {
-        setSuccess("Contraseña actualizada con éxito");
-        setError("");
+      })
+      .then(response => {
+        setSuccess('Password updated successfully');
+        setError('');
         setPasswords({
-          currentPassword: "",
-          newPassword: "",
-          confirmPassword: "",
+          currentPassword: '',
+          newPassword: '',
+          confirmPassword: ''
         });
       })
-      .catch((error) => {
-        setError(
-          "Error al actualizar la contraseña: " +
-            (error.response?.data?.error || error.message)
-        );
+      .catch(error => {
+        setError('Error updating password: ' + (error.response?.data?.error || error.message));
       });
+  };
+
+  const handleLogout = () => {
+    dispatch(setToken(null));
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
   return (
     <Container>
-      <h2>Perfil</h2>
+      <h2>Profile</h2>
       {error && <Alert variant="danger">{error}</Alert>}
       {success && <Alert variant="success">{success}</Alert>}
       <Row>
         <Col md={6}>
           <Card className="mb-3">
-            <Card.Header>Información Personal</Card.Header>
+            <Card.Header>Personal Information</Card.Header>
             <Card.Body>
               <Form onSubmit={handleProfileSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Nombre</Form.Label>
+                  <Form.Label>First Name</Form.Label>
                   <Form.Control
                     type="text"
                     name="firstname"
@@ -160,7 +152,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Apellido</Form.Label>
+                  <Form.Label>Last Name</Form.Label>
                   <Form.Control
                     type="text"
                     name="lastname"
@@ -177,8 +169,26 @@ function EditUser() {
                     onChange={handleProfileChange}
                   />
                 </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="phoneNumber"
+                    value={user.phoneNumber}
+                    onChange={handleProfileChange}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Address</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="address"
+                    value={user.address}
+                    onChange={handleProfileChange}
+                  />
+                </Form.Group>
                 <Button variant="primary" type="submit">
-                  Actualizar Información
+                  Update Information
                 </Button>
               </Form>
             </Card.Body>
@@ -186,11 +196,11 @@ function EditUser() {
         </Col>
         <Col md={6}>
           <Card className="mb-3">
-            <Card.Header>Contraseña</Card.Header>
+            <Card.Header>Password</Card.Header>
             <Card.Body>
               <Form onSubmit={handlePasswordSubmit}>
                 <Form.Group className="mb-3">
-                  <Form.Label>Contraseña Actual</Form.Label>
+                  <Form.Label>Current Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="currentPassword"
@@ -199,7 +209,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Nueva Contraseña</Form.Label>
+                  <Form.Label>New Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="newPassword"
@@ -208,7 +218,7 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Confirmar Nueva Contraseña</Form.Label>
+                  <Form.Label>Confirm New Password</Form.Label>
                   <Form.Control
                     type="password"
                     name="confirmPassword"
@@ -217,13 +227,16 @@ function EditUser() {
                   />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                  Actualizar Contraseña
+                  Update Password
                 </Button>
               </Form>
             </Card.Body>
           </Card>
         </Col>
       </Row>
+      <Button variant="danger" onClick={handleLogout}>
+        Logout
+      </Button>
     </Container>
   );
 }

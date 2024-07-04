@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { Google, Facebook } from "react-bootstrap-icons";
@@ -17,6 +17,13 @@ function Login() {
   const navigate = useNavigate();
 
   const loginNodeRef = useRef(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/profile");
+    }
+  }, []);
 
   const getToken = async () => {
     try {
