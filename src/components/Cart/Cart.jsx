@@ -8,13 +8,14 @@ import {
   removeFromCart,
 } from "../../redux/cartSlice";
 import "../../Styles/Cart/Cart.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaTrash, FaArrowLeft, FaPlus, FaMinus } from "react-icons/fa";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getTotals());
@@ -93,7 +94,7 @@ const Cart = () => {
                 <span className="amount">${cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <Button variant="none" className="checkout-btn">
+              <Button variant="none" className="checkout-btn"  onClick={() => navigate('/checkout')}>
                 Check out
               </Button>
               <Button

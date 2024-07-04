@@ -19,6 +19,7 @@ import ProductMenu from "./pages/ProductMenu";
 import CartPage from "./pages/CartPage";
 import RegisterPage from "./pages/RegisterPage";
 import Profile from "./pages/Profile";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="menu-desserts" element={<MenuDesserts />} />
           <Route path="menu-coffee" element={<MenuCoffee />} />
         </Route>
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/productmenu/:id" element={<ProductMenu />} />
         <Route path="/cart" element={<CartPage />} />

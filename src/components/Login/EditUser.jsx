@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Card, Button, Alert } from "react-bootstrap";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../redux/userSlice";
+import { useNavigate } from "react-router-dom";
 
 function EditUser() {
-  const loggedUser = useSelector((state) => state.user);
+  const userId = localStorage.getItem("userId");
   const [user, setUser] = useState({
     firstname: "",
     lastname: "",
@@ -19,18 +21,20 @@ function EditUser() {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
   useEffect(() => {
-    if (loggedUser.token && loggedUser.id) {
-      fetchProfile();
+    if (userId) {
+      fetchProfile(userId);
     }
-  }, [loggedUser.token, loggedUser.id]);
-
-  const fetchProfile = () => {
+  }, [userId]);
+  
+  const fetchProfile = (userId) => {
     axios
-      .get(`http://localhost:3000/users/profile/${loggedUser.id}`, {
+      .get(`http://localhost:3000/users/profile`, {
         headers: {
-          Authorization: `Bearer ${loggedUser.token}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((response) => {
@@ -51,13 +55,6 @@ function EditUser() {
     });
   };
 
-  const handlePasswordChange = (e) => {
-    setPasswords({
-      ...passwords,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const handleProfileSubmit = (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
@@ -67,7 +64,7 @@ function EditUser() {
     }
 
     axios
-      .put(`http://localhost:3000/users/profile/${loggedUser.id}`, user, {
+      .put(`http://localhost:3000/users/profile`, user, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -75,7 +72,7 @@ function EditUser() {
       .then(() => {
         setSuccess("Profile updated successfully");
         setError("");
-        fetchProfile();
+        fetchProfile(userId);
       })
       .catch((error) => {
         setError(
@@ -83,6 +80,13 @@ function EditUser() {
             (error.response?.data?.error || error.message)
         );
       });
+  };
+
+  const handlePasswordChange = (e) => {
+    setPasswords({
+      ...passwords,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handlePasswordSubmit = (e) => {
@@ -99,33 +103,32 @@ function EditUser() {
     }
 
     axios
-      .put(
-        `http://localhost:3000/users/password/${loggedUser.id}`,
-        {
-          currentPassword: passwords.currentPassword,
-          newPassword: passwords.newPassword,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+      .put('http://localhost:3000/users/profile', {
+        currentPassword: passwords.currentPassword,
+        newPassword: passwords.newPassword
+      }, {
+        headers: {
+          Authorization: `Bearer ${token}`
         }
-      )
-      .then(() => {
-        setSuccess("Password updated successfully");
-        setError("");
+      })
+      .then(response => {
+        setSuccess('Password updated successfully');
+        setError('');
         setPasswords({
-          currentPassword: "",
-          newPassword: "",
-          confirmPassword: "",
+          currentPassword: '',
+          newPassword: '',
+          confirmPassword: ''
         });
       })
-      .catch((error) => {
-        setError(
-          "Error updating password: " +
-            (error.response?.data?.error || error.message)
-        );
+      .catch(error => {
+        setError('Error updating password: ' + (error.response?.data?.error || error.message));
       });
+  };
+
+  const handleLogout = () => {
+    dispatch(setToken(null));
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
   return (
@@ -231,6 +234,9 @@ function EditUser() {
           </Card>
         </Col>
       </Row>
+      <Button variant="danger" onClick={handleLogout}>
+        Logout
+      </Button>
     </Container>
   );
 }
