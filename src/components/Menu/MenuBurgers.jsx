@@ -2,6 +2,7 @@ import React from "react";
 import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import burgers from "../../data/burger";
 
 function MenuBurgers() {
@@ -43,12 +44,12 @@ function MenuBurgers() {
                   <div className="card-back">
                     <h5 className="card-title">{burger.name}</h5>
                     <p>{burger.description}</p>
-                    <a
-                      href={`/productmenu/${burger.id}`}
+                    <Link
+                      to={`/productmenu/${burger.id}`}
                       className="btn btn-warning rounded-4"
                     >
                       Buy Product
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

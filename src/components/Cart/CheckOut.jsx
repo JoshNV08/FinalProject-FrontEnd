@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Cards from 'react-credit-cards-2';
-import 'react-credit-cards-2/dist/es/styles-compiled.css';
-import axios from 'axios';
+import Cards from "react-credit-cards-2";
+import "react-credit-cards-2/dist/es/styles-compiled.css";
+import axios from "axios";
 
-const Checkout = () => {
+const CheckOut = () => {
   const cart = useSelector((state) => state.cart);
   const [formData, setFormData] = useState({
     cvc: "",
@@ -20,7 +20,9 @@ const Checkout = () => {
   });
   const [focus, setFocus] = useState("");
 
-  const token = localStorage.getItem("token"); 
+  // const token = localStorage.getItem("token");
+
+  const token = useSelector((state) => state.user.token);
 
   const handleChange = (e) => {
     setFormData({
@@ -52,19 +54,25 @@ const Checkout = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/orders', orderData, {
-        headers: {
-          Authorization: `Bearer ${token}`
+      const response = await axios.post(
+        "http://localhost:3000/orders",
+        orderData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
-      });
+      );
       if (response.data.success) {
-        alert('Payment and order processed successfully!');
+        alert("Payment and order processed successfully!");
       } else {
-        alert('There was an issue processing your payment. Please try again.');
+        alert("There was an issue processing your payment. Please try again.");
       }
     } catch (error) {
-      console.error('Error processing payment:', error);
-      alert('An error occurred while processing your payment. Please try again.');
+      console.error("Error processing payment:", error);
+      alert(
+        "An error occurred while processing your payment. Please try again."
+      );
     }
   };
 
@@ -76,7 +84,9 @@ const Checkout = () => {
             <h3>Order Summary</h3>
             {cart.cartItems.map((cartItem) => (
               <div className="checkout-item" key={cartItem.id}>
-                <p>{cartItem.name} x {cartItem.cartQuantity}</p>
+                <p>
+                  {cartItem.name} x {cartItem.cartQuantity}
+                </p>
                 <p>Total: ${cartItem.price * cartItem.cartQuantity}</p>
               </div>
             ))}
@@ -84,7 +94,7 @@ const Checkout = () => {
               <h4>Subtotal: ${cart.cartTotalAmount}</h4>
             </div>
           </div>
-          
+
           <div className="delivery-details mt-4">
             <h3>Delivery Details</h3>
             <Form onSubmit={handleSubmit}>
@@ -124,7 +134,7 @@ const Checkout = () => {
             </Form>
           </div>
         </Col>
-        
+
         <Col sm={12} md={4} className="checkout-form shadow-lg rounded-5">
           <h3>Payment Details</h3>
           <Cards
@@ -200,4 +210,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CheckOut;

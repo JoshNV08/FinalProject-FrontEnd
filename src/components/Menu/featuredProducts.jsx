@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -43,12 +44,12 @@ const FeaturedProducts = () => {
                     <h5 className="card-title">{product.name}</h5>
 
                     <p>{product.description}</p>
-                    <a
-                      href={`/productmenu/${product.id}`}
+                    <Link
+                      to={`/productmenu/${product.id}`}
                       className="btn btn-warning rounded-4"
                     >
                       Buy Product
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

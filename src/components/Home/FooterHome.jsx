@@ -30,11 +30,15 @@ function FooterHome() {
                 </a>
               </p>
               <p>
-                <a href="https://www.google.com/maps/place/Los+Muergos+%26+Avenida+Juan+Gorlero,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.961615,-54.9455168,17z/data=!3m1!4b1!4m6!3m5!1s0x957505727177e06f:0xa0b208b127d48dc2!8m2!3d-34.9616194!4d-54.9429419!16s%2Fg%2F11gdsxld5x?entry=ttu">Gorlero y Los Muergos, Punta del este</a>
+                <a href="https://www.google.com/maps/place/Los+Muergos+%26+Avenida+Juan+Gorlero,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.961615,-54.9455168,17z/data=!3m1!4b1!4m6!3m5!1s0x957505727177e06f:0xa0b208b127d48dc2!8m2!3d-34.9616194!4d-54.9429419!16s%2Fg%2F11gdsxld5x?entry=ttu">
+                  Gorlero y Los Muergos, Punta del este
+                </a>
               </p>
             </div>
             <div>
-              <h5><h5>FOLLOW US</h5></h5>
+              <h5>
+                <h5>FOLLOW US</h5>
+              </h5>
               <p>
                 <a href="https://www.instagram.com/goodburger">Instagram</a> -{" "}
                 <a href="https://www.facebook.com/goodburger">Facebook</a> -{" "}
@@ -78,11 +82,11 @@ function FooterHome() {
               <h4>
                 <a href="">rrhh@goodburger.com.uy</a>
               </h4>
-              
             </div>
-            <span className="text-muted justify-content-md-end d-flex">© 2024 GoodBurger. All rights reserved.</span>
+            <span className="text-muted justify-content-md-end d-flex">
+              © 2024 GoodBurger. All rights reserved.
+            </span>
           </Col>
-          
         </Row>
       </Container>
     </div>

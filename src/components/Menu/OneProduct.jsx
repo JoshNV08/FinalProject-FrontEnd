@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../../Styles/Buttons/ButtonsMenu.css";
@@ -44,7 +45,8 @@ function OneProduct({ id }) {
           <Form.Label>Remove</Form.Label>
           <Form.Select
             name="removeOptions"
-            onChange={handleCustomizationChange}>
+            onChange={handleCustomizationChange}
+          >
             <option value="">Select what you want to remove</option>
             <option value="noLettuce">No Lettuce</option>
             <option value="noTomato">No Tomato</option>
@@ -135,7 +137,7 @@ function OneProduct({ id }) {
     <Container>
       <Row className="align-items-center my-3">
         <Col xs="auto">
-          <Button as="a" size="sm" href="/menu" className="btnMenu rounded-5">
+          <Button as={Link} size="sm" to="/menu" className="btnMenu rounded-5">
             <span>Back to Menu</span>
           </Button>
         </Col>
@@ -163,7 +165,8 @@ function OneProduct({ id }) {
                 {renderCustomizationOptions()}
                 <Button
                   className="btnMenu rounded-5 mt-3 w-100"
-                  onClick={() => handleAddToCart(product)}>
+                  onClick={() => handleAddToCart(product)}
+                >
                   <span>Add to Cart</span>
                 </Button>
               </fieldset>

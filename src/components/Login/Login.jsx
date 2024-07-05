@@ -5,7 +5,7 @@ import { Google, Facebook } from "react-bootstrap-icons";
 import "../../Styles/Others/Login.css";
 import "../../Styles/Buttons/ButtonYellow.css";
 import NotAvailable from "../Others/NotAvailable";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { setToken } from "../../redux/userSlice";
 
@@ -15,13 +15,13 @@ function Login() {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const token = useSelector((state) => state.user.token);
 
   const loginNodeRef = useRef(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
     if (token) {
-      navigate("/profile");
+      navigate("/");
     }
   }, []);
 
@@ -32,8 +32,8 @@ function Login() {
         password,
       });
       dispatch(setToken(response.data.token));
-      localStorage.setItem("token", response.data.token);
-      navigate("/profile");
+      // localStorage.setItem("token", response.data.token);
+      navigate("/");
     } catch (error) {
       console.error("Error al logear", error);
     }

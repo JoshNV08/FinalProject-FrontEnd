@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -27,7 +28,6 @@ function MenuSection() {
 
     fetchProducts();
   }, []);
-
 
   const filteredBurgers = products.filter((item) => item.categoryId === 1);
   const filteredSnacks = products.filter((item) => item.categoryId === 2);
@@ -73,10 +73,12 @@ function MenuSection() {
               <Card.Title>BURGERS</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("burgers")}>
+                onClick={() => handleSectionClick("burgers")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
@@ -88,10 +90,12 @@ function MenuSection() {
               <Card.Title>FRENCH FRIES</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("snacks")}>
+                onClick={() => handleSectionClick("snacks")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
@@ -103,10 +107,12 @@ function MenuSection() {
               <Card.Title>DRINKS</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("drinks")}>
+                onClick={() => handleSectionClick("drinks")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
@@ -118,10 +124,12 @@ function MenuSection() {
               <Card.Title>COFFEE</Card.Title>
               <Button
                 variant="link"
-                onClick={() => handleSectionClick("coffee")}>
+                onClick={() => handleSectionClick("coffee")}
+              >
                 <i
                   className="bi bi-chevron-compact-down"
-                  style={{ color: "#FE3031" }}></i>
+                  style={{ color: "#FE3031" }}
+                ></i>
               </Button>
             </Card.Body>
           </Card>
@@ -190,9 +198,11 @@ function MenuSection() {
       <div className="text-center mt-4">
         <Button
           variant="transparent"
-          href="/menu"
+          as={Link}
+          to="/menu"
           className="rounded-5 btnRed"
-          size="lg">
+          size="lg"
+        >
           <span>MENU</span>
         </Button>
       </div>

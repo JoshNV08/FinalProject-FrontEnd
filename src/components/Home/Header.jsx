@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../../Styles/Home/Banner.css";
 import BurgerModel from "./Burger3D";
 
@@ -18,8 +19,10 @@ function Header() {
               <p className="text-md-left">¡Burgers that make you happy!</p>
               <Button
                 className="btnYellow rounded-5 fw-bold"
-                size='lg'
-                href="/menu">
+                size="lg"
+                as={Link}
+                to="/menu"
+              >
                 <span>ORDER NOW</span>
               </Button>
             </div>

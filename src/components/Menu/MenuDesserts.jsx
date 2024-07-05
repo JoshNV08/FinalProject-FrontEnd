@@ -3,7 +3,7 @@ import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 
 function MenuDesserts() {
   const [products, setProducts] = useState([]);
@@ -21,7 +21,7 @@ function MenuDesserts() {
     fetchProducts();
   }, []);
 
-  const  FilteredDesserts = products.filter((item) => item.categoryId === 4);
+  const FilteredDesserts = products.filter((item) => item.categoryId === 4);
 
   return (
     <div className="container py-5 text-center">
@@ -41,15 +41,15 @@ function MenuDesserts() {
                   />
                 </div>
                 <div className="card-back">
-                
-                      <h5 className="card-title">{dessert.name}</h5>
-                    
+                  <h5 className="card-title">{dessert.name}</h5>
+
                   <p>{dessert.description}</p>
-                  <a
-                    href={`/productmenu/${dessert.id}`}
-                    className="btn btn-warning rounded-4">
+                  <Link
+                    to={`/productmenu/${dessert.id}`}
+                    className="btn btn-warning rounded-4"
+                  >
                     Buy Product
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

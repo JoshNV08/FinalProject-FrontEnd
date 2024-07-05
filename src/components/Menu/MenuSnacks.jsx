@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/Menu/MenuCards.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function MenuSnacks() {
@@ -19,7 +20,6 @@ function MenuSnacks() {
 
     fetchProducts();
   }, []);
- 
 
   const filteredSnacks = products.filter((item) => item.categoryId === 2);
 
@@ -41,15 +41,15 @@ function MenuSnacks() {
                   />
                 </div>
                 <div className="card-back">
-                
-                      <h5 className="card-title">{snack.name}</h5>
-                    
+                  <h5 className="card-title">{snack.name}</h5>
+
                   <p>{snack.description}</p>
-                  <a
-                    href={`/productmenu/${snack.id}`}
-                    className="btn btn-warning rounded-4">
+                  <Link
+                    to={`/productmenu/${snack.id}`}
+                    className="btn btn-warning rounded-4"
+                  >
                     Buy Product
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

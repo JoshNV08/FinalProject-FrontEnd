@@ -3,26 +3,24 @@ import { Col, Row, Card, Container, Button } from "react-bootstrap";
 import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function MenuDrinks() {
+  const [products, setProducts] = useState([]);
 
-    const [products, setProducts] = useState([]);
-  
-    useEffect(() => {
-      const fetchProducts = async () => {
-        try {
-          const response = await axios.get("http://localhost:3000/products");
-          setProducts(response.data);
-        } catch (error) {
-          console.error("Error fetching the products:", error);
-        }
-      };
-  
-      fetchProducts();
-    }, []);
-  
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching the products:", error);
+      }
+    };
 
-    
+    fetchProducts();
+  }, []);
+
   const filteredDrinks = products.filter((item) => item.categoryId === 3);
 
   return (
@@ -43,15 +41,15 @@ function MenuDrinks() {
                   />
                 </div>
                 <div className="card-back">
-                
-                      <h5 className="card-title">{drink.name}</h5>
-                    
+                  <h5 className="card-title">{drink.name}</h5>
+
                   <p>{drink.description}</p>
-                  <a
-                    href={`/productmenu/${drink.id}`}
-                    className="btn btn-warning rounded-4">
+                  <Link
+                    to={`/productmenu/${drink.id}`}
+                    className="btn btn-warning rounded-4"
+                  >
                     Buy Product
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

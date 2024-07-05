@@ -7,8 +7,8 @@ import {
   Nav as BootstrapNav,
 } from "react-bootstrap";
 import "../../Styles/Home/Navbar.css";
-
 import Logo from "../../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const iconStyle = {
@@ -24,12 +24,8 @@ function Nav() {
       <Container>
         <Row className="align-items-center w-100">
           <Col xs={6} md={6}>
-            <Navbar.Brand href="/" className="logo-container">
-              <img
-                src={Logo}
-                alt="Good Burger Logo"
-                className="logo"
-              />
+            <Navbar.Brand as={Link} to="/" className="logo-container">
+              <img src={Logo} alt="Good Burger Logo" className="logo" />
             </Navbar.Brand>
           </Col>
           <Col
@@ -38,42 +34,49 @@ function Nav() {
             className="d-flex justify-content-end align-items-center"
           >
             <BootstrapNav className="d-none d-md-flex">
-              <BootstrapNav.Link href="/login" className="fs-5 text-contact">
+              <BootstrapNav.Link
+                as={Link}
+                to="/login"
+                className="fs-5 text-contact"
+              >
                 Login
               </BootstrapNav.Link>
-              <BootstrapNav.Link href="/workwithus" className="fs-5 text-contact">
+              <BootstrapNav.Link
+                as={Link} to="/workwithus"
+                className="fs-5 text-contact"
+              >
                 Work with us
               </BootstrapNav.Link>
-              <BootstrapNav.Link href="/cart">
+              <BootstrapNav.Link as={Link} to="/cart">
                 <i
                   className="bi bi-bag-check"
                   style={{ fontSize: "25px", color: "#fe3030" }}
                 ></i>
               </BootstrapNav.Link>
               <div className="social-icons">
-                <BootstrapNav.Link href="https://www.facebook.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.facebook.com/goodburger">
                   <i className="bi bi-facebook" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.instagram.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.instagram.com/goodburger">
                   <i className="bi bi-instagram" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.twitter.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.twitter.com/goodburger">
                   <i className="bi bi-twitter-x" style={iconStyle}></i>
                 </BootstrapNav.Link>
               </div>
             </BootstrapNav>
             <div className="d-flex d-md-none flex-column align-items-end">
-              <BootstrapNav.Link href="/cart">
+              <BootstrapNav.Link as={Link} to="/cart">
                 <i
                   className="bi bi-bag-check"
                   style={{ fontSize: "30px", color: "#fe3030" }}
                 ></i>
               </BootstrapNav.Link>
-              <BootstrapNav.Link href="/login" className="fs-5 text-contact">
+              <BootstrapNav.Link as={Link} to="/login" className="fs-5 text-contact">
                 Login
               </BootstrapNav.Link>
               <BootstrapNav.Link
-                href="/workwithus"
+                as={Link} to="/workwithus"
                 className="mb-2 text-contact"
                 style={{
                   fontWeight: "bolder",
@@ -84,13 +87,13 @@ function Nav() {
                 Work with us
               </BootstrapNav.Link>
               <div className="social-icons">
-                <BootstrapNav.Link href="https://www.facebook.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.facebook.com/goodburger">
                   <i className="bi bi-facebook" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.instagram.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.instagram.com/goodburger">
                   <i className="bi bi-instagram" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link href="https://www.twitter.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.twitter.com/goodburger">
                   <i className="bi bi-twitter-x" style={iconStyle}></i>
                 </BootstrapNav.Link>
               </div>
