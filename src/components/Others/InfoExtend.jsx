@@ -7,27 +7,25 @@ import "../../Styles/Others/InfoExtend.css";
 function InfoExtend() {
   return (
     <Container>
-      <Row className="custom-intro d-flex justify-content-center py-3">
+      <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h1 className="custom-title pb-3" style={{ fontWeight: "bold" }}>
+          <h2 className="custom-title" style={{ fontWeight: "bold", color:"#fe3030" }}>
+
             About this project
-          </h1>
+          </h2>
         </div>
-        <Col md={12} xs={12} className="text-center">
-          <p>
-            El presente sitio de e-commerce es un proyecto desarrollado por
-            estudiantes de Ánima FINEST - Hack Academy. El FINEST es un programa
-            educativo práctico de dos semestres, donde los estudiantes invierten
-            más de 600 horas a aprender sobre HTML, CSS, JavaScript, Node.js,
-            Express, React.js, SQL y Git.
+        <Col md={8} xs={12} className="text-center" style={{fontSize:"19px"}}>
+          <p className="mt-3">
+          The present e-commerce site is a project developed by students of Ánima FINEST - Hack Academy. FINEST is a hands-on educational program lasting two semesters, where students invest more than 600 hours learning about HTML, CSS, JavaScript, Node.js, Express, React.js, SQL, and Git.
+            <FontAwesomeIcon icon="fa-brands fa-js" />        
           </p>
         </Col>
       </Row>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h1 className="custom-titles pt-5" style={{ fontWeight: "bold" }}>
+          <h2 className="custom-titles pt-2" style={{ fontWeight: "bold", color:"#fe3030" }}>
             Team
-          </h1>
+          </h2>
         </div>
       </Row>
       <Row className="d-flex justify-content-center text-center">
@@ -51,10 +49,10 @@ function InfoExtend() {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://www.linkedin.com/in/joshua-nu%C3%B1ez-3843b8196?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAC36NxQBkcJDTCgFaDYle9Re43CZT6cBI5w&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bznsgn1TaQjiz%2FvfB9jdKIQ%3D%3D">
+              <Card.Link href="https://www.linkedin.com/in/joshua-nuñez">
                 <Linkedin size={20} />
               </Card.Link>
-              <Card.Link href="#">
+              <Card.Link href="https://github.com/JoshNV0">
                 <Github size={20} />
               </Card.Link>
             </Card.Body>
@@ -139,7 +137,7 @@ function InfoExtend() {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Card.Link href="https://uy.linkedin.com/in/nicol%C3%A1s-dos-santos-?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fuy.linkedin.com%2Fpub%2Fdir%2FNicol%25C3%25A1s%2FDos%2BSantos%2Fuy-0-Uruguay">
+              <Card.Link href="https://www.linkedin.com/in/nicol%C3%A1s-dos-santos-/">
                 <Linkedin size={20} />
               </Card.Link>
               <Card.Link href="https://github.com/Nico2santos">
