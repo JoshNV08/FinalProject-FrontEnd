@@ -12,7 +12,7 @@ function FooterHome() {
             <Image
               src="src/assets/ImageFooter.png"
               alt="Footer Image"
-              className="d-none d-md-block z-1 image-container w-auto h-100"
+              className="d-none d-md-block z-1 image-container imgfooter"
             />
           </Col>
           <Col md={3} className="text">

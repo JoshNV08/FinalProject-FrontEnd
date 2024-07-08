@@ -44,8 +44,13 @@
   max-width: 42%;
   height: auto;
   position: absolute;
-  top: -57px;
-  right: 55%;
+  top: 0px;
+  right: 60%;
+}
+.imgfooter{
+  width: auto;
+  height: 455px;
+  right: 65%;
 }
 
 .label {

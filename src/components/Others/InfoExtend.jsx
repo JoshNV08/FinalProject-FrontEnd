@@ -9,22 +9,33 @@ function InfoExtend() {
     <Container>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h2 className="custom-title" style={{ fontWeight: "bold", color:"#fe3030" }}>
-
-            About this project
+          <h2
+            className="custom-title"
+            style={{ fontWeight: "bold", color: "#fe3030" }}>
+            Sobre este proyecto
           </h2>
         </div>
-        <Col md={8} xs={12} className="text-center" style={{fontSize:"19px"}}>
+        <Col
+          md={8}
+          xs={12}
+          className="text-center"
+          style={{ fontSize: "19px" }}>
           <p className="mt-3">
-          The present e-commerce site is a project developed by students of Ánima FINEST - Hack Academy. FINEST is a hands-on educational program lasting two semesters, where students invest more than 600 hours learning about HTML, CSS, JavaScript, Node.js, Express, React.js, SQL, and Git.
-            <FontAwesomeIcon icon="fa-brands fa-js" />        
+            Este sitio web fue desarrollado por alumnos de Ánima FINEST - Hack
+            Academy. FINEST es un programa educativo práctico que dura dos
+            semestres, donde los estudiantes invierten más de 600 horas
+            aprendiendo sobre HTML, CSS, JavaScript, Node.js, Express, React.js,
+            Redux, SQL y Github.
+            <FontAwesomeIcon icon="fa-brands fa-js" />
           </p>
         </Col>
       </Row>
       <Row className="d-flex justify-content-center py-3">
         <div className="text-md-center text-center">
-          <h2 className="custom-titles pt-2" style={{ fontWeight: "bold", color:"#fe3030" }}>
-            Team
+          <h2
+            className="custom-titles pt-2"
+            style={{ fontWeight: "bold", color: "#fe3030" }}>
+            Equipo
           </h2>
         </div>
       </Row>
@@ -33,8 +44,7 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center"
-        >
+          className="d-flex justify-content-center text-center">
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/Joshua.png" className="" />
             <Card.Body>
@@ -62,8 +72,7 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center"
-        >
+          className="d-flex justify-content-center text-center">
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/eze.png" />
             <Card.Body>
@@ -91,8 +100,7 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center"
-        >
+          className="d-flex justify-content-center text-center">
           <Card className="rounded-4 mb-4 overflow-hidden ">
             <Card.Img variant="top" src="src/assets/seba.jpeg" />
             <Card.Body>
@@ -121,8 +129,7 @@ function InfoExtend() {
           xs={6}
           md={6}
           lg={3}
-          className="d-flex justify-content-center text-center"
-        >
+          className="d-flex justify-content-center text-center">
           <Card className="rounded-4 mb-4 overflow-hidden">
             <Card.Img variant="top" src="src/assets/nico.png" />
             <Card.Body>

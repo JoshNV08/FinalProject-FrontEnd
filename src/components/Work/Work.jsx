@@ -32,7 +32,7 @@ function Work() {
           <motion.img
             src="src/assets/WorkImage.png"
             alt="Work with us"
-            className="img-fluid imgWork"
+            className="img-fluid imgWork h-100"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}

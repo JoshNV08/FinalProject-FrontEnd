@@ -13,21 +13,22 @@ function AboutUs() {
             style={{ width: "103%" }}
           />
         </Col>
-        <Col md={5} className=" text-md-start text-center mx-sm-0 mx-md-4 mb-5 mb-md-0">
-          <h2 className="display-5 fw-bold my-5" style={{color:'#fe3030'}}>
+        <Col
+          md={5}
+          className=" text-md-start text-center mx-sm-0 mx-md-4 mb-5 mb-md-0">
+          <h2 className="display-5 fw-bold my-5" style={{ color: "#fe3030" }}>
             About Us
           </h2>
           <p className="lead">
-          Discover excellence in burgers since 2024. In search of perfection
-          perfection in every bite. We are the home of the good burger.
+            Discover excellence in burgers since 2024. In search of perfection
+            in every bite. We are the home of the good burger.
           </p>
           <Button
             variant="transparent"
             size="lg"
             className="my-3 rounded-5 fw-bold"
             href="/aboutus"
-            style={{ backgroundColor: "#ff3030", color: "#fcda51" }}
-          >
+            style={{ backgroundColor: "#ff3030", color: "#fcda51" }}>
             READ MORE
           </Button>
         </Col>
