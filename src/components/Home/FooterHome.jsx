@@ -12,7 +12,7 @@ function FooterHome() {
             <Image
               src="src/assets/ImageFooter.png"
               alt="Footer Image"
-              className="d-none d-md-block z-1 image-container"
+              className="d-none d-md-block z-1 image-container w-auto h-100"
             />
           </Col>
           <Col md={3} className="text">
@@ -79,9 +79,9 @@ function FooterHome() {
               </h5>
             </div>
             <div>
-              <h4>
+              <h5>
                 <a href="">rrhh@goodburger.com.uy</a>
-              </h4>
+              </h5>
             </div>
             <span className="text-muted justify-content-md-end d-flex">
               © 2024 GoodBurger. All rights reserved.

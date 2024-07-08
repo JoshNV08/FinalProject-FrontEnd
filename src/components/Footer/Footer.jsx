@@ -73,9 +73,9 @@ function Footer() {
             </h5>
           </div>
           <div>
-            <h4>
+            <h5>
               <a href="">rrhh@goodburger.com.uy</a>
-            </h4>
+            </h5>
           </div>
           <span className="text-muted justify-content-end d-flex">© 2024 GoodBurger. All rights reserved</span>
         </Col>

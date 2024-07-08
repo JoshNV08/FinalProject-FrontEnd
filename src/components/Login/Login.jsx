@@ -32,8 +32,8 @@ function Login() {
         password,
       });
       dispatch(setToken(response.data.token));
-      // localStorage.setItem("token", response.data.token);
-      navigate("/");
+      localStorage.setItem("token", response.data.token);
+      navigate("/profile");
     } catch (error) {
       console.error("Error al logear", error);
     }
