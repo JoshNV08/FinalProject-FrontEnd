@@ -44,10 +44,10 @@ function Footer() {
           <div>
             <h5>DOWNLOAD OUR APP</h5>
             <p>
-              <a href="">IOS</a>
+              <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank" rel="noopener noreferrer">IOS</a>
             </p>
             <p>
-              <a href="">Android</a>
+              <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank" rel="noopener noreferrer">Android</a>
             </p>
           </div>
           <div>

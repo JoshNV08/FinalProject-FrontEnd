@@ -25,12 +25,12 @@ function FooterHome() {
             <div>
               <h5>BRANCHES</h5>
               <p>
-                <a href="https://www.google.com/maps/place/Av.+18+de+Julio+1056,+11100+Montevideo,+Departamento+de+Montevideo/@-34.9062121,-56.195986,17z/data=!3m1!4b1!4m6!3m5!1s0x959f802d4c7794a1:0xc078cf8ccece51ef!8m2!3d-34.9062165!4d-56.1934111!16s%2Fg%2F11gh01lrvd?entry=ttu">
+                <a href="https://www.google.com/maps/place/Av.+18+de+Julio+1056,+11100+Montevideo,+Departamento+de+Montevideo/@-34.9062121,-56.195986,17z/data=!3m1!4b1!4m6!3m5!1s0x959f802d4c7794a1:0xc078cf8ccece51ef!8m2!3d-34.9062165!4d-56.1934111!16s%2Fg%2F11gh01lrvd?entry=ttu" target="_blank" rel="noopener noreferrer">
                   18 de Julio 1056, Montevideo
                 </a>
               </p>
               <p>
-                <a href="https://www.google.com/maps/place/Los+Muergos+%26+Avenida+Juan+Gorlero,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.961615,-54.9455168,17z/data=!3m1!4b1!4m6!3m5!1s0x957505727177e06f:0xa0b208b127d48dc2!8m2!3d-34.9616194!4d-54.9429419!16s%2Fg%2F11gdsxld5x?entry=ttu">
+                <a href="https://www.google.com/maps/place/Los+Muergos+%26+Avenida+Juan+Gorlero,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.961615,-54.9455168,17z/data=!3m1!4b1!4m6!3m5!1s0x957505727177e06f:0xa0b208b127d48dc2!8m2!3d-34.9616194!4d-54.9429419!16s%2Fg%2F11gdsxld5x?entry=ttu" target="_blank" rel="noopener noreferrer">
                   Gorlero y Los Muergos, Punta del este
                 </a>
               </p>
@@ -40,9 +40,9 @@ function FooterHome() {
                 <h5>FOLLOW US</h5>
               </h5>
               <p>
-                <a href="https://www.instagram.com/goodburger">Instagram</a> -{" "}
-                <a href="https://www.facebook.com/goodburger">Facebook</a> -{" "}
-                <a href="https://x.com/goodburger">Twitter</a>
+                <a href="https://www.instagram.com/goodburger" target="_blank" rel="noopener noreferrer">Instagram</a> -{" "}
+                <a href="https://www.facebook.com/goodburger" target="_blank" rel="noopener noreferrer">Facebook</a> -{" "}
+                <a href="https://x.com/goodburger" target="_blank" rel="noopener noreferrer">Twitter</a>
               </p>
             </div>
           </Col>
@@ -50,10 +50,10 @@ function FooterHome() {
             <div>
               <h5>DOWNLOAD OUR APP</h5>
               <p>
-                <a href="">IOS</a>
+                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank" rel="noopener noreferrer">IOS</a>
               </p>
               <p>
-                <a href="">Android</a>
+                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank" rel="noopener noreferrer">Android</a>
               </p>
             </div>
             <div>

@@ -58,13 +58,13 @@ function Nav() {
                 ></i>
               </BootstrapNav.Link>
               <div className="social-icons">
-                <BootstrapNav.Link as={Link} to="https://www.facebook.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.facebook.com/goodburger" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-facebook" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link as={Link} to="https://www.instagram.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.instagram.com/goodburger" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-instagram" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link as={Link} to="https://www.twitter.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.twitter.com/goodburger" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-twitter-x" style={iconStyle}></i>
                 </BootstrapNav.Link>
               </div>
@@ -95,13 +95,13 @@ function Nav() {
                 Work with us
               </BootstrapNav.Link>
               <div className="social-icons">
-                <BootstrapNav.Link as={Link} to="https://www.facebook.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.facebook.com/goodburger" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-facebook" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link as={Link} to="https://www.instagram.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.instagram.com/goodburger" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-instagram" style={iconStyle}></i>
                 </BootstrapNav.Link>
-                <BootstrapNav.Link as={Link} to="https://www.twitter.com/goodburger">
+                <BootstrapNav.Link as={Link} to="https://www.twitter.com/goodburger" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-twitter-x" style={iconStyle}></i>
                 </BootstrapNav.Link>
               </div>

@@ -85,7 +85,7 @@ function MenuSection() {
         </Col>
         <Col xs={6} md={4}>
           <Card className="rounded-5 mb-4" style={{ height: "90%" }}>
-            <Card.Img variant="top" src="../src/assets/Fritas.png" />
+            <Card.Img variant="top" src="../src/assets/Fritas1.png" />
             <Card.Body>
               <Card.Title>FRENCH FRIES</Card.Title>
               <Button

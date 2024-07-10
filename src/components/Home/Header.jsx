@@ -16,7 +16,7 @@ function Header() {
                 <span className="line">Each Bite</span>
                 <span className="line">With Smiles</span>
               </h2>
-              <p className="text-md-left">¡Burgers that make you happy!</p>
+              <p className="text-md-left">Burgers that make you happy!</p>
               <Button
                 className="btnYellow rounded-5 fw-bold"
                 size="lg"

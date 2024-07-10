@@ -30,7 +30,7 @@ function Work() {
       <Row className="justify-content-center align-items-center">
         <Col md={6} className="text-center d-none d-lg-block z-1">
           <motion.img
-            src="src/assets/WorkImage.png"
+            src="src/assets/WorkImage2.png"
             alt="Work with us"
             className="img-fluid imgWork h-100"
             initial={{ opacity: 0 }}

@@ -41,11 +41,11 @@
 }
 
 .imgWork {
-  max-width: 42%;
+  max-width: 100%;
   height: auto;
   position: absolute;
   top: 0px;
-  right: 60%;
+  right: 53%;
 }
 .imgfooter{
   width: auto;
