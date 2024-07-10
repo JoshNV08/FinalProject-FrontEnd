@@ -9,6 +9,7 @@ import {
 import "../../Styles/Home/Navbar.css";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Nav() {
   const iconStyle = {
@@ -18,6 +19,8 @@ function Nav() {
     padding: "5px",
     borderRadius: "25%",
   };
+
+  const token = useSelector((state) => state.user.token);
 
   return (
     <Navbar className="navbar-custom">
@@ -36,13 +39,14 @@ function Nav() {
             <BootstrapNav className="d-none d-md-flex">
               <BootstrapNav.Link
                 as={Link}
-                to="/login"
+                to={token ? "/profile" : "/login"}
                 className="fs-5 text-contact"
               >
-                Login
+                {token ? "Profile" : "Login"}
               </BootstrapNav.Link>
               <BootstrapNav.Link
-                as={Link} to="/workwithus"
+                as={Link}
+                to="/workwithus"
                 className="fs-5 text-contact"
               >
                 Work with us
@@ -72,8 +76,12 @@ function Nav() {
                   style={{ fontSize: "30px", color: "#fe3030" }}
                 ></i>
               </BootstrapNav.Link>
-              <BootstrapNav.Link as={Link} to="/login" className="fs-5 text-contact">
-                Login
+              <BootstrapNav.Link
+                as={Link}
+                to={token ? "/profile" : "/login"}
+                className="fs-5 text-contact"
+              >
+                {token ? "Profile" : "Login"}
               </BootstrapNav.Link>
               <BootstrapNav.Link
                 as={Link} to="/workwithus"

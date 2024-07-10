@@ -9,8 +9,8 @@ import {
   Alert,
 } from "react-bootstrap";
 import axios from "axios";
-import { useDispatch } from "react-redux";
-import { setToken } from "../../redux/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { destroyToken } from "../../redux/userSlice"; // Import destroyToken instead of setToken
 import { useNavigate } from "react-router-dom";
 
 function EditUser() {
@@ -30,30 +30,28 @@ function EditUser() {
   const [success, setSuccess] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const token = useSelector((state) => state.user.token);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
     if (token) {
-      fetchProfile(token);
+      fetchProfile();
     }
-  }, []);
+  }, [token]);
 
-  const fetchProfile = (token) => {
-    axios
-      .get("http://localhost:3000/users/profile", {
+  const fetchProfile = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/users/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      })
-      .then((response) => {
-        setUser(response.data);
-      })
-      .catch((error) => {
-        setError(
-          "Error fetching user: " +
-            (error.response?.data?.error || error.message)
-        );
       });
+      setUser(response.data);
+    } catch (error) {
+      setError(
+        "Error fetching user: " +
+          (error.response?.data?.error || error.message)
+      );
+    }
   };
 
   const handleProfileChange = (e) => {
@@ -63,31 +61,28 @@ function EditUser() {
     });
   };
 
-  const handleProfileSubmit = (e) => {
+  const handleProfileSubmit = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem("token");
     if (!token) {
       setError("No token found");
       return;
     }
 
-    axios
-      .put("http://localhost:3000/users/profile", user, {
+    try {
+      await axios.put("http://localhost:3000/users/profile", user, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      })
-      .then(() => {
-        setSuccess("Profile updated successfully");
-        setError("");
-        fetchProfile(token);
-      })
-      .catch((error) => {
-        setError(
-          "Error updating profile: " +
-            (error.response?.data?.error || error.message)
-        );
       });
+      setSuccess("Profile updated successfully");
+      setError("");
+      fetchProfile();
+    } catch (error) {
+      setError(
+        "Error updating profile: " +
+          (error.response?.data?.error || error.message)
+      );
+    }
   };
 
   const handlePasswordChange = (e) => {
@@ -97,22 +92,21 @@ function EditUser() {
     });
   };
 
-  const handlePasswordSubmit = (e) => {
+  const handlePasswordSubmit = async (e) => {
     e.preventDefault();
     if (passwords.newPassword !== passwords.confirmPassword) {
       setError("New passwords do not match");
       return;
     }
 
-    const token = localStorage.getItem("token");
     if (!token) {
       setError("No token found");
       return;
     }
 
-    axios
-      .put(
-        "http://localhost:3000/users/profile",
+    try {
+      await axios.put(
+        "http://localhost:3000/users/profile/password",
         {
           currentPassword: passwords.currentPassword,
           newPassword: passwords.newPassword,
@@ -122,27 +116,24 @@ function EditUser() {
             Authorization: `Bearer ${token}`,
           },
         }
-      )
-      .then((response) => {
-        setSuccess("Password updated successfully");
-        setError("");
-        setPasswords({
-          currentPassword: "",
-          newPassword: "",
-          confirmPassword: "",
-        });
-      })
-      .catch((error) => {
-        setError(
-          "Error updating password: " +
-            (error.response?.data?.error || error.message)
-        );
+      );
+      setSuccess("Password updated successfully");
+      setError("");
+      setPasswords({
+        currentPassword: "",
+        newPassword: "",
+        confirmPassword: "",
       });
+    } catch (error) {
+      setError(
+        "Error updating password: " +
+          (error.response?.data?.error || error.message)
+      );
+    }
   };
 
   const handleLogout = () => {
-    dispatch(setToken(null));
-    localStorage.removeItem("token");
+    dispatch(destroyToken());
     navigate("/login");
   };
 
