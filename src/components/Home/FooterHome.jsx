@@ -18,7 +18,7 @@ function FooterHome() {
           <Col md={3} className="text">
             <div>
               <h5>OUR SCHEDULES</h5>
-              <p>Monday at Friday: 7am - 10pm</p>
+              <p>Monday to Friday: 7am - 10pm</p>
               <p>Saturday: 24 hours</p>
               <p>Sunday: 24 hours</p>
             </div>
@@ -31,18 +31,16 @@ function FooterHome() {
               </p>
               <p>
                 <a href="https://www.google.com/maps/place/Los+Muergos+%26+Avenida+Juan+Gorlero,+20100+Punta+del+Este,+Departamento+de+Maldonado/@-34.961615,-54.9455168,17z/data=!3m1!4b1!4m6!3m5!1s0x957505727177e06f:0xa0b208b127d48dc2!8m2!3d-34.9616194!4d-54.9429419!16s%2Fg%2F11gdsxld5x?entry=ttu" target="_blank" rel="noopener noreferrer">
-                  Gorlero y Los Muergos, Punta del este
+                  Gorlero y Los Muergos, Punta del Este
                 </a>
               </p>
             </div>
             <div>
-              <h5>
-                <h5>FOLLOW US</h5>
-              </h5>
+              <h5>FOLLOW US</h5>
               <p>
                 <a href="https://www.instagram.com/goodburger" target="_blank" rel="noopener noreferrer">Instagram</a> -{" "}
                 <a href="https://www.facebook.com/goodburger" target="_blank" rel="noopener noreferrer">Facebook</a> -{" "}
-                <a href="https://x.com/goodburger" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://twitter.com/goodburger" target="_blank" rel="noopener noreferrer">Twitter</a>
               </p>
             </div>
           </Col>
@@ -67,20 +65,18 @@ function FooterHome() {
                 <Link to="/aboutus">ABOUT US</Link>
               </h5>
               <h5>
-                {" "}
                 <Link to="/workwithus">WORK WITH US</Link>
               </h5>
               <h5>
                 <Link to="/faq">FREQUENTLY QUESTIONS</Link>
               </h5>
               <h5>
-                {" "}
-                <Link to="/privacy">POLITICY OF PRIVACY</Link>
+                <Link to="/privacy">POLICY OF PRIVACY</Link>
               </h5>
             </div>
             <div>
               <h5>
-                <a href="">rrhh@goodburger.com.uy</a>
+                <a href="mailto:rrhh@goodburger.com.uy">rrhh@goodburger.com.uy</a>
               </h5>
             </div>
             <span className="text-muted justify-content-md-end d-flex">

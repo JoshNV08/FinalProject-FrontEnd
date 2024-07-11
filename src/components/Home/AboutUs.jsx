@@ -20,8 +20,7 @@ function AboutUs() {
             About Us
           </h2>
           <p className="lead">
-            Discover excellence in burgers since 2024. In search of perfection
-            in every bite. We are the home of the good burger.
+          Discovering excellence in burgers since 2024, where each bite is crafted with a commitment to perfection. At our establishment, we pride ourselves on being the ultimate destination for burger enthusiasts seeking unparalleled quality and flavor. From meticulously sourced ingredients to artisanal preparation techniques, we are dedicated to elevating the art of burger-making. Join us on a culinary journey where every detail matters, ensuring that each visit is a memorable celebration of the timeless appeal of a truly exceptional burger experience. <br/> Welcome to Good Burger home of the good burger!
           </p>
           <Button
             variant="transparent"

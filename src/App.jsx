@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
@@ -18,8 +18,9 @@ import PrivacyPage from "./pages/PrivacyPage";
 import ProductMenu from "./pages/ProductMenu";
 import CartPage from "./pages/CartPage";
 import RegisterPage from "./pages/RegisterPage";
-import Profile from "./pages/Profile";
 import CheckoutPage from "./pages/CheckoutPage";
+import PrivateRoute from "./components/PrivateRoutes";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -34,8 +35,8 @@ function App() {
           <Route path="menu-desserts" element={<MenuDesserts />} />
           <Route path="menu-coffee" element={<MenuCoffee />} />
         </Route>
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/checkout" element={<PrivateRoute><CheckoutPage /></PrivateRoute>} />
+        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
         <Route path="/productmenu/:id" element={<ProductMenu />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/aboutus" element={<Information />} />

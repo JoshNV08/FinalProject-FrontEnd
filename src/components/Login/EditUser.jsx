@@ -7,10 +7,11 @@ import {
   Card,
   Button,
   Alert,
+  Spinner,
 } from "react-bootstrap";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { destroyToken } from "../../redux/userSlice"; // Import destroyToken instead of setToken
+import { destroyToken } from "../../redux/userSlice";
 import { useNavigate } from "react-router-dom";
 
 function EditUser() {
@@ -28,6 +29,7 @@ function EditUser() {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = useSelector((state) => state.user.token);
@@ -35,8 +37,10 @@ function EditUser() {
   useEffect(() => {
     if (token) {
       fetchProfile();
+    } else {
+      navigate("/login");
     }
-  }, [token]);
+  }, [token, navigate]);
 
   const fetchProfile = async () => {
     try {
@@ -46,11 +50,13 @@ function EditUser() {
         },
       });
       setUser(response.data);
+      setLoading(false);
     } catch (error) {
       setError(
         "Error fetching user: " +
           (error.response?.data?.error || error.message)
       );
+      setLoading(false);
     }
   };
 
@@ -142,104 +148,108 @@ function EditUser() {
       <h2>Profile</h2>
       {error && <Alert variant="danger">{error}</Alert>}
       {success && <Alert variant="success">{success}</Alert>}
-      <Row>
-        <Col md={6}>
-          <Card className="mb-3">
-            <Card.Header>Personal Information</Card.Header>
-            <Card.Body>
-              <Form onSubmit={handleProfileSubmit}>
-                <Form.Group className="mb-3">
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="firstname"
-                    value={user.firstname}
-                    onChange={handleProfileChange}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="lastname"
-                    value={user.lastname}
-                    onChange={handleProfileChange}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    value={user.email}
-                    onChange={handleProfileChange}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>Phone Number</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="phoneNumber"
-                    value={user.phoneNumber}
-                    onChange={handleProfileChange}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>Address</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="address"
-                    value={user.address}
-                    onChange={handleProfileChange}
-                  />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Update Information
-                </Button>
-              </Form>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6}>
-          <Card className="mb-3">
-            <Card.Header>Password</Card.Header>
-            <Card.Body>
-              <Form onSubmit={handlePasswordSubmit}>
-                <Form.Group className="mb-3">
-                  <Form.Label>Current Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="currentPassword"
-                    value={passwords.currentPassword}
-                    onChange={handlePasswordChange}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>New Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="newPassword"
-                    value={passwords.newPassword}
-                    onChange={handlePasswordChange}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>Confirm New Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="confirmPassword"
-                    value={passwords.confirmPassword}
-                    onChange={handlePasswordChange}
-                  />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Update Password
-                </Button>
-              </Form>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      {loading ? (
+        <Spinner animation="border" />
+      ) : (
+        <Row>
+          <Col md={6}>
+            <Card className="mb-3">
+              <Card.Header>Personal Information</Card.Header>
+              <Card.Body>
+                <Form onSubmit={handleProfileSubmit}>
+                  <Form.Group className="mb-3">
+                    <Form.Label>First Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="firstname"
+                      value={user.firstname}
+                      onChange={handleProfileChange}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Last Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="lastname"
+                      value={user.lastname}
+                      onChange={handleProfileChange}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control
+                      type="email"
+                      name="email"
+                      value={user.email}
+                      onChange={handleProfileChange}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="phoneNumber"
+                      value={user.phoneNumber}
+                      onChange={handleProfileChange}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="address"
+                      value={user.address}
+                      onChange={handleProfileChange}
+                    />
+                  </Form.Group>
+                  <Button variant="primary" type="submit">
+                    Update Information
+                  </Button>
+                </Form>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6}>
+            <Card className="mb-3">
+              <Card.Header>Password</Card.Header>
+              <Card.Body>
+                <Form onSubmit={handlePasswordSubmit}>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Current Password</Form.Label>
+                    <Form.Control
+                      type="password"
+                      name="currentPassword"
+                      value={passwords.currentPassword}
+                      onChange={handlePasswordChange}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>New Password</Form.Label>
+                    <Form.Control
+                      type="password"
+                      name="newPassword"
+                      value={passwords.newPassword}
+                      onChange={handlePasswordChange}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Confirm New Password</Form.Label>
+                    <Form.Control
+                      type="password"
+                      name="confirmPassword"
+                      value={passwords.confirmPassword}
+                      onChange={handlePasswordChange}
+                    />
+                  </Form.Group>
+                  <Button variant="primary" type="submit">
+                    Update Password
+                  </Button>
+                </Form>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      )}
       <Button variant="danger" onClick={handleLogout}>
         Logout
       </Button>
