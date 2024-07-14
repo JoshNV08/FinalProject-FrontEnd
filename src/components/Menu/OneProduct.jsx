@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../Styles/Buttons/ButtonsMenu.css";
 import { addToCart } from "../../redux/cartSlice";
+import { supabase } from '../../../supabaseClient';
 
 function OneProduct({ id }) {
   const [product, setProduct] = useState(null);
@@ -21,10 +20,15 @@ function OneProduct({ id }) {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3000/products/${id}`
-        );
-        setProduct(response.data);
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('id', id) 
+          .single();
+
+        if (error) throw error;
+
+        setProduct(data);
       } catch (error) {
         console.error("Error fetching the product:", error);
       }

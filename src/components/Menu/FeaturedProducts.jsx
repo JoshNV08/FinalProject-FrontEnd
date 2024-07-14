@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { supabase } from '../../../supabaseClient';
 
 const FeaturedProducts = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
@@ -9,10 +10,13 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:3000/products/featured"
-        );
-        setFeaturedProducts(response.data);
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('feature', true);
+        if (error) throw error;
+
+        setFeaturedProducts(data);
       } catch (error) {
         console.error("Error fetching featured products", error);
       }

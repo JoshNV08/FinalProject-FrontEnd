@@ -4,6 +4,7 @@ import "../../Styles/Menu/MenuCards.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from '../../../supabaseClient';
 
 function MenuDrinks() {
   const [products, setProducts] = useState([]);
@@ -11,8 +12,13 @@ function MenuDrinks() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/products");
-        setProducts(response.data);
+        const { data, error } = await supabase
+          .from('products')
+          .select('*');
+
+        if (error) throw error;
+
+        setProducts(data);
       } catch (error) {
         console.error("Error fetching the products:", error);
       }
@@ -20,7 +26,7 @@ function MenuDrinks() {
 
     fetchProducts();
   }, []);
-
+  
   const filteredDrinks = products.filter((item) => item.categoryId === 3);
 
   return (
